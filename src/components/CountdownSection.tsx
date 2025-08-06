@@ -35,9 +35,9 @@ const CountdownSection: React.FC<CountdownSectionProps> = ({ timeLeft, onBookCon
             </div>
           </div>
           <h2 className="text-2xl font-bold text-gray-900 font-heading">
-            Fall 2025 admissions close soon
+            Fall 2025 admission deadlines approaching
           </h2>
-          <p className="text-lg text-gray-600 font-body">Book your free strategy call now.</p>
+          <p className="text-lg text-gray-600 font-body">Most US universities close applications by January 2025. Book your free strategy call now.</p>
           <button className="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-700 transition-colors flex items-center space-x-2 mx-auto font-body">
             <span onClick={onBookConsultation} className="flex items-center space-x-2">
               <Calendar className="w-5 h-5" />

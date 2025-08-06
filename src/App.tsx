@@ -32,8 +32,8 @@ function App() {
     phone: ''
   });
 
-  // Calculate time until Fall 2025 deadline
-  const deadline = new Date('2025-03-01T00:00:00');
+  // Calculate time until Fall 2025 admission deadline
+  const deadline = new Date('2025-01-15T00:00:00');
   const timeLeft = useCountdown(deadline);
 
   const handleBookConsultation = () => {
