@@ -18,11 +18,23 @@ const Footer: React.FC = () => {
             </div>
             <div className="flex items-center justify-center space-x-2 text-blue-200">
               <Phone className="w-4 h-4" />
-              <span className="font-body">+919228122553</span>
+              <a 
+                href="tel:+919228122553" 
+                className="font-body hover:text-white transition-colors"
+                aria-label="Call Kanan.co at +919228122553"
+              >
+                +919228122553
+              </a>
             </div>
             <div className="flex items-center justify-center space-x-2 text-blue-200">
               <Mail className="w-4 h-4" />
-              <span className="font-body">info@kanan.co</span>
+              <a 
+                href="mailto:info@kanan.co" 
+                className="font-body hover:text-white transition-colors"
+                aria-label="Email Kanan.co at info@kanan.co"
+              >
+                info@kanan.co
+              </a>
             </div>
           </div>
         </div>

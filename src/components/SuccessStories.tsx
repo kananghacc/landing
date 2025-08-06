@@ -112,7 +112,7 @@ const SuccessStories: React.FC = () => {
             </button>
           </div>
           
-          <div className="flex justify-center space-x-2 mt-4" role="tablist" aria-label="Testimonial navigation">
+          <div className="flex justify-center space-x-2 mt-4" role="tablist" aria-label="ation">
             {testimonials.map((_, index) => (
               <button
                 key={index}

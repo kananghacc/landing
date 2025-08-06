@@ -90,11 +90,23 @@ const ThankYouPage: React.FC<ThankYouPageProps> = ({ onBackToHome }) => {
               <div className="space-y-4">
                 <div className="flex items-center justify-center space-x-3">
                   <Phone className="w-5 h-5 text-blue-600" />
-                  <span className="text-gray-700 font-body">+919228122553</span>
+                  <a 
+                    href="tel:+919228122553" 
+                    className="text-gray-700 font-body hover:text-blue-600 transition-colors"
+                    aria-label="Call Kanan.co at +919228122553"
+                  >
+                    +919228122553
+                  </a>
                 </div>
                 <div className="flex items-center justify-center space-x-3">
                   <Mail className="w-5 h-5 text-blue-600" />
-                  <span className="text-gray-700 font-body">info@kanan.co</span>
+                  <a 
+                    href="mailto:info@kanan.co" 
+                    className="text-gray-700 font-body hover:text-blue-600 transition-colors"
+                    aria-label="Email Kanan.co at info@kanan.co"
+                  >
+                    info@kanan.co
+                  </a>
                 </div>
                 <div className="flex items-center justify-center space-x-3">
                   <MapPin className="w-5 h-5 text-blue-600" />
@@ -106,7 +118,7 @@ const ThankYouPage: React.FC<ThankYouPageProps> = ({ onBackToHome }) => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="https://wa.me/917355573555?text=I'd%20like%20to%20speak%20to%20a%20Kanan.co%20counsellor%20reg.%20my%20Canada%20plans"
+                href="https://wa.me/917355573555?text=I'd%20like%20to%20speak%20to%20a%20Kanan.co%20counsellor%20reg.%20my%20USA%20plans"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-700 transition-colors flex items-center justify-center space-x-2 font-body"
@@ -139,7 +151,7 @@ const ThankYouPage: React.FC<ThankYouPageProps> = ({ onBackToHome }) => {
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-4 h-4 text-green-600" />
-                <span className="text-sm text-gray-600 font-body">ICCRC/CCIC #R509505</span>
+                <span className="text-sm text-gray-600 font-body">SEVP Certified</span>
               </div>
             </div>
           </div>
@@ -162,16 +174,28 @@ const ThankYouPage: React.FC<ThankYouPageProps> = ({ onBackToHome }) => {
               </div>
               <div className="flex items-center justify-center space-x-2 text-blue-200">
                 <Phone className="w-4 h-4" />
-                <span className="font-body">+919228122553</span>
+                <a 
+                  href="tel:+919228122553" 
+                  className="font-body hover:text-white transition-colors"
+                  aria-label="Call Kanan.co at +919228122553"
+                >
+                  +919228122553
+                </a>
               </div>
               <div className="flex items-center justify-center space-x-2 text-blue-200">
                 <Mail className="w-4 h-4" />
-                <span className="font-body">info@kanan.co</span>
+                <a 
+                  href="mailto:info@kanan.co" 
+                  className="font-body hover:text-white transition-colors"
+                  aria-label="Email Kanan.co at info@kanan.co"
+                >
+                  info@kanan.co
+                </a>
               </div>
             </div>
           </div>
           <div className="border-t border-blue-500 mt-8 pt-8 text-center text-blue-200">
-            <p className="font-body">&copy; 2025 Kanan.co · ICCRC/CCIC #R509505</p>
+            <p className="font-body">&copy; 2025 Kanan.co · SEVP Certified</p>
           </div>
         </div>
       </footer>
