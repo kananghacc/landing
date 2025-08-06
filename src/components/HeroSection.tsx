@@ -77,10 +77,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookConsultation }) => {
                 Visa Approved!
               </div>
               <picture>
-                <source srcSet="/hero-students-2-further-optimized.jpg" type="image/jpeg" />
+                <source srcSet="/study-in-usa-hero-image.jpg" type="image/jpeg" />
                 <img 
-                  src="/hero-students-2-further-optimized.jpg" 
-                  alt="Diverse university students on campus during autumn - Study in USA with Kanan.co"
+                  src="/study-in-usa-hero-image.jpg" 
+                  alt="Diverse South Asian students walking on university campus - Study in USA with Kanan.co"
                   className="w-full h-48 sm:h-64 object-cover rounded-xl mb-4 sm:mb-6"
                   loading="lazy"
                   width="600"
