@@ -16,31 +16,31 @@ const SuccessStories: React.FC = () => {
       name: "Tulsiben Patel",
       college: "Oklahoma State University",
       quote: "Indeed, it was a great experience and helpful as I got to learn something new about my abroad journey.",
-      image: "/testimonial-images-optimized/Avisha_Sanjay_Kumar_Patel.png"
+      image: "/testimonial-images/tulsiben_usa_e23b90583f.png"
     },
     {
       name: "Krupa Patel",
       college: "University at Buffalo",
       quote: "My experience with Kanan international was amazing, right from the coaching till the visa approval.",
-      image: "/testimonial-images-optimized/Bhargavi_Patel.png"
+      image: "/testimonial-images/krupa_usa_c0551fa6ac.png"
     },
     {
       name: "Vats Panchal",
       college: "San Jose State University",
       quote: "I never thought I could clear my IELTS Exam and Interviews so confidently. It was a very smooth process and I am so glad to receive my USA Visa. Heartfelt thanks to Kanan International.",
-      image: "/testimonial-images-optimized/Bhavik_Patel_b655b19057.png"
+      image: "/testimonial-images/vats_usa_1203652ad1.png"
     },
     {
       name: "Pujan Gajjar",
       college: "US University",
       quote: "My overall experience was highly satisfactory. My big thanks to Mr. Deep Shah and Mr. Mayur Patil for their exceptional assistance throughout the journey. Their transparency throughout the processes is truly commendable. I will recommend Kanan.co to everyone!",
-      image: "/testimonial-images-optimized/Saloni_34fc2dee35.png"
+      image: "/testimonial-images/pujan_gajjar_1624105d35.png"
     },
     {
       name: "Yug Thakkar",
       college: "University of Central Oklahoma",
       quote: "I'm excited to share that I've successfully cleared my US interview and secured admission... A special thanks to my tutor whose friendly and excellent support made my study abroad journey easy. I'm grateful to Kanan.co for their invaluable assistance. If you're looking for guidance, I would recommend them!",
-      image: "/testimonial-images-optimized/Jaimin_Patel_65b6c293d5.png"
+      image: "/testimonial-images/yug_thakkar_ab9be4677e.png"
     }
   ];
 
