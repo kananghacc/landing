@@ -13,7 +13,7 @@ Disallow: /private/
 Disallow: /api/
 
 # Allow important pages
-Allow: /study-canada
+Allow: /study-usa
 Allow: /services
 Allow: /contact
 Allow: /about 
