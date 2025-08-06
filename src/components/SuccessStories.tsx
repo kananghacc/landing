@@ -13,64 +13,34 @@ const SuccessStories: React.FC = () => {
 
   const testimonials: TestimonialItem[] = [
     {
-      name: "Avisha Sanjay Kumar Patel",
-      college: "MIT",
-      quote: "I thank Kanan for their great support and hospitality services.",
+      name: "Tulsiben Patel",
+      college: "Oklahoma State University",
+      quote: "Indeed, it was a great experience and helpful as I got to learn something new about my abroad journey.",
       image: "/testimonial-images-optimized/Avisha_Sanjay_Kumar_Patel.png"
     },
     {
-      name: "Bhargavi Patel",
-      college: "Stanford University",
-      quote: "My special thanks to Yash sir, who gave personal guidance during the process.",
+      name: "Krupa Patel",
+      college: "University at Buffalo",
+      quote: "My experience with Kanan international was amazing, right from the coaching till the visa approval.",
       image: "/testimonial-images-optimized/Bhargavi_Patel.png"
     },
     {
-      name: "Bhavik Patel",
-      college: "University of California Berkeley",
-      quote: "Just because of their guidance I am studying at UC Berkeley, USA.",
+      name: "Vats Panchal",
+      college: "San Jose State University",
+      quote: "I never thought I could clear my IELTS Exam and Interviews so confidently. It was a very smooth process and I am so glad to receive my USA Visa. Heartfelt thanks to Kanan International.",
       image: "/testimonial-images-optimized/Bhavik_Patel_b655b19057.png"
     },
     {
-      name: "Saloni",
-      college: "Harvard University",
-      quote: "They helped me throughout my education journey abroad.",
+      name: "Pujan Gajjar",
+      college: "US University",
+      quote: "My overall experience was highly satisfactory. My big thanks to Mr. Deep Shah and Mr. Mayur Patil for their exceptional assistance throughout the journey. Their transparency throughout the processes is truly commendable. I will recommend Kanan.co to everyone!",
       image: "/testimonial-images-optimized/Saloni_34fc2dee35.png"
     },
     {
-      name: "Jaimin Patel",
-      college: "Columbia University",
-      quote: "They helped me in all stages of getting a student visa.",
+      name: "Yug Thakkar",
+      college: "University of Central Oklahoma",
+      quote: "I'm excited to share that I've successfully cleared my US interview and secured admission... A special thanks to my tutor whose friendly and excellent support made my study abroad journey easy. I'm grateful to Kanan.co for their invaluable assistance. If you're looking for guidance, I would recommend them!",
       image: "/testimonial-images-optimized/Jaimin_Patel_65b6c293d5.png"
-    },
-    {
-      name: "Sanskriti",
-      college: "University of Michigan",
-      quote: "I didn't face any problems with my visa and university admission process.",
-      image: "/testimonial-images-optimized/Sanskriti_35d4ff78c0.png"
-    },
-    {
-      name: "Hetvi Baktarwala",
-      college: "Carnegie Mellon University",
-      quote: "The multiple mock tests boosted my confidence and helped me achieve a high score.",
-      image: "/testimonial-images-optimized/hetvi_baktarwala_d25f05a368.png"
-    },
-    {
-      name: "Disha Patel",
-      college: "University of Pennsylvania",
-      quote: "Their friendly environment and exceptional support were amazing.",
-      image: "/testimonial-images-optimized/disha_patel_b07218c2ac.png"
-    },
-    {
-      name: "Jatin Raj Bharadwaj",
-      college: "University of Texas Austin",
-      quote: "My TOEFL trainer, Ms. Mansi, helped me through my TOEFL journey.",
-      image: "/testimonial-images-optimized/jatin_raj_bharadwaj_52633119c0.png"
-    },
-    {
-      name: "Tulsi Thakar",
-      college: "University of Illinois Urbana-Champaign",
-      quote: "I have done all my visa process with the support of Kanan.co team, and it was a great experience.",
-      image: "/testimonial-images-optimized/tulsi_thakar_66cb3365ee.png"
     }
   ];
 
@@ -96,7 +66,7 @@ const SuccessStories: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
           <h2 id="success-stories-heading" className="text-4xl font-bold text-gray-900 font-heading">Success Stories</h2>
-          <p className="text-xl text-gray-600 font-body">Real students, real results</p>
+          <p className="text-xl text-gray-600 font-body">Real students, real results from USA</p>
         </div>
 
         <div className="relative overflow-hidden">
