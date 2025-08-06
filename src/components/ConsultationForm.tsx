@@ -37,7 +37,7 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({
         
         <div className="text-center mb-6">
           <h3 className="text-2xl font-bold text-gray-900 mb-2 font-heading">Book Free Consultation</h3>
-          <p className="text-gray-600 font-body">Get personalized guidance for your Canada study journey</p>
+          <p className="text-gray-600 font-body">Get personalized guidance for your USA study journey</p>
         </div>
 
         <form onSubmit={onSubmit} className="space-y-4">
