@@ -2,22 +2,22 @@ import React from 'react';
 
 const PartnerColleges: React.FC = () => {
   const collegeLogos = [
-    { src: "/2_Conestoga-optimized.png", alt: "MIT" },
-    { src: "/3_Seneca-optimized.png", alt: "Stanford University" },
-    { src: "/4_Loyalist-optimized.png", alt: "Harvard University" },
-    { src: "/5_Algoma-optimized.png", alt: "University of California Berkeley" },
-    { src: "/10_Georgian_-optimized.png", alt: "Columbia University" },
-    { src: "/13_Niagara-optimized.png", alt: "University of Michigan" },
-    { src: "/14_Northern_-optimized.png", alt: "University of Pennsylvania" },
-    { src: "/15_Sheridan-optimized.png", alt: "Carnegie Mellon University" },
-    { src: "/1_Centennial-optimized.png", alt: "University of Texas Austin" },
-    { src: "/6_St_Lawrence_Black-optimized.png", alt: "University of Illinois Urbana-Champaign" },
-    { src: "/7_Cambrian_-optimized.png", alt: "Georgia Institute of Technology" },
-    { src: "/8_Canadore-optimized.png", alt: "University of Washington" },
-    { src: "/9_Fleming_-optimized.png", alt: "University of Wisconsin-Madison" },
-    { src: "/11_Lambton-optimized.png", alt: "Purdue University" },
-    { src: "/12_Mohawk_-optimized.png", alt: "University of Maryland" },
-    { src: "/16_Fanshawe-optimized.png", alt: "University of Minnesota" }
+    { src: "/1_MIT.png", alt: "Massachusetts Institute of Technology" },
+    { src: "/1_SJSU.png", alt: "San José State University" },
+    { src: "/2_Harvard.png", alt: "Harvard University" },
+    { src: "/2_RIT.png", alt: "Rochester Institute of Technology" },
+    { src: "/3_Standford.png", alt: "Stanford University" },
+    { src: "/3_TSU.png", alt: "Texas State University" },
+    { src: "/4_Berke.png", alt: "University of California Berkeley" },
+    { src: "/4_Depaul.png", alt: "DePaul University" },
+    { src: "/5_Chicago.png", alt: "University of Chicago" },
+    { src: "/5_San.png", alt: "San Francisco State University" },
+    { src: "/6_Penn.png", alt: "University of Pennsylvania" },
+    { src: "/7_Caltech.png", alt: "California Institute of Technology" },
+    { src: "/8_Cornwell.png", alt: "Cornell University" },
+    { src: "/9_Yale.png", alt: "Yale University" },
+    { src: "/10_Princeton.png", alt: "Princeton University" },
+    { src: "/11_Columbiya.png", alt: "Columbia University" }
   ];
 
   return (
