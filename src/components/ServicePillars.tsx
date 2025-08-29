@@ -1,80 +1,245 @@
 import React from 'react';
-import { Building, FileText, Shield, Plane, Heart, DollarSign, Users, Award } from 'lucide-react';
+import { Video, BookOpen, Clock, Users, Award, Monitor, GraduationCap, Target, CheckCircle, Star } from 'lucide-react';
 
-interface ServicePillar {
-  title: string;
-  painResolved: string;
-  deliverables: string;
+interface ServiceFeature {
   icon: React.ReactNode;
-  gradient: string;
+  title: string;
+  description: string;
+  highlight?: string;
 }
 
-const ServicePillars: React.FC = () => {
-  const servicePillars: ServicePillar[] = [
+interface DeliveryMethod {
+  type: string;
+  title: string;
+  description: string;
+  features: string[];
+  recommended?: boolean;
+}
+
+interface ServicePillarsProps {
+  onBookConsultation?: () => void;
+}
+
+const ServicePillars: React.FC<ServicePillarsProps> = ({ onBookConsultation }) => {
+  const features: ServiceFeature[] = [
     {
-      title: "University & Program Match",
-      painResolved: "Overwhelm of 4,200+ universities",
-      deliverables: "AI shortlist, budget fit ($15K-$55K), employability score, scholarship guidance",
-      icon: <Building className="w-6 h-6" />,
-      gradient: "from-blue-400 to-blue-600"
+      icon: <Video className="w-8 h-8" />,
+      title: "KananPrep Portal",
+      description: "600+ videos covering mindset, the four parts of the test, tips & tricks and more.",
+      highlight: "600+ Videos"
     },
     {
-      title: "Application & SOP Boost",
-      painResolved: "Fear of rejection",
-      deliverables: "Unlimited edits, former Stanford admissions readers, TOEFL/GRE coaching",
-      icon: <FileText className="w-6 h-6" />,
-      gradient: "from-green-400 to-green-600"
+      icon: <Target className="w-8 h-8" />,
+      title: "Practice Tests",
+      description: "Sectional tests and simulated full-length mock tests give you the ultimate exam practice.",
+      highlight: "Full Mock Tests"
     },
     {
-      title: "Visa & Financial Prep",
-      painResolved: "Documentation anxiety",
-      deliverables: "USCIS-compliant file, education loans, forex, insurance, accommodation",
-      icon: <Shield className="w-6 h-6" />,
-      gradient: "from-purple-400 to-purple-600"
+      icon: <Clock className="w-8 h-8" />,
+      title: "Flexible Class Timings",
+      description: "Conveniently integrate your IELTS preparation alongside other commitments.",
+      highlight: "Flexible Schedule"
     },
     {
-      title: "Landing & Career Edge",
-      painResolved: '"What next?" worries',
-      deliverables: "Airport pickup, OPT webinars, mentor network, job placement support",
-      icon: <Plane className="w-6 h-6" />,
-      gradient: "from-orange-400 to-orange-600"
+      icon: <BookOpen className="w-8 h-8" />,
+      title: "Study Materials",
+      description: "No need to buy expensive exam prep books. We provide comprehensive study material with your course enrollment.",
+      highlight: "Free Materials"
+    },
+    {
+      icon: <Award className="w-8 h-8" />,
+      title: "Certified Trainers",
+      description: "Certified trainers with high IELTS scores guide with proven study methods. You are in good hands at Kanan.co.",
+      highlight: "Certified Experts"
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Small Batch Size",
+      description: "This intimate learning environment facilitates active participation and focused guidance from our expert trainers.",
+      highlight: "Personal Attention"
+    }
+  ];
+
+  const deliveryMethods: DeliveryMethod[] = [
+    {
+      type: "Online Group",
+      title: "Online Group Class",
+      description: "Live interactive sessions with expert trainers from anywhere in India",
+      features: [
+        "Live interactive sessions",
+        "Recorded sessions available",
+        "24/7 doubt support",
+        "Mobile app access",
+        "Flexible timing options"
+      ]
+    },
+    {
+      type: "Offline Group",
+      title: "Offline Group Class",
+      description: "Classroom-based learning with face-to-face interaction in Chennai",
+      features: [
+        "Face-to-face interaction",
+        "Immediate doubt clearing",
+        "Group discussions",
+        "Study materials included",
+        "Regular assessments"
+      ],
+      recommended: true
+    },
+    {
+      type: "Online 1-on-1",
+      title: "Online 1-to-1 Class",
+      description: "Personalized attention with dedicated trainer for maximum results",
+      features: [
+        "Personalized curriculum",
+        "Flexible scheduling",
+        "Individual attention",
+        "Custom study plan",
+        "Progress tracking"
+      ]
+    },
+    {
+      type: "Offline 1-on-1",
+      title: "Offline 1-to-1 Class",
+      description: "One-on-one coaching with maximum personal attention and flexibility",
+      features: [
+        "Maximum personal attention",
+        "Customized approach",
+        "Flexible timing",
+        "Intensive practice",
+        "Regular feedback"
+      ]
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-white" aria-labelledby="services-heading">
+    <section className="py-16 lg:py-20 bg-white" id="course-features">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-4 mb-16">
-          <h2 id="services-heading" className="text-4xl font-bold text-gray-900 font-heading">What We Do – Service Pillars</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-body">
-            With 24+ years expertise and 230,000+ students guided, we bridge YOUR dream to reality
+        {/* Section Header */}
+        <div className="text-center mb-12 lg:mb-16">
+          <div className="flex items-center justify-center space-x-2 mb-4">
+            <Star className="w-6 h-6 text-blue-500" />
+            <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">Course Features</span>
+          </div>
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 font-heading mb-4">
+            What's Included in This Smart 
+            <span className="text-blue-600"> Live IELTS Course</span>
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Everything you need to achieve your target band score in one comprehensive package
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {servicePillars.map((pillar, index) => (
-            <div key={index} className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
-              <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${pillar.gradient} flex items-center justify-center text-white mb-6`}>
-                {pillar.icon}
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 font-heading">{pillar.title}</h3>
-              <div className="space-y-2">
-                <div className="text-sm text-blue-600 font-medium font-body">Pain Resolved:</div>
-                <div className="text-gray-700 mb-3 font-body">{pillar.painResolved}</div>
-                <div className="text-sm text-green-600 font-medium font-body">Key Deliverables:</div>
-                <div className="text-gray-700 font-body">{pillar.deliverables}</div>
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-blue-600 text-white rounded-lg flex items-center justify-center">
+                    {feature.icon}
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2 font-heading">{feature.title}</h3>
+                  <p className="text-gray-600 text-sm">{feature.description}</p>
+                  {feature.highlight && (
+                    <div className="mt-3">
+                      <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                        {feature.highlight}
+                      </span>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="bg-green-50 border-l-4 border-green-400 p-6 rounded-lg">
-          <div className="flex items-start space-x-3">
-            <Heart className="w-6 h-6 text-green-600 mt-1" />
+        {/* Delivery Methods Section */}
+        <div className="mb-12">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 font-heading mb-4">
+              Delivery Methods
+            </h3>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              We offer four convenient training methodologies to suit your individual learning styles and preferences
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {deliveryMethods.map((method, index) => (
+              <div 
+                key={index} 
+                className={`relative bg-white rounded-xl p-6 border-2 transition-all hover:shadow-lg ${
+                  method.recommended 
+                    ? 'border-blue-500 shadow-lg' 
+                    : 'border-gray-200 hover:border-blue-300'
+                }`}
+              >
+                {method.recommended && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-xs font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-4">
+                  <div className={`w-12 h-12 mx-auto mb-3 rounded-lg flex items-center justify-center ${
+                    method.recommended ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600'
+                  }`}>
+                    {method.type.includes('Online') ? (
+                      <Monitor className="w-6 h-6" />
+                    ) : (
+                      <GraduationCap className="w-6 h-6" />
+                    )}
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2 font-heading">{method.title}</h4>
+                  <p className="text-gray-600 text-sm">{method.description}</p>
+                </div>
+
+                <div className="space-y-2">
+                  {method.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                      <span className="text-sm text-gray-700">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-6">
+                  <button 
+                    className={`w-full py-2 px-4 rounded-full font-semibold transition-colors ${
+                      method.recommended
+                        ? 'bg-blue-600 text-white hover:bg-blue-700'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                    onClick={onBookConsultation}
+                  >
+                    Choose This Option
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Trust Indicators */}
+        <div className="bg-blue-50 rounded-2xl p-8 text-center border border-blue-100">
+          <h3 className="text-2xl font-bold mb-4 font-heading text-gray-900">Why Choose Our IELTS Course?</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
-              <p className="text-gray-800 font-medium font-body">
-                <strong>OCA Service</strong> — no consulting fee for students. You only pay third-party charges such as TOEFL/GRE or university application fees. Education loans at the lowest rates, insurance claims settled in 24 hours.
-              </p>
+              <div className="text-3xl font-bold text-blue-600 mb-2">94%</div>
+              <div className="text-gray-600">Students achieve target score</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">12</div>
+              <div className="text-gray-600">Weeks average completion</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">4.8/5</div>
+              <div className="text-gray-600">Student satisfaction</div>
             </div>
           </div>
         </div>

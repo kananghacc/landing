@@ -64,21 +64,21 @@ const ThankYouPage: React.FC<ThankYouPageProps> = ({ onBackToHome }) => {
                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <MessageCircle className="w-6 h-6 text-blue-600" />
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2 font-body">1. Expert Review</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2 font-heading">1. Expert Review</h3>
                   <p className="text-gray-600 text-sm font-body">Our certified counselors will analyze your profile and requirements</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Target className="w-6 h-6 text-blue-600" />
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2 font-body">2. Personalized Plan</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2 font-heading">2. Personalized Plan</h3>
                   <p className="text-gray-600 text-sm font-body">We'll create your custom study roadmap with college recommendations</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Users className="w-6 h-6 text-blue-600" />
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2 font-body">3. Ongoing Support</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2 font-heading">3. Ongoing Support</h3>
                   <p className="text-gray-600 text-sm font-body">Get continuous guidance throughout your application journey</p>
                 </div>
               </div>
@@ -143,11 +143,11 @@ const ThankYouPage: React.FC<ThankYouPageProps> = ({ onBackToHome }) => {
                     <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <span className="text-sm font-medium text-gray-700 font-body">4.9 rating</span>
+                <span className="text-sm font-medium text-gray-700 font-body"><span className="font-heading font-semibold">4.9</span> rating</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Users className="w-4 h-4 text-blue-600" />
-                <span className="text-sm text-gray-600 font-body">100,000+ students helped</span>
+                <span className="text-sm text-gray-600 font-body"><span className="font-heading font-semibold">100,000+</span> students helped</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-4 h-4 text-green-600" />

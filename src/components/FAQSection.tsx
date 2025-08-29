@@ -7,84 +7,110 @@ interface FAQItem {
 }
 
 const FAQSection: React.FC = () => {
-  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqs: FAQItem[] = [
     {
-      question: "Do I pay for your services?",
-      answer: "No! Our consulting is completely free. We're remunerated by partner institutions as an Official Channel Agent (OCA). You only pay third-party charges like TOEFL/GRE or university application fees."
+      question: "How long does it take to achieve 8+ band in IELTS?",
+      answer: "Most students achieve 8+ band in 12 weeks with our proven methodology, certified trainers, and comprehensive study materials including 600+ videos and mock tests. The exact duration depends on your current English proficiency level and target band score."
     },
     {
-      question: "What are the tuition fees and living costs?",
-      answer: "Tuition fees vary from $15,000 to $55,000 per annum; living costs around $8,000–$10,000 per year. We help you find scholarships and part-time work opportunities to offset these costs."
+      question: "Do you offer online IELTS coaching?",
+      answer: "Yes! We offer both online and offline IELTS coaching options. You can choose from online group classes, offline group classes, or 1-on-1 coaching based on your preference and schedule. All online classes are live and interactive with our certified trainers."
     },
     {
-      question: "Can I work while studying in the USA?",
-      answer: "Yes! You can work up to 20 hours per week on campus during studies and unlimited hours during breaks. Post-study OPT extends work permission up to 3 years for STEM graduates. Earn $10–$15/hour part-time."
+      question: "What's included in the IELTS course?",
+      answer: "Our course includes 600+ videos covering all four modules (Listening, Reading, Writing, Speaking), practice tests, comprehensive study materials, certified trainers, small batch sizes for personalized attention, and 3-day access to our mock test portal."
     },
     {
-      question: "What is SEVP certification and why does it matter?",
-      answer: "SEVP (Student and Exchange Visitor Program) certification means we're federally authorized to assist with F-1 visa applications and represent you before USCIS (US Citizenship and Immigration Services). This ensures legal compliance and professional standards."
+      question: "Can I get a free demo class?",
+      answer: "Yes! We offer a 1-on-1 zero-risk demo class where you can experience our teaching methodology and get a personalized skill assessment. This helps you understand our approach and determine the best course option for your needs."
     },
     {
-      question: "Are there age limits or academic background restrictions?",
-      answer: "No age limit! Students with backlogs or diverse academic backgrounds can still apply. We help students from various educational backgrounds find suitable programs and universities."
+      question: "What are the course duration options?",
+      answer: "We offer flexible course durations: 30 days (intensive), 45 days (standard), and 90 days (comprehensive). Choose the option that best fits your timeline and current English proficiency level. Our trainers will recommend the optimal duration during your free assessment."
     },
     {
-      question: "What admission tests do I need?",
-      answer: "Depending on your program: IELTS/TOEFL for English proficiency, GRE for graduate programs, GMAT for business schools, D-SAT/Digital SAT for undergraduate. We provide coaching facilities for all tests."
+      question: "What is your success rate?",
+      answer: "We have a 94% success rate with students achieving their target band scores. Our proven methodology, experienced trainers, and comprehensive study materials ensure that most students see significant improvement in their IELTS scores within the course duration."
     },
     {
-      question: "Can you help with education loans?",
-      answer: "Yes! We have partnerships with leading education loan providers for seamless financing and can guide you through the entire loan application process for US universities. Education loans at the lowest rates."
+      question: "Do you provide study materials?",
+      answer: "Yes! All study materials are included with your course enrollment. You don't need to buy expensive exam prep books. We provide comprehensive study material, practice tests, and access to our online portal with 600+ videos and resources."
     },
     {
-      question: "What if my visa is refused?",
-      answer: "Our US law-firm partner handles refusals, appeals, and work permits. With our 96% visa approval rate, refusals are rare, but we're prepared to fight for you with experienced immigration attorneys."
-    },
-    {
-      question: "Do you provide pre-departure support?",
-      answer: "Yes! We offer complete pre-departure orientation including accommodation, travel insurance, forex, air tickets, SIM cards, and more. We take care as a family would."
-    },
-    {
-      question: "Do you serve cities outside Vadodara?",
-      answer: "Yes! While our main office is in Vadodara, we serve students across India with dedicated Gujarati/Tamil/Hindi helplines and virtual consultations. Our services are available nationwide."
+      question: "What if I don't achieve my target score?",
+      answer: "We offer a money-back guarantee if you don't achieve your target score after completing our course. However, with our 94% success rate and comprehensive support, most students achieve their goals. We also provide additional support and practice sessions if needed."
     }
   ];
 
   const toggleFAQ = (index: number) => {
-    setOpenFAQ(openFAQ === index ? null : index);
+    setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section className="py-20 bg-gray-50" aria-labelledby="faq-heading">
+    <section className="py-16 lg:py-20 bg-white" id="faq">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-4 mb-16">
-          <h2 id="faq-heading" className="text-4xl font-bold text-gray-900 font-heading">Frequently Asked Questions</h2>
-          <p className="text-xl text-gray-600 font-body">Everything you need to know about studying in the USA</p>
+        {/* Section Header */}
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Everything you need to know about our IELTS coaching program
+          </p>
         </div>
 
+        {/* FAQ Items */}
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-white rounded-2xl shadow-sm border border-gray-100">
+            <div key={index} className="bg-gray-50 rounded-xl overflow-hidden">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 rounded-2xl transition-colors"
+                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors"
               >
-                <span className="text-lg font-semibold text-gray-900 font-heading">{faq.question}</span>
-                {openFAQ === index ? (
-                  <ChevronUp className="w-5 h-5 text-gray-500" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 font-heading">
+                  {faq.question}
+                </h3>
+                {openIndex === index ? (
+                  <ChevronUp className="w-5 h-5 text-blue-600 flex-shrink-0" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-gray-500" />
+                  <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
                 )}
               </button>
-              {openFAQ === index && (
-                <div className="px-8 pb-6">
-                  <p className="text-gray-600 leading-relaxed font-body">{faq.answer}</p>
+              
+              {openIndex === index && (
+                <div className="px-6 pb-4">
+                  <p className="text-gray-600 leading-relaxed">
+                    {faq.answer}
+                  </p>
                 </div>
               )}
             </div>
           ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-12">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4 font-heading">Still Have Questions?</h3>
+            <p className="text-lg mb-6 opacity-90">
+              Our IELTS experts are here to help you achieve your target band score
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="https://wa.me/919228122552?text=Hi! I have some questions about IELTS coaching. Can you help?"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Chat on WhatsApp
+              </a>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                Free Demo Class
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

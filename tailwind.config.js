@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Manrope', 'system-ui', 'sans-serif'],
+        'sans': ['Rubik', 'system-ui', 'sans-serif'],
         'heading': ['Manrope', 'system-ui', 'sans-serif'],
         'body': ['Rubik', 'system-ui', 'sans-serif'],
       },

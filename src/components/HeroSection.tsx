@@ -1,113 +1,223 @@
 import React from 'react';
-import { Target, Phone, Star, Users, CheckCircle, GraduationCap, DollarSign } from 'lucide-react';
+import { Target, Phone, Star, Users, CheckCircle, GraduationCap, Clock, Award, Play } from 'lucide-react';
 
 interface HeroSectionProps {
   onBookConsultation: () => void;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ onBookConsultation }) => {
+  // Calculate next batch date (5th of next month)
+  const getNextBatchDate = () => {
+    const now = new Date();
+    const nextMonth = new Date(now.getFullYear(), now.getMonth() + 1, 5);
+    return nextMonth.toLocaleDateString('en-US', { 
+      day: 'numeric', 
+      month: 'long',
+      year: 'numeric'
+    });
+  };
+
+  const nextBatchDate = getNextBatchDate();
+
   return (
-    <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20" role="banner" aria-labelledby="hero-heading">
+    <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-16 lg:py-20" role="banner" aria-labelledby="hero-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Left Column - Content */}
           <div className="space-y-8">
+            {/* Trust Badge */}
+            <div className="flex items-center space-x-3 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 w-fit">
+              <Award className="w-5 h-5 text-yellow-500" />
+              <span className="text-sm font-semibold text-gray-700">ISO-Certified • Founded 1996</span>
+            </div>
+
+            {/* Main Headline */}
             <div className="space-y-6">
               <div className="hero-heading-container">
-                <h1 id="hero-heading" className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight font-heading">
-                  Shape Your Future with a 
-                  <span className="text-blue-600"> US Degree</span>
+                <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 font-heading">
+                  Achieve 8+ Band in 12 Weeks
                 </h1>
               </div>
-              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed font-body">
-                <strong>Admissions. Scholarships. Visa. Success</strong>—Start here! End-to-end <span className="font-semibold text-blue-600">free</span> guidance for Indian students. Trusted by <strong>230,000+</strong> learners already in the USA.
+              
+              {/* Subheadline with Social Proof */}
+              <p className="text-xl lg:text-2xl text-gray-600 mb-8 font-heading">
+                Join 1,000+ students who achieved 8+ band in just 12 weeks! 
+                Free demo class, certified trainers, 600+ videos, mock tests.
               </p>
             </div>
             
+            {/* Course Duration Options */}
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100 shadow-sm">
+              <h4 className="text-lg font-semibold text-gray-900 mb-4 font-heading">Course Duration Options</h4>
+              <div className="grid grid-cols-3 gap-4">
+                <div className="text-center p-3 bg-white rounded-lg border border-blue-200 hover:border-blue-300 transition-colors">
+                  <div className="text-2xl font-bold text-blue-600">30</div>
+                  <div className="text-sm text-gray-600">Days</div>
+                </div>
+                <div className="text-center p-3 bg-white rounded-lg border border-blue-200 hover:border-blue-300 transition-colors">
+                  <div className="text-2xl font-bold text-blue-600">45</div>
+                  <div className="text-sm text-gray-600">Days</div>
+                </div>
+                <div className="text-center p-3 bg-white rounded-lg border border-blue-200 hover:border-blue-300 transition-colors">
+                  <div className="text-2xl font-bold text-blue-600">90</div>
+                  <div className="text-sm text-gray-600">Days</div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Primary CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
                 onClick={onBookConsultation}
-                className="bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2 font-body"
+                className="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2 font-body shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
-                <Target className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span>Book Your Free Planning Session</span>
+                <Target className="w-5 h-5" />
+                <span>Free Demo Class</span>
               </button>
               <a 
-                href="https://wa.me/917355573555?text=I'd%20like%20to%20speak%20to%20a%20Kanan.co%20counsellor%20reg.%20my%20USA%20plans"
+                href="https://wa.me/919228122552?text=Hi! I'm interested in IELTS coaching. Can you tell me more about the course options?"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:border-gray-400 transition-colors flex items-center justify-center space-x-2 font-body"
+                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold text-lg hover:border-gray-400 transition-colors flex items-center justify-center space-x-2 font-body bg-white hover:bg-gray-50"
               >
-                <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span>Speak to a Counsellor</span>
+                <Phone className="w-5 h-5" />
+                <span>Chat on WhatsApp</span>
               </a>
             </div>
 
+            {/* Social Proof & Trust Indicators */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6 pt-4">
+              {/* Student Avatars */}
               <div className="flex items-center space-x-2">
                 <div className="flex -space-x-2">
-                  {[1,2,3,4].map((i) => (
-                    <div key={i} className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-300 border-2 border-white"></div>
-                  ))}
+                  <img 
+                    src="/testimonial-images/krupa_usa_c0551fa6ac.png" 
+                    alt="Student" 
+                    className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
+                  />
+                  <img 
+                    src="/testimonial-images/pujan_gajjar_1624105d35.png" 
+                    alt="Student" 
+                    className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
+                  />
+                  <img 
+                    src="/testimonial-images/tulsiben_usa_e23b90583f.png" 
+                    alt="Student" 
+                    className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
+                  />
+                  <img 
+                    src="/testimonial-images/vats_usa_1203652ad1.png" 
+                    alt="Student" 
+                    className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
+                  />
                 </div>
-                <span className="text-xs sm:text-sm text-gray-600 font-body">5,000+ this month</span>
+                <span className="text-sm text-gray-600 font-body"><span className="font-heading font-semibold">1,000+</span> students this month</span>
               </div>
+              {/* Rating */}
               <div className="flex items-center space-x-1">
                 <div className="flex space-x-1">
-                  {[1,2,3,4,5].map((i) => (
-                    <Star 
-                      key={i} 
-                      className={`w-3 h-3 sm:w-4 sm:h-4 ${
-                        i <= 4 
-                          ? 'fill-yellow-400 text-yellow-400' 
-                          : i === 5 
-                            ? 'fill-yellow-400 text-yellow-400 opacity-60' 
-                            : 'text-gray-300'
-                      }`} 
-                    />
-                  ))}
+                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  <Star className="w-4 h-4 text-yellow-400 fill-current" style={{ clipPath: 'inset(0 50% 0 0)' }} />
                 </div>
-                <span className="text-xs sm:text-sm font-medium text-gray-700 font-body">4.6 rating</span>
+                <span className="text-sm text-gray-600 font-body"><span className="font-heading font-semibold">4.5</span> rating (1,500+ reviews)</span>
+              </div>
+            </div>
+
+            {/* Urgency Banner */}
+            <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-xl p-4 text-center">
+              <div className="flex items-center justify-center space-x-2 mb-2">
+                <Clock className="w-5 h-5" />
+                <span className="font-semibold">Next Batch Starts: {nextBatchDate}</span>
+              </div>
+              <div className="flex items-center justify-center space-x-4 text-sm">
+                <span>🎁 Includes 3-Day Mock Test Access</span>
+                <span>👩‍🏫 1-on-1 Demo Class Available</span>
               </div>
             </div>
           </div>
 
+          {/* Right Column - Visual Content */}
           <div className="relative">
+            {/* Main Hero Card */}
             <div className="relative bg-white rounded-2xl shadow-2xl p-6 sm:p-8">
-              <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 bg-green-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold shadow-lg">
-                Visa Approved!
+              {/* Success Badge */}
+              <div className="absolute -top-4 -right-4 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg flex items-center space-x-1">
+                <CheckCircle className="w-4 h-4" />
+                <span>Band 8+ Achieved!</span>
               </div>
+              
+              {/* Hero Image */}
               <picture>
-                <source srcSet="/study-in-usa-hero-image.jpg" type="image/jpeg" />
+                <source srcSet="/hero-students-optimized.jpg" type="image/jpeg" />
                 <img 
-                  src="/study-in-usa-hero-image.jpg" 
-                  alt="Diverse South Asian students walking on university campus - Study in USA with Kanan.co"
-                  className="w-full h-48 sm:h-64 object-cover rounded-xl mb-4 sm:mb-6"
+                  src="/hero-students-optimized.jpg" 
+                  alt="Successful IELTS students celebrating their band scores - Join 1,000+ students who achieved 8+ band"
+                  className="w-full h-48 sm:h-64 object-cover rounded-xl mb-6"
                   loading="lazy"
                   width="600"
                   height="400"
                 />
               </picture>
-              <div className="space-y-3 sm:space-y-4">
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 font-heading">Your Success Story Starts Here</h3>
-                <p className="text-sm sm:text-base text-gray-600 font-body">Join 5 million Indians already thriving in the USA</p>
+              
+              {/* Video Preview */}
+              <div className="relative mb-6">
+                <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-4 text-white">
+                  <div className="flex items-center space-x-3 mb-3">
+                    <div className="bg-white/20 rounded-full p-2">
+                      <Play className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold font-heading">Watch Success Stories</h3>
+                      <p className="text-sm opacity-90">See how our students achieved 8+ band</p>
+                    </div>
+                  </div>
+                  <button className="w-full bg-white/20 hover:bg-white/30 transition-colors rounded-full py-2 text-sm font-medium">
+                    Play Video Testimonials
+                  </button>
+                </div>
+              </div>
+
+              {/* Key Features Grid */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-gray-900 font-heading">What's Included:</h3>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-center space-x-2">
-                    <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
-                    <span className="text-xs sm:text-sm text-gray-600 font-body">4,200+ universities</span>
+                    <GraduationCap className="w-5 h-5 text-blue-600" />
+                    <span className="text-sm text-gray-600 font-body">600+ Videos</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <DollarSign className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
-                    <span className="text-xs sm:text-sm text-gray-600 font-body">$1,600/month part-time</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-500" />
-                    <span className="text-xs sm:text-sm font-medium font-body">96% visa approval</span>
+                    <Users className="w-5 h-5 text-green-600" />
+                    <span className="text-sm text-gray-600 font-body">Small Batches</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Users className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600" />
-                    <span className="text-xs sm:text-sm text-gray-600 font-body">230,000+ students placed</span>
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-sm font-medium font-body">Certified Trainers</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Target className="w-4 h-4 text-purple-600" />
+                    <span className="text-sm text-gray-600 font-body">Mock Tests</span>
                   </div>
                 </div>
+              </div>
+
+              {/* Trust Badges */}
+              <div className="mt-6 pt-4 border-t border-gray-100">
+                <div className="flex items-center justify-between text-xs text-gray-500">
+                  <span>🔒 Secure Payment</span>
+                  <span>📞 24/7 Support</span>
+                  <span>⭐ Certified Trainers</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Floating Stats Card */}
+            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 border border-gray-100">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-blue-600">7</div>
+                <div className="text-xs text-gray-600">Seats Left</div>
               </div>
             </div>
           </div>
