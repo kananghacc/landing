@@ -91,22 +91,22 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookConsultation }) => {
               <div className="flex items-center space-x-2">
                 <div className="flex -space-x-2">
                   <img 
-                    src="/testimonial-images/krupa_usa_c0551fa6ac.png" 
+                    src="/testimonial-images/maitry_f4c1575654.png" 
                     alt="Student" 
                     className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
                   />
                   <img 
-                    src="/testimonial-images/pujan_gajjar_1624105d35.png" 
+                    src="/testimonial-images/bharvi_patel_8d7835ce10.png" 
                     alt="Student" 
                     className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
                   />
                   <img 
-                    src="/testimonial-images/tulsiben_usa_e23b90583f.png" 
+                    src="/testimonial-images/manan_rajesh_padsala_dca2ae5fe4.png" 
                     alt="Student" 
                     className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
                   />
                   <img 
-                    src="/testimonial-images/vats_usa_1203652ad1.png" 
+                    src="/testimonial-images/anees_basha_ielts_review_fd739179d4.png" 
                     alt="Student" 
                     className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
                   />
