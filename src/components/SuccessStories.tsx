@@ -8,7 +8,6 @@ interface Testimonial {
   image: string;
   quote: string;
   videoUrl?: string;
-  courseType: string;
   duration: string;
 }
 
@@ -22,71 +21,63 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ onBookConsultation }) =
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      name: "RCanadaakshanaa",
-      bandScore: "7.5",
-      image: "/testimonial-images/krupa_usa_c0551fa6ac.png",
-      quote: "I completed my IELTS training at Kanan.co, where detailed trainer explanations, mock tests, and study materials helped me achieve my target band score.",
-      courseType: "Online Group Class",
-      duration: "12 weeks"
+      name: "Maitry Acharya",
+      bandScore: "8.0",
+      image: "/testimonial-images/maitry_f4c1575654.png",
+      quote: "My decision to go to **Canada** was quite instant, so I had to give IELTS within **10 days**. However, Kanan's **crash course** was perfect for my decision. The teacher was **friendly and amazing**, their class was easily understandable.",
     },
     {
       id: 2,
-      name: "Jai Ganesh",
+      name: "Bharvi Patel",
       bandScore: "8.0",
-      image: "/testimonial-images/pujan_gajjar_1624105d35.png",
-      quote: "Kanan.co's friendly trainers and exceptional teaching methods helped me prepare confidently and achieve an impressive 8-band IELTS score.",
-      courseType: "Offline Group Class",
-      duration: "10 weeks"
+      image: "/testimonial-images/bharvi_patel_8d7835ce10.png",
+      quote: "With Kanan's **exceptional guidance**, I achieved an overall **band score of 8** in my IELTS exam. The faculty is **incredibly supportive**, offering tools like **Kys and FLT** for a realistic exam experience.",
     },
     {
       id: 3,
-      name: "Sangeetha",
-      bandScore: "7.0",
-      image: "/testimonial-images/tulsiben_usa_e23b90583f.png",
-      quote: "Thanks to Kanan.co's friendly trainers, detailed explanations, mock tests, and study materials, I highly recommend their coaching.",
-      courseType: "1-on-1 Coaching",
-      duration: "8 weeks"
+      name: "Manan Rajesh Padsala",
+      bandScore: "8.0",
+      image: "/testimonial-images/manan_rajesh_padsala_dca2ae5fe4.png",
+      quote: "**Studying abroad** was my dream, and finding the right IELTS coaching became crucial. Fortunately, I found Kanan International, **recommended by a friend**. Their IELTS training **surpassed my expectations**. The instructors were not only **knowledgeable but incredibly supportive**.",
     },
     {
       id: 4,
-      name: "Priya Sharma",
-      bandScore: "8.5",
-      image: "/testimonial-images/vats_usa_1203652ad1.png",
-      quote: "The personalized attention and structured approach helped me improve from 6.5 to 8.5 in just 12 weeks. Highly recommended!",
-      courseType: "Online Group Class",
-      duration: "12 weeks"
+      name: "Jayashankar",
+      bandScore: "7.5",
+      image: "/testimonial-images/jayashankar_179f406b82.png",
+      quote: "IELTS trainer and her **exceptional training** helped me achieve an impressive overall **band score of 7.5** in the **Academic module**. Her **detailed preparation and dedicated guidance** played a significant role in my success. The **personalized attention** and her expertise not only improved my language skills but also **boosted my confidence** for the exam.",
     },
     {
       id: 5,
-      name: "Arjun Patel",
-      bandScore: "7.5",
-      image: "/testimonial-images/yug_thakkar_ab9be4677e.png",
-      quote: "The mock tests and feedback sessions were game-changers. I felt completely prepared and confident on exam day.",
-      courseType: "Offline Group Class",
-      duration: "10 weeks"
+      name: "Suriya Senthilkumar",
+      bandScore: "7.0",
+      image: "/testimonial-images/suriya_senthilkumar_ielts_review_7dfca668c9.png",
+      quote: "Upon a **friend's recommendation**, I enrolled in the IELTS coaching program at Kanan International. Initially, I was hesitant, but I can now confidently say it was **absolutely worthwhile**. Their **exceptional coaching and guidance** enabled me to achieve an overall **band score of 7.0** in the IELTS exam.",
     },
     {
       id: 6,
-      name: "Anjali Desai",
-      bandScore: "8.0",
-      image: "/testimonial-images/krupa_usa_c0551fa6ac.png",
-      quote: "From Band 6.0 to 8.0 in just 8 weeks! The personalized attention and structured approach made all the difference.",
-      courseType: "Online 1-on-1 Class",
-      duration: "8 weeks"
+      name: "Anees Basha",
+      bandScore: "7.5",
+      image: "/testimonial-images/anees_basha_ielts_review_fd739179d4.png",
+      quote: "The **training and classroom experience** with their **expert trainers** were exceptional. Their **unparalleled guidance and support** enabled me to achieve an overall score of **7.5**, with a **perfect score of 9.0 in reading**.",
     },
     {
       id: 7,
-      name: "Rahul Sharma",
+      name: "Prachi Saxena",
       bandScore: "7.0",
-      image: "/testimonial-images/pujan_gajjar_1624105d35.png",
-      quote: "The study materials and practice tests were excellent. I improved my writing score significantly with their guidance.",
-      courseType: "Offline Group Class",
-      duration: "12 weeks"
+      image: "/testimonial-images/prachi_sexana_e01739ed20.png",
+      quote: "I had a **great learning and classroom experience** at Kanan. They offered **KYS** and conducted several **mock tests** which helped me to **enhance my various skills**. **Highly recommended!**",
+
     }
   ];
 
   const onBookConsultationClick = () => {
     onBookConsultation?.();
+  };
+
+  // Function to convert markdown-style bold to HTML
+  const formatQuote = (quote: string) => {
+    return quote.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
   };
 
   return (
@@ -165,12 +156,13 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ onBookConsultation }) =
                       ))}
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600">{testimonials[0].courseType} • {testimonials[0].duration}</p>
+
                 </div>
               </div>
-              <blockquote className="text-lg text-gray-700 italic leading-relaxed">
-                "{testimonials[0].quote}"
-              </blockquote>
+              <blockquote 
+                className="text-lg text-gray-700 italic leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: `"${formatQuote(testimonials[0].quote)}"` }}
+              />
               <div className="flex items-center space-x-2 text-sm text-gray-500">
                 <TrendingUp className="w-4 h-4" />
                 <span>Improved from Band 6.0 to {testimonials[0].bandScore} in {testimonials[0].duration}</span>
@@ -199,12 +191,13 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ onBookConsultation }) =
                       ))}
                     </div>
                   </div>
-                  <p className="text-xs text-gray-600">{testimonial.courseType} • {testimonial.duration}</p>
+                  <p className="text-xs text-gray-600">{testimonial.duration}</p>
                 </div>
               </div>
-              <blockquote className="text-sm text-gray-700 italic leading-relaxed">
-                "{testimonial.quote}"
-              </blockquote>
+              <blockquote 
+                className="text-sm text-gray-700 italic leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: `"${formatQuote(testimonial.quote)}"` }}
+              />
             </div>
           ))}
         </div>

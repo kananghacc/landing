@@ -6,7 +6,11 @@ interface FAQItem {
   answer: string;
 }
 
-const FAQSection: React.FC = () => {
+interface FAQSectionProps {
+  onBookConsultation?: () => void;
+}
+
+const FAQSection: React.FC<FAQSectionProps> = ({ onBookConsultation }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqs: FAQItem[] = [
@@ -106,7 +110,10 @@ const FAQSection: React.FC = () => {
               >
                 Chat on WhatsApp
               </a>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+              <button 
+                onClick={onBookConsultation}
+                className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              >
                 Free Demo Class
               </button>
             </div>

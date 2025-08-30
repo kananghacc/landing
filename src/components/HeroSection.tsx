@@ -35,7 +35,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookConsultation }) => {
             <div className="space-y-6">
               <div className="hero-heading-container">
                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 font-heading">
-                  Achieve 8+ Band in 12 Weeks
+                  Achieve 8+ IELTS Band in 12 Weeks
                 </h1>
               </div>
               
@@ -151,10 +151,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookConsultation }) => {
               
               {/* Hero Image */}
               <picture>
-                <source srcSet="/hero-students-optimized.jpg" type="image/jpeg" />
+                <source srcSet="/kanan-ielts-3.png" type="image/png" />
                 <img 
-                  src="/hero-students-optimized.jpg" 
-                  alt="Successful IELTS students celebrating their band scores - Join 1,000+ students who achieved 8+ band"
+                  src="/kanan-ielts-3.png" 
+                  alt="Students at university campus with digital education icons - Achieve your IELTS goals with Kanan.co"
                   className="w-full h-48 sm:h-64 object-cover rounded-xl mb-6"
                   loading="lazy"
                   width="600"

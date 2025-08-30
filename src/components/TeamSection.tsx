@@ -12,7 +12,11 @@ interface Trainer {
   studentsTrained: string;
 }
 
-const TeamSection: React.FC = () => {
+interface TeamSectionProps {
+  onBookConsultation?: () => void;
+}
+
+const TeamSection: React.FC<TeamSectionProps> = ({ onBookConsultation }) => {
   const trainers: Trainer[] = [
     {
       name: "Rasheeda Madani",
@@ -203,7 +207,10 @@ const TeamSection: React.FC = () => {
               >
                 Chat with Trainer
               </a>
-              <button className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition-colors">
+              <button 
+                onClick={onBookConsultation}
+                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+              >
                 Book Free Demo Class
               </button>
             </div>

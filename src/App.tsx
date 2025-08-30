@@ -8,6 +8,7 @@ import TeamSection from './components/TeamSection';
 import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
 import ConsultationForm from './components/ConsultationForm';
+import FloatingButtons from './components/FloatingButtons';
 import { useCountdown } from './hooks/useCountdown';
 
 interface FormData {
@@ -32,6 +33,18 @@ function App() {
     targetBand: '',
     examDate: ''
   });
+
+  // Listen for custom event to open consultation form
+  React.useEffect(() => {
+    const handleOpenConsultationForm = () => {
+      setShowConsultationForm(true);
+    };
+
+    window.addEventListener('openConsultationForm', handleOpenConsultationForm);
+    return () => {
+      window.removeEventListener('openConsultationForm', handleOpenConsultationForm);
+    };
+  }, []);
 
   // Calculate time until next batch start (5th of next month)
   const getNextBatchDate = () => {
@@ -91,8 +104,8 @@ function App() {
         <HeroSection onBookConsultation={handleBookConsultation} />
         <ServicePillars onBookConsultation={handleBookConsultation} />
         <SuccessStories onBookConsultation={handleBookConsultation} />
-        <TeamSection />
-        <FAQSection />
+        <TeamSection onBookConsultation={handleBookConsultation} />
+        <FAQSection onBookConsultation={handleBookConsultation} />
         <Footer />
       </div>
       
@@ -103,6 +116,8 @@ function App() {
         onInputChange={handleInputChange}
         onSubmit={handleFormSubmit}
       />
+      
+      <FloatingButtons />
     </div>
   );
 }
