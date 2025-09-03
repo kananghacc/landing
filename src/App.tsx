@@ -12,28 +12,9 @@ import ConsultationForm from './components/ConsultationForm';
 import FloatingButtons from './components/FloatingButtons';
 import { useCountdown } from './hooks/useCountdown';
 
-interface FormData {
-  name: string;
-  phone: string;
-  email: string;
-  coursePackage: string;
-  currentBand?: string;
-  targetBand?: string;
-  examDate?: string;
-}
-
 function App() {
   const [showConsultationForm, setShowConsultationForm] = useState(false);
   const [showThankYouPage, setShowThankYouPage] = useState(false);
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    phone: '',
-    email: '',
-    coursePackage: '',
-    currentBand: '',
-    targetBand: '',
-    examDate: ''
-  });
 
   // Listen for custom event to open consultation form
   React.useEffect(() => {
@@ -58,48 +39,11 @@ function App() {
   const timeLeft = useCountdown(deadline);
 
   const handleBookConsultation = (selectedPackage?: string) => {
-    if (selectedPackage) {
-      // Map package ID to course package value
-      const packageMap: { [key: string]: string } = {
-        '1': 'self-preparation',
-        '2': 'live-class-champion',
-        '3': 'personalized-batches'
-      };
-      
-      const coursePackage = packageMap[selectedPackage];
-      if (coursePackage) {
-        setFormData(prev => ({ ...prev, coursePackage }));
-      }
-    }
     setShowConsultationForm(true);
-  };
-
-  const handleFormSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    setShowConsultationForm(false);
-    setShowThankYouPage(true);
-    // Reset form
-    setFormData({ 
-      name: '', 
-      phone: '', 
-      email: '', 
-      coursePackage: '',
-      currentBand: '',
-      targetBand: '',
-      examDate: ''
-    });
   };
 
   const handleBackToHome = () => {
     setShowThankYouPage(false);
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
   };
 
   const handleCloseForm = () => {
@@ -143,9 +87,6 @@ function App() {
       <ConsultationForm
         isOpen={showConsultationForm}
         onClose={handleCloseForm}
-        formData={formData}
-        onInputChange={handleInputChange}
-        onSubmit={handleFormSubmit}
       />
       
       <FloatingButtons />
