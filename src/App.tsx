@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ThankYouPage from './components/ThankYouPage';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
+import CoursePackages from './components/CoursePackages';
 import ServicePillars from './components/ServicePillars';
 import SuccessStories from './components/SuccessStories';
 import TeamSection from './components/TeamSection';
@@ -15,7 +16,7 @@ interface FormData {
   name: string;
   phone: string;
   email: string;
-  classType: string;
+  coursePackage: string;
   currentBand?: string;
   targetBand?: string;
   examDate?: string;
@@ -28,7 +29,7 @@ function App() {
     name: '',
     phone: '',
     email: '',
-    classType: '',
+    coursePackage: '',
     currentBand: '',
     targetBand: '',
     examDate: ''
@@ -56,7 +57,20 @@ function App() {
   const deadline = getNextBatchDate();
   const timeLeft = useCountdown(deadline);
 
-  const handleBookConsultation = () => {
+  const handleBookConsultation = (selectedPackage?: string) => {
+    if (selectedPackage) {
+      // Map package ID to course package value
+      const packageMap: { [key: string]: string } = {
+        '1': 'self-preparation',
+        '2': 'live-class-champion',
+        '3': 'personalized-batches'
+      };
+      
+      const coursePackage = packageMap[selectedPackage];
+      if (coursePackage) {
+        setFormData(prev => ({ ...prev, coursePackage }));
+      }
+    }
     setShowConsultationForm(true);
   };
 
@@ -70,7 +84,7 @@ function App() {
       name: '', 
       phone: '', 
       email: '', 
-      classType: '',
+      coursePackage: '',
       currentBand: '',
       targetBand: '',
       examDate: ''
@@ -118,7 +132,8 @@ function App() {
           onBookConsultation={handleBookConsultation} 
           onOpenVideoTestimonials={handleOpenVideoTestimonials}
         />
-        <ServicePillars onBookConsultation={handleBookConsultation} />
+        <CoursePackages onBookConsultation={handleBookConsultation} />
+        <ServicePillars />
         <SuccessStories onBookConsultation={handleBookConsultation} />
         <TeamSection onBookConsultation={handleBookConsultation} />
         <FAQSection onBookConsultation={handleBookConsultation} />

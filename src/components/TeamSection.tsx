@@ -13,7 +13,7 @@ interface Trainer {
 }
 
 interface TeamSectionProps {
-  onBookConsultation?: () => void;
+  onBookConsultation?: (selectedPackage?: string) => void;
 }
 
 const TeamSection: React.FC<TeamSectionProps> = ({ onBookConsultation }) => {
@@ -208,7 +208,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ onBookConsultation }) => {
                 Chat with Trainer
               </a>
               <button 
-                onClick={onBookConsultation}
+                onClick={() => onBookConsultation?.()}
                 className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition-colors"
               >
                 Book Free Demo Class

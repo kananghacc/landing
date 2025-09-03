@@ -7,7 +7,7 @@ interface FAQItem {
 }
 
 interface FAQSectionProps {
-  onBookConsultation?: () => void;
+  onBookConsultation?: (selectedPackage?: string) => void;
 }
 
 const FAQSection: React.FC<FAQSectionProps> = ({ onBookConsultation }) => {
@@ -16,7 +16,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({ onBookConsultation }) => {
   const faqs: FAQItem[] = [
     {
       question: "How long does it take to achieve 8+ band in IELTS?",
-      answer: "Most students achieve 8+ band in 12 weeks with our proven methodology, certified trainers, and comprehensive study materials including 600+ videos and mock tests. The exact duration depends on your current English proficiency level and target band score."
+      answer: "Most students achieve 8+ band in 6 weeks with our proven methodology, certified trainers, and comprehensive study materials including 600+ videos and mock tests. The exact duration depends on your current English proficiency level and target band score."
     },
     {
       question: "Do you offer online IELTS coaching?",
@@ -102,6 +102,12 @@ const FAQSection: React.FC<FAQSectionProps> = ({ onBookConsultation }) => {
               Our IELTS experts are here to help you achieve your target band score
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button 
+                onClick={() => onBookConsultation?.()}
+                className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                Free Demo Class
+              </button>
               <a 
                 href="https://wa.me/919228122552?text=Hi! I have some questions about IELTS coaching. Can you help?"
                 target="_blank"
@@ -110,12 +116,6 @@ const FAQSection: React.FC<FAQSectionProps> = ({ onBookConsultation }) => {
               >
                 Chat on WhatsApp
               </a>
-              <button 
-                onClick={onBookConsultation}
-                className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                Free Demo Class
-              </button>
             </div>
           </div>
         </div>

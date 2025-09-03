@@ -1,5 +1,5 @@
 import React from 'react';
-import { Video, BookOpen, Clock, Users, Award, Monitor, GraduationCap, Target, CheckCircle, Star } from 'lucide-react';
+import { Video, BookOpen, Clock, Users, Award, Target, CheckCircle, Star } from 'lucide-react';
 
 interface ServiceFeature {
   icon: React.ReactNode;
@@ -8,19 +8,9 @@ interface ServiceFeature {
   highlight?: string;
 }
 
-interface DeliveryMethod {
-  type: string;
-  title: string;
-  description: string;
-  features: string[];
-  recommended?: boolean;
-}
 
-interface ServicePillarsProps {
-  onBookConsultation?: () => void;
-}
 
-const ServicePillars: React.FC<ServicePillarsProps> = ({ onBookConsultation }) => {
+const ServicePillars: React.FC = () => {
   const features: ServiceFeature[] = [
     {
       icon: <Video className="w-8 h-8" />,
@@ -60,57 +50,7 @@ const ServicePillars: React.FC<ServicePillarsProps> = ({ onBookConsultation }) =
     }
   ];
 
-  const deliveryMethods: DeliveryMethod[] = [
-    {
-      type: "Online Group",
-      title: "Online Group Class",
-      description: "Live interactive sessions with expert trainers from anywhere in India",
-      features: [
-        "Live interactive sessions",
-        "Recorded sessions available",
-        "24/7 doubt support",
-        "Mobile app access",
-        "Flexible timing options"
-      ]
-    },
-    {
-      type: "Offline Group",
-      title: "Offline Group Class",
-      description: "Classroom-based learning with face-to-face interaction in Chennai",
-      features: [
-        "Face-to-face interaction",
-        "Immediate doubt clearing",
-        "Group discussions",
-        "Study materials included",
-        "Regular assessments"
-      ],
-      recommended: true
-    },
-    {
-      type: "Online 1-on-1",
-      title: "Online 1-to-1 Class",
-      description: "Personalized attention with dedicated trainer for maximum results",
-      features: [
-        "Personalized curriculum",
-        "Flexible scheduling",
-        "Individual attention",
-        "Custom study plan",
-        "Progress tracking"
-      ]
-    },
-    {
-      type: "Offline 1-on-1",
-      title: "Offline 1-to-1 Class",
-      description: "One-on-one coaching with maximum personal attention and flexibility",
-      features: [
-        "Maximum personal attention",
-        "Customized approach",
-        "Flexible timing",
-        "Intensive practice",
-        "Regular feedback"
-      ]
-    }
-  ];
+
 
   return (
     <section className="py-16 lg:py-20 bg-white" id="course-features">
@@ -122,12 +62,18 @@ const ServicePillars: React.FC<ServicePillarsProps> = ({ onBookConsultation }) =
             <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">Course Features</span>
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 font-heading mb-4">
-            What's Included in This Smart 
-            <span className="text-blue-600"> Live IELTS Course</span>
+            What's Included in Kanan.co's Smart 
+            <span className="text-blue-600"> Live IELTS Courses</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Everything you need to achieve your target band score in one comprehensive package
           </p>
+          <div className="flex justify-center mt-4">
+            <span className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 text-sm font-medium rounded-full border border-green-200">
+              <CheckCircle className="w-4 h-4 mr-2" />
+              Both IELTS Academic and General Training options available
+            </span>
+          </div>
         </div>
 
         {/* Features Grid */}
@@ -156,74 +102,7 @@ const ServicePillars: React.FC<ServicePillarsProps> = ({ onBookConsultation }) =
           ))}
         </div>
 
-        {/* Delivery Methods Section */}
-        <div className="mb-12">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 font-heading mb-4">
-              Delivery Methods
-            </h3>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We offer four convenient training methodologies to suit your individual learning styles and preferences
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {deliveryMethods.map((method, index) => (
-              <div 
-                key={index} 
-                className={`relative bg-white rounded-xl p-6 border-2 transition-all hover:shadow-lg ${
-                  method.recommended 
-                    ? 'border-blue-500 shadow-lg' 
-                    : 'border-gray-200 hover:border-blue-300'
-                }`}
-              >
-                {method.recommended && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-xs font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-4">
-                  <div className={`w-12 h-12 mx-auto mb-3 rounded-lg flex items-center justify-center ${
-                    method.recommended ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600'
-                  }`}>
-                    {method.type.includes('Online') ? (
-                      <Monitor className="w-6 h-6" />
-                    ) : (
-                      <GraduationCap className="w-6 h-6" />
-                    )}
-                  </div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2 font-heading">{method.title}</h4>
-                  <p className="text-gray-600 text-sm">{method.description}</p>
-                </div>
-
-                <div className="space-y-2">
-                  {method.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-6">
-                  <button 
-                    className={`w-full py-2 px-4 rounded-full font-semibold transition-colors ${
-                      method.recommended
-                        ? 'bg-blue-600 text-white hover:bg-blue-700'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
-                    onClick={onBookConsultation}
-                  >
-                    Choose This Option
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Trust Indicators */}
         <div className="bg-blue-50 rounded-2xl p-8 text-center border border-blue-100">
@@ -234,7 +113,7 @@ const ServicePillars: React.FC<ServicePillarsProps> = ({ onBookConsultation }) =
               <div className="text-gray-600">Students achieve target score</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-blue-600 mb-2">12</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">6</div>
               <div className="text-gray-600">Weeks average completion</div>
             </div>
             <div>

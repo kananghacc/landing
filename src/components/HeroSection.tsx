@@ -2,7 +2,7 @@ import React from 'react';
 import { Target, Phone, Star, Users, CheckCircle, GraduationCap, Clock, Award, Play } from 'lucide-react';
 
 interface HeroSectionProps {
-  onBookConsultation: () => void;
+  onBookConsultation: (selectedPackage?: string) => void;
   onOpenVideoTestimonials?: () => void;
 }
 
@@ -36,14 +36,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookConsultation, onOpenVid
             <div className="space-y-6">
               <div className="hero-heading-container">
                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 font-heading">
-                  Achieve 8+ IELTS Band in 12 Weeks
+                  Achieve 8+ IELTS Band in 6 Weeks
                 </h1>
               </div>
               
               {/* Subheadline with Social Proof */}
               <p className="text-xl lg:text-2xl text-gray-600 mb-8 font-heading">
-                Join 1,000+ students who achieved 8+ band in just 12 weeks! 
-                Free demo class, certified trainers, 600+ videos, mock tests.
+                Join 1,000+ students who achieved their target scores – with free demo class, certified trainers, 600+ videos and mock tests.
               </p>
             </div>
             
@@ -69,7 +68,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookConsultation, onOpenVid
             {/* Primary CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
-                onClick={onBookConsultation}
+                onClick={() => onBookConsultation()}
                 className="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2 font-body shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
                 <Target className="w-5 h-5" />

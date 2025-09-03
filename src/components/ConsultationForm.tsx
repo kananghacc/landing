@@ -5,7 +5,7 @@ interface FormData {
   name: string;
   phone: string;
   email: string;
-  classType: string;
+  coursePackage: string;
   currentBand?: string;
   targetBand?: string;
   examDate?: string;
@@ -68,6 +68,18 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({
                 Book Your Free Demo Class
               </h2>
             <p className="text-gray-600">Get personalized IELTS study plan in 2 hours</p>
+            {formData.coursePackage && (
+              <div className="mt-3 p-3 bg-green-50 border border-green-200 rounded-lg">
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <span className="text-sm font-medium text-green-800">
+                    Course Package: {formData.coursePackage === 'self-preparation' ? 'IELTS Self Preparation Course' : 
+                                   formData.coursePackage === 'live-class-champion' ? 'IELTS Live Class Champion Course' : 
+                                   'IELTS Personalized Batches (1-on-1)'}
+                  </span>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
@@ -173,22 +185,32 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2 font-heading">
-                  Preferred Class Type *
+                  Select Course Package *
                 </label>
                 <select
-                  id="classType"
-                  name="classType"
-                  value={formData.classType}
+                  id="coursePackage"
+                  name="coursePackage"
+                  value={formData.coursePackage}
                   onChange={onInputChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                 >
-                  <option value="">Select class type</option>
-                  <option value="online-group">Online Group Class</option>
-                  <option value="offline-group">Offline Group Class</option>
-                  <option value="online-1on1">Online 1-on-1 Class</option>
-                  <option value="offline-1on1">Offline 1-on-1 Class</option>
+                  <option value="">Select course package</option>
+                  <option value="self-preparation">IELTS Self Preparation Course - INR 5999</option>
+                  <option value="live-class-champion">IELTS Live Class Champion Course - INR 9999</option>
+                  <option value="personalized-batches">IELTS Personalized Batches (1-on-1) - Starting INR 5000</option>
                 </select>
+                <div className="mt-2 text-xs text-gray-500">
+                  {formData.coursePackage === 'self-preparation' && (
+                    <span>✅ Self-paced learning with 600+ videos, practice tests & expert support</span>
+                  )}
+                  {formData.coursePackage === 'live-class-champion' && (
+                    <span>✅ Live classes + self-paced content + French course bonus</span>
+                  )}
+                  {formData.coursePackage === 'personalized-batches' && (
+                    <span>✅ Custom 1-on-1 coaching with flexible scheduling</span>
+                  )}
+                </div>
               </div>
             </div>
 

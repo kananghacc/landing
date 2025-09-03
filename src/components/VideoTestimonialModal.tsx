@@ -8,7 +8,6 @@ interface VideoTestimonial {
   image: string;
   videoUrl?: string;
   quote: string;
-  duration: string;
 }
 
 interface VideoTestimonialModalProps {

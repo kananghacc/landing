@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, MessageCircle } from 'lucide-react';
 
 interface HeaderProps {
-  onBookConsultation: () => void;
+  onBookConsultation: (selectedPackage?: string) => void;
 }
 
 const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
@@ -84,7 +84,7 @@ const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
               <span>Call</span>
             </a>
             <button
-              onClick={onBookConsultation}
+                              onClick={() => onBookConsultation()}
               className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors"
             >
                               Free Demo Class
