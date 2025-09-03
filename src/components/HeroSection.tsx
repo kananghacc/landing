@@ -46,24 +46,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookConsultation, onOpenVid
               </p>
             </div>
             
-            {/* Course Duration Options */}
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100 shadow-sm">
-              <h4 className="text-lg font-semibold text-gray-900 mb-4 font-heading">Course Duration Options</h4>
-              <div className="grid grid-cols-3 gap-4">
-                <div className="text-center p-3 bg-white rounded-lg border border-blue-200 hover:border-blue-300 transition-colors">
-                  <div className="text-2xl font-bold text-blue-600">30</div>
-                  <div className="text-sm text-gray-600">Days</div>
-                </div>
-                <div className="text-center p-3 bg-white rounded-lg border border-blue-200 hover:border-blue-300 transition-colors">
-                  <div className="text-2xl font-bold text-blue-600">45</div>
-                  <div className="text-sm text-gray-600">Days</div>
-                </div>
-                <div className="text-center p-3 bg-white rounded-lg border border-blue-200 hover:border-blue-300 transition-colors">
-                  <div className="text-2xl font-bold text-blue-600">90</div>
-                  <div className="text-sm text-gray-600">Days</div>
-                </div>
-              </div>
-            </div>
+
             
             {/* Primary CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
