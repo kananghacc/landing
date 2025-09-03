@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Award, User, Mail, Phone, CheckCircle } from 'lucide-react';
+import { X, Award, ExternalLink } from 'lucide-react';
 
 interface ConsultationFormProps {
   isOpen: boolean;
@@ -13,86 +13,46 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({
   isOpen,
   onClose
 }) => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    mobile: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Log the data being sent
-    console.log('Submitting form data:', formData);
-    
-    try {
-      // Submit to Zoho endpoint
-      const response = await fetch('https://yujc-zc1.maillist-manage.in/ua/Optin', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams({
-          od: '1a1e3dbc371d6',
-          zx: '1df90a3f61',
-          sD: '13732403116b3e25',
-          '1': formData.name,
-          '6': formData.email,
-          '2': formData.mobile
-        })
-      });
-      
-      console.log('Response status:', response.status);
-      console.log('Response headers:', response.headers);
-      
-      if (response.ok) {
-        const responseText = await response.text();
-        console.log('Response body:', responseText);
-        setShowSuccess(true);
-        setTimeout(() => {
-          setShowSuccess(false);
-          onClose();
-          setFormData({ name: '', email: '', mobile: '' });
-        }, 3000);
-      } else {
-        console.error('Form submission failed:', response.status, response.statusText);
-      }
-    } catch (error) {
-      console.error('Form submission error:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  const [iframeLoaded, setIframeLoaded] = useState(false);
+  const [iframeError, setIframeError] = useState(false);
 
   if (!isOpen) return null;
 
+  const handleIframeLoad = () => {
+    setIframeLoaded(true);
+    setIframeError(false);
+  };
+
+  const handleIframeError = () => {
+    setIframeError(true);
+    setIframeLoaded(false);
+  };
+
+  const handleOpenZohoForm = () => {
+    window.open('https://yujc-zc1.maillist-manage.in/ua/Optin?od=1a1e3dbc371d6&zx=1df90a3f61&sD=13732403116b3e25', '_blank');
+  };
+
+  const handleOpenAlternativeForm = () => {
+    window.open('https://zcmp.in/h4Ql', '_blank');
+  };
+
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+      <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
         {/* Header */}
-        <div className="relative p-6 border-b border-gray-200">
+        <div className="relative p-4 border-b border-gray-200">
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+            className="absolute top-3 right-3 text-gray-400 hover:text-gray-600 transition-colors"
           >
-            <X className="w-6 h-6" />
+            <X className="w-5 h-5" />
           </button>
           
           <div className="text-center">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Award className="w-8 h-8 text-blue-600" />
+            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+              <Award className="w-6 h-6 text-blue-600" />
             </div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2 font-heading">
+            <h2 className="text-xl font-bold text-gray-900 mb-2 font-heading">
               Register For Demo Class
             </h2>
             <p className="text-gray-600 text-sm">
@@ -101,115 +61,66 @@ const ConsultationForm: React.FC<ConsultationFormProps> = ({
           </div>
         </div>
 
-        {/* Success Message */}
-        {showSuccess && (
-          <div className="p-6 text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <CheckCircle className="w-8 h-8 text-green-600" />
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2 font-heading">Thank You!</h3>
-            <p className="text-gray-600 mb-4">Your registration has been submitted successfully.</p>
-            <p className="text-sm text-gray-500">We'll contact you within 30 minutes.</p>
+        {/* Zoho Form iframe */}
+        <div className="p-4">
+          <div className="relative w-full h-[500px] border border-gray-200 rounded-lg overflow-hidden bg-gray-50">
+            {!iframeLoaded && !iframeError && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-8 h-8 border-2 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
+                  <p className="text-sm text-gray-600">Loading form...</p>
+                </div>
+              </div>
+            )}
+            
+            {iframeError && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center p-4">
+                  <p className="text-sm text-gray-600 mb-3">Form couldn't load. Please use one of the options below:</p>
+                  <div className="space-y-2">
+                    <button
+                      onClick={handleOpenZohoForm}
+                      className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+                    >
+                      Open Registration Form
+                    </button>
+                    <button
+                      onClick={handleOpenAlternativeForm}
+                      className="w-full border border-gray-300 text-gray-700 py-2 px-4 rounded-lg text-sm font-medium hover:border-gray-400 transition-colors"
+                    >
+                      Alternative Form Link
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+            
+            <iframe 
+              frameBorder="0" 
+              id="iframewin" 
+              width="100%" 
+              height="100%" 
+              src="https://yujc-zc1.maillist-manage.in/ua/Optin?od=1a1e3dbc371d6&zx=1df90a3f61&sD=13732403116b3e25"
+              title="IELTS Demo Class Registration Form"
+              className="w-full h-full border-0"
+              onLoad={handleIframeLoad}
+              onError={handleIframeError}
+              style={{ display: iframeLoaded ? 'block' : 'none' }}
+            />
           </div>
-        )}
-
-        {/* Form */}
-        {!showSuccess && (
-          <form onSubmit={handleSubmit} className="p-6 space-y-6">
-            {/* Name Field */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2 font-heading">
-                First Name
-              </label>
-              <div className="relative">
-                <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-                  placeholder="Enter Your Name"
-                />
-              </div>
-            </div>
-
-            {/* Email Field */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2 font-heading">
-                Lead Email *
-              </label>
-              <div className="relative">
-                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-                  placeholder="Enter Email ID"
-                />
-              </div>
-            </div>
-
-            {/* Mobile Field */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2 font-heading">
-                Mobile *
-              </label>
-              <div className="relative">
-                <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <input
-                  type="tel"
-                  name="mobile"
-                  value={formData.mobile}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-                  placeholder="Mobile Number"
-                />
-              </div>
-            </div>
-
-            {/* Required Fields Note */}
-            <div className="text-center">
-              <p className="text-sm text-red-600">*Required fields</p>
-            </div>
-
-            {/* Submit Button */}
+          
+          {/* Fallback Options */}
+          <div className="mt-4 text-center">
+            <p className="text-sm text-gray-600 mb-3">If the form above doesn't work, use this option:</p>
             <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+              onClick={handleOpenZohoForm}
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2 mx-auto"
             >
-              {isSubmitting ? (
-                <>
-                  <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                  <span>Submitting...</span>
-                </>
-              ) : (
-                <>
-                  <span>Submit</span>
-                </>
-              )}
+              <span>Open Registration Form</span>
+              <ExternalLink className="w-4 h-4" />
             </button>
-
-            {/* Alternative Contact */}
-            <div className="text-center">
-              <p className="text-sm text-gray-600 mb-3">Prefer not to fill form?</p>
-              <a
-                href="https://wa.me/919228122552?text=Hi! I'm interested in IELTS coaching. Can you help me?"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium"
-              >
-                <span>Chat with our counselor via WhatsApp</span>
-              </a>
-            </div>
-          </form>
-        )}
+          </div>
+        </div>
       </div>
     </div>
   );
