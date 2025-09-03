@@ -3,9 +3,10 @@ import { Target, Phone, Star, Users, CheckCircle, GraduationCap, Clock, Award, P
 
 interface HeroSectionProps {
   onBookConsultation: () => void;
+  onOpenVideoTestimonials?: () => void;
 }
 
-const HeroSection: React.FC<HeroSectionProps> = ({ onBookConsultation }) => {
+const HeroSection: React.FC<HeroSectionProps> = ({ onBookConsultation, onOpenVideoTestimonials }) => {
   // Calculate next batch date (5th of next month)
   const getNextBatchDate = () => {
     const now = new Date();
@@ -174,7 +175,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookConsultation }) => {
                       <p className="text-sm opacity-90">See how our students achieved 8+ band</p>
                     </div>
                   </div>
-                  <button className="w-full bg-white/20 hover:bg-white/30 transition-colors rounded-full py-2 text-sm font-medium">
+                  <button 
+                    onClick={onOpenVideoTestimonials}
+                    className="w-full bg-white/20 hover:bg-white/30 transition-colors rounded-full py-2 text-sm font-medium"
+                  >
                     Play Video Testimonials
                   </button>
                 </div>

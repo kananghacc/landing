@@ -92,6 +92,19 @@ function App() {
     setShowConsultationForm(false);
   };
 
+  // Function to scroll to success stories and open video testimonials
+  const handleOpenVideoTestimonials = () => {
+    const successStoriesSection = document.getElementById('success-stories');
+    if (successStoriesSection) {
+      successStoriesSection.scrollIntoView({ behavior: 'smooth' });
+      // Trigger video modal after scroll
+      setTimeout(() => {
+        const event = new CustomEvent('openVideoTestimonials');
+        window.dispatchEvent(event);
+      }, 1000);
+    }
+  };
+
   // Show thank you page if form was submitted
   if (showThankYouPage) {
     return <ThankYouPage onBackToHome={handleBackToHome} />;
@@ -101,7 +114,10 @@ function App() {
     <div className="min-h-screen bg-white font-body">
       <Header onBookConsultation={handleBookConsultation} />
       <div className="pt-16 lg:pt-20">
-        <HeroSection onBookConsultation={handleBookConsultation} />
+        <HeroSection 
+          onBookConsultation={handleBookConsultation} 
+          onOpenVideoTestimonials={handleOpenVideoTestimonials}
+        />
         <ServicePillars onBookConsultation={handleBookConsultation} />
         <SuccessStories onBookConsultation={handleBookConsultation} />
         <TeamSection onBookConsultation={handleBookConsultation} />
