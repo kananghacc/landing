@@ -1,169 +1,184 @@
-# Performance Optimizations Summary
+# 🚀 Performance Optimizations Guide
 
-## Lighthouse Audit Issues Addressed
+This document outlines the performance optimizations implemented to improve the IELTS landing page performance.
 
-### 1. Render Blocking Requests (Est. savings: 1,510 ms)
+## 📊 **Current Performance Issues & Solutions**
 
-**Issues Fixed:**
-- ✅ **Google Fonts optimization**: Added preload for critical font files
-- ✅ **Preconnect hints**: Added preconnect for `images.pexels.com`
-- ✅ **Critical CSS**: Inlined critical CSS for above-the-fold content
-- ✅ **Font display**: Using `display=swap` for better font loading
+### **1. Render Blocking Requests (Est. Savings: 1,360ms)**
 
-**Implementation:**
+**Issue**: Google Fonts and CSS files blocking initial render
+**Solution**: 
+- ✅ Preconnect to external domains
+- ✅ Preload critical fonts with `fetchpriority="high"`
+- ✅ Use `font-display=swap` for non-blocking font loading
+- ✅ Critical CSS inlined for above-the-fold content
+
+**Implementation**:
 ```html
-<!-- Preload critical fonts -->
-<link rel="preload" href="https://fonts.gstatic.com/s/manrope/v15/xn7gYHE41ni1AdIRggexSg.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="https://fonts.gstatic.com/s/rubik/v30/iJWKBXyIfDnIV7nBrXk.woff2" as="font" type="font/woff2" crossorigin>
-
 <!-- Preconnect for external resources -->
-<link rel="preconnect" href="https://images.pexels.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- Critical CSS inlined -->
+<!-- Preload critical fonts -->
+<link rel="preload" href="..." as="font" type="font/woff2" crossorigin fetchpriority="high">
+
+<!-- Critical CSS inline -->
 <style>
-  /* Critical CSS for hero section and header */
   .font-heading { font-family: 'Rubik', sans-serif; }
   .font-body { font-family: 'Manrope', sans-serif; }
-  /* ... additional critical styles ... */
+  /* ... more critical styles */
 </style>
 ```
 
-### 2. Layout Shift Culprits (CLS Score: 0.171)
+### **2. Image Optimization (Est. Savings: 556 KiB)**
 
-**Issues Fixed:**
-- ✅ **Hero heading layout shift**: Added reserved space container
-- ✅ **Image dimensions**: Added explicit width/height attributes
-- ✅ **Font loading**: Preloaded critical fonts to prevent layout shifts
+**Issue**: Large PNG images (522x522) displayed at small sizes (28x28, 56x56)
+**Solution**:
+- ✅ Convert to WebP format (85% quality)
+- ✅ Resize images to actual display dimensions
+- ✅ Use `<picture>` element with WebP fallback
+- ✅ Add proper `width` and `height` attributes
 
-**Implementation:**
+**Image Size Optimizations**:
+- **Testimonial avatars**: 522x522 → 28x28, 48x48, 56x56, 128x128
+- **Trainer images**: Original → 80x80
+- **Hero image**: 443x256 → 390x192
+
+**Implementation**:
 ```html
-<!-- Reserved space for hero heading -->
-<div className="hero-heading-container">
-  <h1 id="hero-heading" className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight font-heading">
-    Canada Awaits—Start Your 
-    <span className="text-blue-600"> Study Journey</span> Today
-  </h1>
-</div>
-
-<!-- CSS for reserved space -->
-.hero-heading-container {
-  min-height: 4.5rem;
-  line-height: 1.25;
-}
-
-@media (min-width: 1024px) {
-  .hero-heading-container {
-    min-height: 5.625rem;
-  }
-}
-```
-
-### 3. Image Delivery Optimization (Est. savings: 1,495 KiB)
-
-**Issues Fixed:**
-- ✅ **Hero image**: 1.1MB → 119KB (89% reduction)
-- ✅ **College logos**: 27KB → 4.9KB average (82% reduction)
-- ✅ **Responsive images**: Added width/height attributes
-- ✅ **Lazy loading**: Implemented for non-critical images
-
-**Image Optimization Results:**
-```
-Original vs Optimized Sizes:
-- hero-students.jpg: 1.1MB → 119KB (89% reduction)
-- 1_Centennial.png: 27KB → 4.9KB (82% reduction)
-- 2_Conestoga.png: 18KB → 3.2KB (82% reduction)
-- 3_Seneca.png: 41KB → 7.8KB (81% reduction)
-- 11_Lambton.png: 57KB → 6.9KB (88% reduction)
-```
-
-**Implementation:**
-```html
-<!-- Optimized hero image with responsive loading -->
 <picture>
-  <source srcSet="/hero-students-optimized.jpg" type="image/jpeg" />
+  <source srcSet="/optimized/image.webp" type="image/webp" />
   <img 
-    src="/hero-students-optimized.jpg" 
-    alt="Diverse university students on campus during autumn - Study in Canada with Kanan.co"
-    className="w-full h-64 object-cover rounded-xl mb-6"
+    src="/original/image.png" 
+    alt="Description"
     loading="lazy"
-    width="800"
-    height="600"
+    width="32"
+    height="32"
   />
 </picture>
+```
 
-<!-- Optimized college logos with explicit dimensions -->
+### **3. JavaScript Execution Time (Est. Savings: 8.7s)**
+
+**Issue**: Large JavaScript bundle and inefficient execution
+**Solution**:
+- ✅ Code splitting with manual chunks
+- ✅ Vendor chunk separation (React, React-DOM)
+- ✅ Icons chunk separation (Lucide React)
+- ✅ Terser minification with console removal
+- ✅ CSS code splitting
+
+**Vite Configuration**:
+```typescript
+build: {
+  rollupOptions: {
+    output: {
+      manualChunks: {
+        vendor: ['react', 'react-dom'],
+        icons: ['lucide-react'],
+      },
+    },
+  },
+  minify: 'terser',
+  terserOptions: {
+    compress: {
+      drop_console: true,
+      drop_debugger: true,
+    },
+  },
+}
+```
+
+### **4. Lazy Loading (Est. Savings: 600 KiB)**
+
+**Issue**: All images loading immediately, blocking critical resources
+**Solution**:
+- ✅ Add `loading="lazy"` to off-screen images
+- ✅ Use `IntersectionObserver` for dynamic loading
+- ✅ Prioritize above-the-fold images
+
+**Implementation**:
+```html
 <img 
-  src="/1_Centennial-optimized.png" 
-  alt="Centennial College" 
-  className="h-12 w-auto object-contain" 
-  width="120" 
-  height="48" 
-  loading="lazy" 
+  src="image.jpg" 
+  loading="lazy"
+  alt="Description"
 />
 ```
 
-### 4. Network Dependency Tree Optimization
+## 🛠️ **Tools & Scripts**
 
-**Issues Fixed:**
-- ✅ **Critical path reduction**: Preloaded critical resources
-- ✅ **External domain optimization**: Added preconnect for pexels.com
-- ✅ **Resource prioritization**: Critical CSS inlined, non-critical deferred
+### **Image Optimization Script**
+```bash
+# Run the optimization script
+./optimize-images.sh
 
-**Maximum Critical Path Latency**: Reduced from 1,789 ms
+# Requirements: ImageMagick
+# macOS: brew install imagemagick
+# Ubuntu: sudo apt-get install imagemagick
+```
 
-### 5. Preconnect Candidates
+### **Build Optimization**
+```bash
+# Production build with optimizations
+npm run build
 
-**Added Preconnect:**
-- ✅ `https://images.pexels.com` (Est. LCP savings: 300 ms)
+# Preview optimized build
+npm run preview
+```
 
-## Performance Improvements Summary
+## 📈 **Expected Performance Improvements**
 
-### Before Optimization:
-- **Render blocking requests**: 1,510 ms
-- **Image delivery**: 1,495 KiB oversized images
-- **Layout shifts**: CLS score 0.171
-- **Critical path**: 1,789 ms maximum latency
+| Metric | Before | After | Improvement |
+|--------|--------|-------|-------------|
+| **LCP** | ~2.4s | ~1.2s | **50% faster** |
+| **FCP** | ~1.2s | ~0.8s | **33% faster** |
+| **Bundle Size** | ~215KB | ~150KB | **30% smaller** |
+| **Image Size** | ~600KB | ~100KB | **83% smaller** |
+| **Total Savings** | - | - | **~2.5s + 1.1MB** |
 
-### After Optimization:
-- **Font loading**: Preloaded critical fonts, reduced render blocking
-- **Image optimization**: 89% reduction in hero image, 82% average for logos
-- **Layout stability**: Reserved space for dynamic content
-- **Network efficiency**: Preconnect hints for external resources
+## 🔍 **Monitoring & Testing**
 
-### Expected Performance Gains:
-1. **LCP (Largest Contentful Paint)**: 300ms+ improvement from preconnect
-2. **FCP (First Contentful Paint)**: 1,510ms improvement from render blocking fixes
-3. **CLS (Cumulative Layout Shift)**: Significant improvement from reserved space
-4. **Overall page weight**: ~1.4MB reduction in image sizes
+### **Lighthouse Audit**
+```bash
+# Run Lighthouse audit
+npx lighthouse https://your-site.com --output=html --output-path=./lighthouse-report.html
+```
 
-## Technical Implementation Details
+### **Performance Monitoring**
+- **Web Vitals**: Monitor LCP, FCP, CLS
+- **Bundle Analyzer**: Analyze chunk sizes
+- **Image Optimization**: Monitor Core Web Vitals
 
-### Font Optimization Strategy:
-1. Preload critical font files with `crossorigin` attribute
-2. Use `display=swap` for non-blocking font loading
-3. Inline critical CSS for immediate rendering
+## 🚨 **Best Practices Going Forward**
 
-### Image Optimization Strategy:
-1. Resize images to actual display dimensions
-2. Use appropriate compression for web delivery
-3. Implement lazy loading for below-the-fold content
-4. Add explicit width/height attributes to prevent layout shifts
+### **New Images**
+1. **Always optimize** before adding to the site
+2. **Use WebP format** with PNG fallback
+3. **Set proper dimensions** (width/height attributes)
+4. **Add lazy loading** for off-screen images
 
-### CSS Optimization Strategy:
-1. Inline critical CSS for above-the-fold content
-2. Defer non-critical CSS loading
-3. Use Tailwind's built-in optimization features
+### **New Components**
+1. **Use code splitting** for large components
+2. **Implement lazy loading** for heavy features
+3. **Monitor bundle size** during development
+4. **Test performance** before deployment
 
-## Monitoring Recommendations
+### **Content Updates**
+1. **Optimize new images** using the script
+2. **Review font usage** and minimize external requests
+3. **Monitor Core Web Vitals** after changes
+4. **Use performance budgets** for new features
 
-1. **Regular Lighthouse audits**: Monitor performance metrics monthly
-2. **Image optimization**: Implement automated image optimization pipeline
-3. **Font loading**: Consider self-hosting fonts for better control
-4. **CDN implementation**: Consider CDN for static assets
+## 📚 **Resources**
 
-## Next Steps for Further Optimization
+- [Web.dev Performance](https://web.dev/performance/)
+- [Lighthouse Documentation](https://developers.google.com/web/tools/lighthouse)
+- [Image Optimization Guide](https://web.dev/fast/#optimize-your-images)
+- [Font Loading Best Practices](https://web.dev/font-display/)
 
-1. **WebP/AVIF support**: Implement modern image formats with fallbacks
-2. **Service Worker**: Add caching for better offline experience
-3. **Resource hints**: Implement more granular resource hints
-4. **Bundle optimization**: Analyze and optimize JavaScript bundles 
+---
+
+**Last Updated**: $(date)
+**Performance Score Target**: 90+ (Lighthouse)
+**Next Review**: Monthly performance audit 

@@ -69,26 +69,50 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookConsultation, onOpenVid
               {/* Student Avatars */}
               <div className="flex items-center space-x-2">
                 <div className="flex -space-x-2">
-                  <img 
-                    src="/testimonial-images/maitry_f4c1575654.png" 
-                    alt="Student" 
-                    className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
-                  />
-                  <img 
-                    src="/testimonial-images/bharvi_patel_8d7835ce10.png" 
-                    alt="Student" 
-                    className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
-                  />
-                  <img 
-                    src="/testimonial-images/manan_rajesh_padsala_dca2ae5fe4.png" 
-                    alt="Student" 
-                    className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
-                  />
-                  <img 
-                    src="/testimonial-images/anees_basha_ielts_review_fd739179d4.png" 
-                    alt="Student" 
-                    className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
-                  />
+                  <picture>
+                    <source srcSet="/testimonial-images/optimized/maitry_f4c1575654.webp" type="image/webp" />
+                    <img 
+                      src="/testimonial-images/maitry_f4c1575654.png" 
+                      alt="Student" 
+                      className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
+                      loading="lazy"
+                      width="32"
+                      height="32"
+                    />
+                  </picture>
+                  <picture>
+                    <source srcSet="/testimonial-images/optimized/bharvi_patel_8d7835ce10.webp" type="image/webp" />
+                    <img 
+                      src="/testimonial-images/bharvi_patel_8d7835ce10.png" 
+                      alt="Student" 
+                      className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
+                      loading="lazy"
+                      width="32"
+                      height="32"
+                    />
+                  </picture>
+                  <picture>
+                    <source srcSet="/testimonial-images/optimized/manan_rajesh_padsala_dca2ae5fe4.webp" type="image/webp" />
+                    <img 
+                      src="/testimonial-images/manan_rajesh_padsala_dca2ae5fe4.png" 
+                      alt="Student" 
+                      className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
+                      loading="lazy"
+                      width="32"
+                      height="32"
+                    />
+                  </picture>
+                  <picture>
+                    <source srcSet="/testimonial-images/optimized/anees_basha_ielts_review_fd739179d4.webp" type="image/webp" />
+                    <img 
+                      src="/testimonial-images/anees_basha_ielts_review_fd739179d4.png" 
+                      alt="Student" 
+                      className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
+                      loading="lazy"
+                      width="32"
+                      height="32"
+                    />
+                  </picture>
                 </div>
                 <span className="text-sm text-gray-600 font-body"><span className="font-heading font-semibold">1,000+</span> students this month</span>
               </div>
@@ -130,14 +154,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookConsultation, onOpenVid
               
               {/* Hero Image */}
               <picture>
-                <source srcSet="/kanan-ielts-3.png" type="image/png" />
+                <source srcSet="/kanan-ielts-3-optimized.webp" type="image/webp" />
                 <img 
                   src="/kanan-ielts-3.png" 
                   alt="Students at university campus with digital education icons - Achieve your IELTS goals with Kanan.co"
                   className="w-full h-48 sm:h-64 object-cover rounded-xl mb-6"
                   loading="lazy"
-                  width="600"
-                  height="400"
+                  width="390"
+                  height="192"
                 />
               </picture>
               
