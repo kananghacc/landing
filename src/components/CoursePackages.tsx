@@ -202,7 +202,7 @@ const CoursePackages: React.FC<CoursePackagesProps> = ({ onBookConsultation }) =
                 Free Consultation
               </button>
               <a 
-                href="https://wa.me/919228122552?text=Hi! I need help choosing an IELTS course package. Can you guide me?"
+                href="https://wa.me/919150050940?text=Hi! I need help choosing an IELTS course package. Can you guide me?"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-full font-semibold hover:border-gray-400 transition-colors bg-white hover:bg-gray-50"

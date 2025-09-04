@@ -109,7 +109,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({ onBookConsultation }) => {
                 Free Demo Class
               </button>
               <a 
-                href="https://wa.me/919228122552?text=Hi! I have some questions about IELTS coaching. Can you help?"
+                href="https://wa.me/919150050940?text=Hi! I have some questions about IELTS coaching. Can you help?"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"

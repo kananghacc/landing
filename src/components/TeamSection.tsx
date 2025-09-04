@@ -200,7 +200,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ onBookConsultation }) => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="https://wa.me/919228122552?text=Hi! I'd like to speak with an IELTS trainer about my preparation."
+                href="https://wa.me/919150050940?text=Hi! I'd like to speak with an IELTS trainer about my preparation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors"

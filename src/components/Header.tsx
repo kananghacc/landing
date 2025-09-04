@@ -68,7 +68,7 @@ const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center space-x-4">
             <a 
-              href="https://wa.me/919228122552?text=Hi! I'm interested in IELTS coaching. Can you help me?"
+              href="https://wa.me/919150050940?text=Hi! I'm interested in IELTS coaching. Can you help me?"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
@@ -141,7 +141,7 @@ const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
               
               <div className="pt-4 border-t border-gray-200 space-y-4">
                 <a 
-                  href="https://wa.me/919228122552?text=Hi! I'm interested in IELTS coaching. Can you help me?"
+                  href="https://wa.me/919150050940?text=Hi! I'm interested in IELTS coaching. Can you help me?"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"

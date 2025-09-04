@@ -26,11 +26,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookConsultation, onOpenVid
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Column - Content */}
           <div className="space-y-8">
-            {/* Trust Badge */}
-            <div className="flex items-center space-x-3 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 w-fit">
-              <Award className="w-5 h-5 text-yellow-500" />
-              <span className="text-sm font-semibold text-gray-700">ISO-Certified • Founded 1996</span>
-            </div>
+
 
             {/* Main Headline */}
             <div className="space-y-6">
@@ -58,7 +54,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookConsultation, onOpenVid
                 <span>Free Demo Class</span>
               </button>
               <a 
-                href="https://wa.me/919228122552?text=Hi! I'm interested in IELTS coaching. Can you tell me more about the course options?"
+                href="https://wa.me/919150050940?text=Hi! I'm interested in IELTS coaching. Can you tell me more about the course options?"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold text-lg hover:border-gray-400 transition-colors flex items-center justify-center space-x-2 font-body bg-white hover:bg-gray-50"
