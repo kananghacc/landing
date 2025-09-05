@@ -1,7 +1,7 @@
 import React from 'react';
 import { Target, Phone, Star, Users, CheckCircle, GraduationCap, Clock, Award, Play } from 'lucide-react';
-import kananIeltsImage from '/kanan-ielts-3.png';
-import kananIeltsWebp from '/kanan-ielts-3-optimized.webp';
+const kananIeltsImage = '/kanan-ielts-3.png';
+const kananIeltsWebp = '/kanan-ielts-3-optimized.webp';
 
 interface HeroSectionProps {
   onBookConsultation: (selectedPackage?: string) => void;

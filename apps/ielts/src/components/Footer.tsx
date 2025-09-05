@@ -1,5 +1,5 @@
 import React from 'react';
-import kananLogo from '/kanan-logo.svg';
+const kananLogo = '/kanan-logo.svg';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {

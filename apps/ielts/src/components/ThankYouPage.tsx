@@ -10,7 +10,7 @@ import {
   Target,
   MessageCircle
 } from 'lucide-react';
-import kananLogo from '/kanan-logo.svg';
+const kananLogo = '/kanan-logo.svg';
 
 interface ThankYouPageProps {
   onBackToHome?: () => void;
