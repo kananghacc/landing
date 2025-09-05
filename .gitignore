@@ -111,3 +111,26 @@ temp/
 
 # Netlify
 .netlify
+
+# Static deployment - ignore React/Node.js files
+# React source code (not needed for static HTML)
+src/
+apps/
+shared/
+
+# Node.js dependencies (not needed for static HTML)
+package.json
+package-lock.json
+node_modules/
+
+# Build tools (not needed for static HTML)
+build.js
+eslint.config.js
+postcss.config.js
+tailwind.config.js
+tsconfig*.json
+vite.config.ts
+
+# React build outputs (not needed for static HTML)
+dist/
+build/
