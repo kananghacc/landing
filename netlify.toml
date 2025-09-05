@@ -8,16 +8,16 @@
 
 # Static HTML deployment - serves static HTML from dist directory
 
-# Redirect root to IELTS app (main app)
+# Redirect root to IELTS Chennai app (main app)
 [[redirects]]
   from = "/"
-  to = "/ielts/"
+  to = "/ielts-chennai/"
   status = 200
 
 # Specific redirects for each app
 [[redirects]]
-  from = "/ielts"
-  to = "/ielts/"
+  from = "/ielts-chennai"
+  to = "/ielts-chennai/"
   status = 200
 
 [[redirects]]
@@ -32,8 +32,8 @@
 
 # Catch-all redirect for SPA routing within each app
 [[redirects]]
-  from = "/ielts/*"
-  to = "/ielts/index.html"
+  from = "/ielts-chennai/*"
+  to = "/ielts-chennai/index.html"
   status = 200
 
 [[redirects]]
