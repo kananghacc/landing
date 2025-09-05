@@ -8,6 +8,13 @@
 # Static HTML deployment - no React build needed
 
 # Simple HTML version - serve index.html for all routes
+# Specific redirect for /ielts path
+[[redirects]]
+  from = "/ielts"
+  to = "/index.html"
+  status = 200
+
+# Catch-all redirect for all other routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
