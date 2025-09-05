@@ -5,6 +5,8 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# Static HTML deployment - no React build needed
+
 # Simple HTML version - serve index.html for all routes
 [[redirects]]
   from = "/*"
