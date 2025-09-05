@@ -1,24 +1,49 @@
 [build]
-  publish = "."
+  publish = "dist"
   command = "./build.sh"
   base = "."
 
 [build.environment]
   NODE_VERSION = "18"
 
-# Static HTML deployment - no React build needed
+# Static HTML deployment - serves static HTML from dist directory
 
-# Simple HTML version - serve index.html for all routes
-# Specific redirect for /ielts path
+# Redirect root to IELTS app (main app)
 [[redirects]]
-  from = "/ielts"
-  to = "/index.html"
+  from = "/"
+  to = "/ielts/"
   status = 200
 
-# Catch-all redirect for all other routes
+# Specific redirects for each app
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/ielts"
+  to = "/ielts/"
+  status = 200
+
+[[redirects]]
+  from = "/gre"
+  to = "/gre/"
+  status = 200
+
+[[redirects]]
+  from = "/gmat"
+  to = "/gmat/"
+  status = 200
+
+# Catch-all redirect for SPA routing within each app
+[[redirects]]
+  from = "/ielts/*"
+  to = "/ielts/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/gre/*"
+  to = "/gre/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/gmat/*"
+  to = "/gmat/index.html"
   status = 200
 
 # Headers for security and performance
