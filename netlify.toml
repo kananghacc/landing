@@ -19,6 +19,31 @@
   force = true
 
 [[redirects]]
+  from = "/ielts/testimonial-images/*"
+  to = "/ielts/testimonial-images/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/ielts/testimonial-images/optimized/*"
+  to = "/ielts/testimonial-images/optimized/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/ielts/trainer-images/*"
+  to = "/ielts/trainer-images/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/ielts/trainer-images/optimized/*"
+  to = "/ielts/trainer-images/optimized/:splat"
+  status = 200
+  force = true
+
+# General image redirects (lower priority)
+[[redirects]]
   from = "/ielts/*.png"
   to = "/ielts/:splat"
   status = 200
@@ -39,24 +64,6 @@
 [[redirects]]
   from = "/ielts/*.jpeg"
   to = "/ielts/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/ielts/testimonial-images/*"
-  to = "/ielts/testimonial-images/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/ielts/testimonial-images/optimized/*"
-  to = "/ielts/testimonial-images/optimized/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/ielts/trainer-images/*"
-  to = "/ielts/trainer-images/:splat"
   status = 200
   force = true
 
@@ -114,3 +121,4 @@
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
+
