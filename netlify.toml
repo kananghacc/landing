@@ -5,21 +5,61 @@
 [build.environment]
   NODE_VERSION = "18"
 
-# Redirect rules for SPA routing
+# Serve static assets directly (higher priority)
+[[redirects]]
+  from = "/ielts/assets/*"
+  to = "/ielts/assets/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/ielts/*.svg"
+  to = "/ielts/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/ielts/*.png"
+  to = "/ielts/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/ielts/*.webp"
+  to = "/ielts/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/ielts/*.jpg"
+  to = "/ielts/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/ielts/*.jpeg"
+  to = "/ielts/:splat"
+  status = 200
+  force = true
+
+# SPA routing for HTML pages (lower priority)
 [[redirects]]
   from = "/ielts/*"
   to = "/ielts/index.html"
   status = 200
+  force = false
 
 [[redirects]]
   from = "/gre/*"
   to = "/gre/index.html"
   status = 200
+  force = false
 
 [[redirects]]
   from = "/gmat/*"
   to = "/gmat/index.html"
   status = 200
+  force = false
 
 # Fallback for all other routes
 [[redirects]]
