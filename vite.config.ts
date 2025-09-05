@@ -1,56 +1,33 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  
-  // Optimize dependencies
-  optimizeDeps: {
-    include: ['react', 'react-dom'],
-    exclude: ['lucide-react'],
-  },
-  
+  root: '.',
   build: {
-    // Enable source maps for production debugging
-    sourcemap: false,
-    
-    // Optimize chunk splitting
+    outDir: 'dist',
     rollupOptions: {
-      output: {
-        manualChunks: {
-          // Separate vendor chunks
-          vendor: ['react', 'react-dom'],
-          // Separate lucide icons
-          icons: ['lucide-react'],
-        },
-        // Optimize chunk naming
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
-      },
-    },
-    
-    // Enable minification
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
-    
-    // Optimize CSS
-    cssCodeSplit: true,
-    
-    // Set chunk size warning limit
-    chunkSizeWarningLimit: 1000,
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        ielts: resolve(__dirname, 'apps/ielts/index.html'),
+        gre: resolve(__dirname, 'apps/gre/index.html'),
+        gmat: resolve(__dirname, 'apps/gmat/index.html')
+      }
+    }
   },
-  
-  // Server optimizations for development
   server: {
-    hmr: {
-      overlay: false,
-    },
+    port: 3000,
+    open: true
   },
-});
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, './src'),
+      '@shared': resolve(__dirname, './shared'),
+      '@ielts': resolve(__dirname, './apps/ielts/src'),
+      '@gre': resolve(__dirname, './apps/gre/src'),
+      '@gmat': resolve(__dirname, './apps/gmat/src')
+    }
+  }
+})
