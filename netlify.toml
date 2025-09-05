@@ -1,92 +1,11 @@
 [build]
-  publish = "dist"
-  command = "npm run build"
+  publish = "."
+  command = "echo 'HTML version - no build needed'"
 
 [build.environment]
   NODE_VERSION = "18"
 
-# Serve static assets directly (higher priority)
-[[redirects]]
-  from = "/ielts/assets/*"
-  to = "/ielts/assets/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/ielts/*.svg"
-  to = "/ielts/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/ielts/testimonial-images/*"
-  to = "/ielts/testimonial-images/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/ielts/testimonial-images/optimized/*"
-  to = "/ielts/testimonial-images/optimized/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/ielts/trainer-images/*"
-  to = "/ielts/trainer-images/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/ielts/trainer-images/optimized/*"
-  to = "/ielts/trainer-images/optimized/:splat"
-  status = 200
-  force = true
-
-# General image redirects (lower priority)
-[[redirects]]
-  from = "/ielts/*.png"
-  to = "/ielts/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/ielts/*.webp"
-  to = "/ielts/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/ielts/*.jpg"
-  to = "/ielts/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/ielts/*.jpeg"
-  to = "/ielts/:splat"
-  status = 200
-  force = true
-
-# SPA routing for HTML pages (lower priority)
-[[redirects]]
-  from = "/ielts/*"
-  to = "/ielts/index.html"
-  status = 200
-  force = false
-
-[[redirects]]
-  from = "/gre/*"
-  to = "/gre/index.html"
-  status = 200
-  force = false
-
-[[redirects]]
-  from = "/gmat/*"
-  to = "/gmat/index.html"
-  status = 200
-  force = false
-
-# Fallback for all other routes
+# Simple HTML version - serve index.html for all routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
