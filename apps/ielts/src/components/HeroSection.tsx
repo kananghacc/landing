@@ -72,9 +72,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookConsultation, onOpenVid
               <div className="flex items-center space-x-2">
                 <div className="flex -space-x-2">
                   <picture>
-                    <source srcSet="/testimonial-images/optimized/maitry_f4c1575654.webp" type="image/webp" />
+                    <source srcSet={`${import.meta.env.BASE_URL}testimonial-images/optimized/maitry_f4c1575654.webp`} type="image/webp" />
                     <img 
-                      src="/testimonial-images/maitry_f4c1575654.png" 
+                      src={`${import.meta.env.BASE_URL}testimonial-images/maitry_f4c1575654.png`} 
                       alt="Student" 
                       className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
                       loading="lazy"
@@ -83,9 +83,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookConsultation, onOpenVid
                     />
                   </picture>
                   <picture>
-                    <source srcSet="/testimonial-images/optimized/bharvi_patel_8d7835ce10.webp" type="image/webp" />
+                    <source srcSet={`${import.meta.env.BASE_URL}testimonial-images/optimized/bharvi_patel_8d7835ce10.webp`} type="image/webp" />
                     <img 
-                      src="/testimonial-images/bharvi_patel_8d7835ce10.png" 
+                      src={`${import.meta.env.BASE_URL}testimonial-images/bharvi_patel_8d7835ce10.png`} 
                       alt="Student" 
                       className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
                       loading="lazy"
@@ -94,9 +94,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookConsultation, onOpenVid
                     />
                   </picture>
                   <picture>
-                    <source srcSet="/testimonial-images/optimized/manan_rajesh_padsala_dca2ae5fe4.webp" type="image/webp" />
+                    <source srcSet={`${import.meta.env.BASE_URL}testimonial-images/optimized/manan_rajesh_padsala_dca2ae5fe4.webp`} type="image/webp" />
                     <img 
-                      src="/testimonial-images/manan_rajesh_padsala_dca2ae5fe4.png" 
+                      src={`${import.meta.env.BASE_URL}testimonial-images/manan_rajesh_padsala_dca2ae5fe4.png`} 
                       alt="Student" 
                       className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
                       loading="lazy"
@@ -105,9 +105,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookConsultation, onOpenVid
                     />
                   </picture>
                   <picture>
-                    <source srcSet="/testimonial-images/optimized/anees_basha_ielts_review_fd739179d4.webp" type="image/webp" />
+                    <source srcSet={`${import.meta.env.BASE_URL}testimonial-images/optimized/anees_basha_ielts_review_fd739179d4.webp`} type="image/webp" />
                     <img 
-                      src="/testimonial-images/anees_basha_ielts_review_fd739179d4.png" 
+                      src={`${import.meta.env.BASE_URL}testimonial-images/anees_basha_ielts_review_fd739179d4.png`} 
                       alt="Student" 
                       className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
                       loading="lazy"

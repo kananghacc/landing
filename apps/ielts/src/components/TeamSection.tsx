@@ -22,7 +22,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ onBookConsultation }) => {
       name: "Rasheeda Madani",
       role: "Senior IELTS Strategist",
       experience: "20+ Years",
-      image: "/trainer-images/Rasheeda.png",
+      image: `${import.meta.env.BASE_URL}trainer-images/Rasheeda.png`,
       achievements: [
         "M.A., M.Phil., TEFL Certified",
         "Expert SAT & IELTS strategist",
@@ -37,7 +37,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ onBookConsultation }) => {
       name: "Jayadev",
       role: "Content Delivery Head",
       experience: "10+ Years",
-      image: "/trainer-images/jayadev.png",
+      image: `${import.meta.env.BASE_URL}trainer-images/jayadev.png`,
       achievements: [
         "Dual degree from BITS Pilani",
         "UCLA PGP Pro graduate",
@@ -52,7 +52,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ onBookConsultation }) => {
       name: "Pooja",
       role: "Certified IELTS Coach",
       experience: "6+ Years",
-      image: "/trainer-images/pooja.png",
+      image: `${import.meta.env.BASE_URL}trainer-images/pooja.png`,
       achievements: [
         "Certified IELTS coach",
         "TESOL qualification",
@@ -67,7 +67,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({ onBookConsultation }) => {
       name: "Meena",
       role: "Communicative English Expert",
       experience: "5+ Years",
-      image: "/trainer-images/meena.png",
+      image: `${import.meta.env.BASE_URL}trainer-images/meena.png`,
       achievements: [
         "3+ years at NICE Institute",
         "Specializes in Communicative English",

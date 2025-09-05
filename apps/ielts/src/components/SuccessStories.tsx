@@ -38,7 +38,7 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ onBookConsultation }) =
       id: 1,
       name: "Maitry Acharya",
       bandScore: "8.0",
-      image: "/testimonial-images/maitry_f4c1575654.png",
+      image: `${import.meta.env.BASE_URL}testimonial-images/maitry_f4c1575654.png`,
       quote: "My decision to go to **Canada** was quite instant, so I had to give IELTS within **10 days**. However, Kanan's **crash course** was perfect for my decision. The teacher was **friendly and amazing**, their class was easily understandable.",
       videoUrl: "https://example.com/maitry-testimonial.mp4"
     },
@@ -46,7 +46,7 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ onBookConsultation }) =
       id: 2,
       name: "Bharvi Patel",
       bandScore: "8.0",
-      image: "/testimonial-images/bharvi_patel_8d7835ce10.png",
+      image: `${import.meta.env.BASE_URL}testimonial-images/bharvi_patel_8d7835ce10.png`,
       quote: "With Kanan's **exceptional guidance**, I achieved an overall **band score of 8** in my IELTS exam. The faculty is **incredibly supportive**, offering tools like **Kys and FLT** for a realistic exam experience.",
       videoUrl: "https://example.com/bharvi-testimonial.mp4"
     },
@@ -54,7 +54,7 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ onBookConsultation }) =
       id: 3,
       name: "Manan Rajesh Padsala",
       bandScore: "8.0",
-      image: "/testimonial-images/manan_rajesh_padsala_dca2ae5fe4.png",
+      image: `${import.meta.env.BASE_URL}testimonial-images/manan_rajesh_padsala_dca2ae5fe4.png`,
       quote: "**Studying abroad** was my dream, and finding the right IELTS coaching became crucial. Fortunately, I found Kanan International, **recommended by a friend**. Their IELTS training **surpassed my expectations**. The instructors were not only **knowledgeable but incredibly supportive**.",
       videoUrl: "https://example.com/manan-testimonial.mp4"
     },
@@ -62,7 +62,7 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ onBookConsultation }) =
       id: 4,
       name: "Jayashankar",
       bandScore: "7.5",
-      image: "/testimonial-images/jayashankar_179f406b82.png",
+      image: `${import.meta.env.BASE_URL}testimonial-images/jayashankar_179f406b82.png`,
       quote: "IELTS trainer and her **exceptional training** helped me achieve an impressive overall **band score of 7.5** in the **Academic module**. Her **detailed preparation and dedicated guidance** played a significant role in my success. The **personalized attention** and her expertise not only improved my language skills but also **boosted my confidence** for the exam.",
       videoUrl: "https://example.com/jayashankar-testimonial.mp4"
     },
@@ -70,7 +70,7 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ onBookConsultation }) =
       id: 5,
       name: "Suriya Senthilkumar",
       bandScore: "7.0",
-      image: "/testimonial-images/suriya_senthilkumar_ielts_review_7dfca668c9.png",
+      image: `${import.meta.env.BASE_URL}testimonial-images/suriya_senthilkumar_ielts_review_7dfca668c9.png`,
       quote: "Upon a **friend's recommendation**, I enrolled in the IELTS coaching program at Kanan International. Initially, I was hesitant, but I can now confidently say it was **absolutely worthwhile**. Their **exceptional coaching and guidance** enabled me to achieve an overall **band score of 7.0** in the IELTS exam.",
       videoUrl: "https://example.com/suriya-testimonial.mp4"
     },
@@ -78,7 +78,7 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ onBookConsultation }) =
       id: 6,
       name: "Anees Basha",
       bandScore: "7.5",
-      image: "/testimonial-images/anees_basha_ielts_review_fd739179d4.png",
+      image: `${import.meta.env.BASE_URL}testimonial-images/anees_basha_ielts_review_fd739179d4.png`,
       quote: "The **training and classroom experience** with their **expert trainers** were exceptional. Their **unparalleled guidance and support** enabled me to achieve an overall score of **7.5**, with a **perfect score of 9.0 in reading**.",
       videoUrl: "https://example.com/anees-testimonial.mp4"
     },
@@ -86,7 +86,7 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ onBookConsultation }) =
       id: 7,
       name: "Prachi Saxena",
       bandScore: "7.0",
-      image: "/testimonial-images/prachi_sexana_e01739ed20.png",
+      image: `${import.meta.env.BASE_URL}testimonial-images/prachi_sexana_e01739ed20.png`,
       quote: "I had a **great learning and classroom experience** at Kanan. They offered **KYS** and conducted several **mock tests** which helped me to **enhance my various skills**. **Highly recommended!**",
       videoUrl: "https://example.com/prachi-testimonial.mp4"
     }
