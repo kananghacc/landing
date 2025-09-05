@@ -1,5 +1,7 @@
 import React from 'react';
 import { Target, Phone, Star, Users, CheckCircle, GraduationCap, Clock, Award, Play } from 'lucide-react';
+import kananIeltsImage from '/kanan-ielts-3.png';
+import kananIeltsWebp from '/kanan-ielts-3-optimized.webp';
 
 interface HeroSectionProps {
   onBookConsultation: (selectedPackage?: string) => void;
@@ -154,9 +156,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookConsultation, onOpenVid
               
               {/* Hero Image */}
               <picture>
-                <source srcSet="/kanan-ielts-3-optimized.webp" type="image/webp" />
+                <source srcSet={kananIeltsWebp} type="image/webp" />
                 <img 
-                  src="/kanan-ielts-3.png" 
+                  src={kananIeltsImage} 
                   alt="Students at university campus with digital education icons - Achieve your IELTS goals with Kanan.co"
                   className="w-full h-48 sm:h-64 object-cover rounded-xl mb-6"
                   loading="lazy"

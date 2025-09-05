@@ -1,4 +1,5 @@
 import React from 'react';
+import kananLogo from '/kanan-logo.svg';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -10,7 +11,7 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center mb-4">
               <img 
-                src="/kanan-logo.svg" 
+                src={kananLogo} 
                 alt="Kanan.co" 
                 className="h-8 w-auto filter brightness-0 invert"
               />

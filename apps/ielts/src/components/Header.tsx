@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, MessageCircle } from 'lucide-react';
+import kananLogo from '/kanan-logo.svg';
 
 interface HeaderProps {
   onBookConsultation: (selectedPackage?: string) => void;
@@ -31,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({ onBookConsultation }) => {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/kanan-logo.svg" 
+              src={kananLogo} 
               alt="Kanan.co - IELTS Coaching" 
               className="h-8 lg:h-10 w-auto"
             />

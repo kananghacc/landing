@@ -10,6 +10,7 @@ import {
   Target,
   MessageCircle
 } from 'lucide-react';
+import kananLogo from '/kanan-logo.svg';
 
 interface ThankYouPageProps {
   onBackToHome?: () => void;
@@ -24,7 +25,7 @@ const ThankYouPage: React.FC<ThankYouPageProps> = ({ onBackToHome }) => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
               <img 
-                src="/kanan-logo.svg" 
+                src={kananLogo} 
                 alt="Kanan.co" 
                 className="h-8"
               />
