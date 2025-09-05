@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, MessageCircle } from 'lucide-react';
-const kananLogo = '/kanan-logo.svg';
+const kananLogo = `${import.meta.env.BASE_URL}kanan-logo.svg`;
 
 interface HeaderProps {
   onBookConsultation: (selectedPackage?: string) => void;
