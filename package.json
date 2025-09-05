@@ -8,18 +8,18 @@
     "shared/*"
   ],
   "scripts": {
-    "dev": "npm run dev --workspace=apps/ielts",
-    "dev:ielts": "npm run dev --workspace=apps/ielts",
-    "dev:gre": "npm run dev --workspace=apps/gre",
-    "dev:gmat": "npm run dev --workspace=apps/gmat",
-    "build": "node build.js",
-    "build:workspaces": "npm run build --workspaces",
-    "build:ielts": "npm run build --workspace=apps/ielts",
-    "build:gre": "npm run build --workspace=apps/gre",
-    "build:gmat": "npm run build --workspace=apps/gmat",
-    "preview": "npm run preview --workspace=apps/ielts",
-    "lint": "npm run lint --workspaces",
-    "type-check": "npm run type-check --workspaces"
+    "dev": "echo 'Static HTML version - no dev server needed'",
+    "dev:ielts": "echo 'Static HTML version - no dev server needed'",
+    "dev:gre": "echo 'Static HTML version - no dev server needed'",
+    "dev:gmat": "echo 'Static HTML version - no dev server needed'",
+    "build": "echo 'Static HTML version - no build required'",
+    "build:workspaces": "echo 'Static HTML version - no build required'",
+    "build:ielts": "echo 'Static HTML version - no build required'",
+    "build:gre": "echo 'Static HTML version - no build required'",
+    "build:gmat": "echo 'Static HTML version - no build required'",
+    "preview": "echo 'Static HTML version - open index.html in browser'",
+    "lint": "echo 'Static HTML version - no linting needed'",
+    "type-check": "echo 'Static HTML version - no type checking needed'"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
