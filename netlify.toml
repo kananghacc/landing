@@ -42,6 +42,24 @@
   status = 200
   force = true
 
+[[redirects]]
+  from = "/ielts/testimonial-images/*"
+  to = "/ielts/testimonial-images/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/ielts/testimonial-images/optimized/*"
+  to = "/ielts/testimonial-images/optimized/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/ielts/trainer-images/*"
+  to = "/ielts/trainer-images/:splat"
+  status = 200
+  force = true
+
 # SPA routing for HTML pages (lower priority)
 [[redirects]]
   from = "/ielts/*"
