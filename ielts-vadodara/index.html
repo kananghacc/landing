@@ -1712,10 +1712,16 @@
         // Modal functions
         function openConsultationForm(selectedPackage = '') {
             const modal = document.getElementById('consultation-modal');
-            const packageSelect = document.getElementById('package');
+            const iframe = document.getElementById('iframewin');
             
+            // Update iframe URL with package parameter if provided
             if (selectedPackage) {
-                packageSelect.value = selectedPackage;
+                const baseUrl = 'https://yujc-zc1.maillist-manage.in/ua/Optin?od=1a1e3dbc371d6&zx=1df90a3f61&sD=13732403116b3e25';
+                const packageParam = `&package=${selectedPackage}`;
+                iframe.src = baseUrl + packageParam;
+            } else {
+                // Reset to original URL if no package selected
+                iframe.src = 'https://yujc-zc1.maillist-manage.in/ua/Optin?od=1a1e3dbc371d6&zx=1df90a3f61&sD=13732403116b3e25';
             }
             
             modal.classList.add('show');
