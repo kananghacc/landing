@@ -40,6 +40,11 @@
   to = "/dubai/"
   status = 200
 
+[[redirects]]
+  from = "/gre"
+  to = "/gre/"
+  status = 200
+
 # Catch-all redirect for SPA routing within each app
 [[redirects]]
   from = "/ielts-chennai/*"
@@ -64,6 +69,11 @@
 [[redirects]]
   from = "/dubai/*"
   to = "/dubai/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/gre/*"
+  to = "/gre/index.html"
   status = 200
 
 # Headers for security and performance

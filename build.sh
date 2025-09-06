@@ -1,11 +1,12 @@
 #!/bin/bash
-echo "🚀 Static HTML Deployment for IELTS Chennai, Vadodara & Dubai"
+echo "🚀 Static HTML Deployment for IELTS Chennai, Vadodara, Dubai & GRE"
 echo "📁 Preparing dist directories..."
 
 # Create dist directories if they don't exist
 mkdir -p dist/ielts-chennai
 mkdir -p dist/ielts-vadodara
 mkdir -p dist/dubai
+mkdir -p dist/gre
 
 # Copy our static HTML to all directories
 echo "📄 Copying static HTML to dist/ielts-chennai/index.html"
@@ -16,6 +17,9 @@ cp ielts-vadodara/index.html dist/ielts-vadodara/index.html
 
 echo "📄 Copying static HTML to dist/dubai/index.html"
 cp dubai/index.html dist/dubai/index.html
+
+echo "📄 Copying static HTML to dist/gre/index.html"
+cp gre/index.html dist/gre/index.html
 
 # Copy all necessary assets to Chennai directory
 echo "🖼️ Copying assets to Chennai directory..."
@@ -51,14 +55,30 @@ cp dubai/manifest.json dist/dubai/ 2>/dev/null || true
 cp dubai/robots.txt dist/dubai/ 2>/dev/null || true
 cp dubai/sitemap.xml dist/dubai/ 2>/dev/null || true
 
+# Copy all necessary assets to GRE directory
+echo "🖼️ Copying assets to GRE directory..."
+cp -r gre/testimonial-images dist/gre/ 2>/dev/null || true
+cp -r gre/trainer-images dist/gre/ 2>/dev/null || true
+cp gre/GRE-hero-image.jpg dist/gre/ 2>/dev/null || true
+cp gre/GRE-hero-image-2.jpg dist/gre/ 2>/dev/null || true
+cp gre/GRE-hero-image-3.png dist/gre/ 2>/dev/null || true
+cp gre/kanan-logo.svg dist/gre/ 2>/dev/null || true
+cp gre/faviconV2.png dist/gre/ 2>/dev/null || true
+cp gre/manifest.json dist/gre/ 2>/dev/null || true
+cp gre/robots.txt dist/gre/ 2>/dev/null || true
+cp gre/sitemap.xml dist/gre/ 2>/dev/null || true
+
 echo "✅ Static HTML deployment ready!"
 echo "🌐 Chennai: join.kanan.co/ielts-chennai"
 echo "🌐 Vadodara: join.kanan.co/ielts-vadodara"
 echo "🌐 Dubai: join.kanan.co/dubai"
-echo "📂 Files deployed to dist/ielts-chennai/, dist/ielts-vadodara/, and dist/dubai/"
+echo "🌐 GRE: join.kanan.co/gre"
+echo "📂 Files deployed to dist/ielts-chennai/, dist/ielts-vadodara/, dist/dubai/, and dist/gre/"
 ls -la dist/ielts-chennai/ | head -5
 echo "..."
 ls -la dist/ielts-vadodara/ | head -5
 echo "..."
 ls -la dist/dubai/ | head -5
+echo "..."
+ls -la dist/gre/ | head -5
 exit 0
