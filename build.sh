@@ -8,15 +8,15 @@ mkdir -p dist/ielts-vadodara
 
 # Copy our static HTML to both directories
 echo "📄 Copying static HTML to dist/ielts-chennai/index.html"
-cp index.html dist/ielts-chennai/index.html
+cp ielts-chennai/index.html dist/ielts-chennai/index.html
 
 echo "📄 Copying static HTML to dist/ielts-vadodara/index.html"
-cp index-vadodara.html dist/ielts-vadodara/index.html
+cp ielts-vadodara/index.html dist/ielts-vadodara/index.html
 
 # Copy all necessary assets to Chennai directory
 echo "🖼️ Copying assets to Chennai directory..."
 cp -r testimonial-images dist/ielts-chennai/ 2>/dev/null || true
-cp -r trainer-images dist/ielts-chennai/ 2>/dev/null || true
+cp -r ielts-chennai/trainer-images dist/ielts-chennai/ 2>/dev/null || true
 cp kanan-ielts-3.png dist/ielts-chennai/ 2>/dev/null || true
 cp kanan-ielts-3-optimized.webp dist/ielts-chennai/ 2>/dev/null || true
 cp kanan-logo.svg dist/ielts-chennai/ 2>/dev/null || true
@@ -28,7 +28,7 @@ cp sitemap.xml dist/ielts-chennai/ 2>/dev/null || true
 # Copy all necessary assets to Vadodara directory
 echo "🖼️ Copying assets to Vadodara directory..."
 cp -r testimonial-images dist/ielts-vadodara/ 2>/dev/null || true
-cp -r trainer-images dist/ielts-vadodara/ 2>/dev/null || true
+cp -r ielts-vadodara/trainer-images dist/ielts-vadodara/ 2>/dev/null || true
 cp kanan-ielts-3.png dist/ielts-vadodara/ 2>/dev/null || true
 cp kanan-ielts-3-optimized.webp dist/ielts-vadodara/ 2>/dev/null || true
 cp kanan-logo.svg dist/ielts-vadodara/ 2>/dev/null || true

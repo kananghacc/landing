@@ -6,7 +6,7 @@
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    })(window,document,'script','dataLayer','GTM-5TS75DC');</script>
     <!-- End Google Tag Manager -->
     
     <meta charset="UTF-8">
@@ -110,7 +110,7 @@
 </head>
 <body class="min-h-screen bg-white font-body">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TS75DC"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     
@@ -1712,10 +1712,16 @@
         // Modal functions
         function openConsultationForm(selectedPackage = '') {
             const modal = document.getElementById('consultation-modal');
-            const packageSelect = document.getElementById('package');
+            const iframe = document.getElementById('iframewin');
             
+            // Update iframe URL with package parameter if provided
             if (selectedPackage) {
-                packageSelect.value = selectedPackage;
+                const baseUrl = 'https://yujc-zc1.maillist-manage.in/ua/Optin?od=1a1e3dbc371d6&zx=1df90a3f61&sD=13732403116b3e25';
+                const packageParam = `&package=${selectedPackage}`;
+                iframe.src = baseUrl + packageParam;
+            } else {
+                // Reset to original URL if no package selected
+                iframe.src = 'https://yujc-zc1.maillist-manage.in/ua/Optin?od=1a1e3dbc371d6&zx=1df90a3f61&sD=13732403116b3e25';
             }
             
             modal.classList.add('show');
