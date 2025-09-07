@@ -11,6 +11,7 @@ const { Trainers } = require('./src/components/Trainers.js');
 const { Testimonials } = require('./src/components/Testimonials.js');
 const { FAQ } = require('./src/components/FAQ.js');
 const { Footer } = require('./src/components/Footer.js');
+const { FloatingButtons } = require('./src/components/FloatingButtons.js');
 
 // Import configuration data
 const { 
@@ -45,6 +46,7 @@ function build() {
     const testimonialsSection = Testimonials(testimonials);
     const faqSection = FAQ(faqs);
     const footer = Footer();
+    const floatingButtons = FloatingButtons();
     
     // Combine all content
     const content = [
@@ -52,7 +54,9 @@ function build() {
       coursePackagesSection,
       trainersSection,
       testimonialsSection,
-      faqSection
+      faqSection,
+      footer,
+      floatingButtons
     ].join('\n\n');
     
     // Replace template variables
