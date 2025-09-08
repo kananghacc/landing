@@ -26,6 +26,11 @@
   status = 200
 
 [[redirects]]
+  from = "/ielts-online"
+  to = "/ielts-online/"
+  status = 200
+
+[[redirects]]
   from = "/gre"
   to = "/gre/"
   status = 200
@@ -59,6 +64,11 @@
 [[redirects]]
   from = "/ielts-vadodara/*"
   to = "/ielts-vadodara/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/ielts-online/*"
+  to = "/ielts-online/index.html"
   status = 200
 
 [[redirects]]
