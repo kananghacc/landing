@@ -5,6 +5,7 @@ echo "📁 Preparing dist directories..."
 # Create dist directories if they don't exist
 mkdir -p dist/ielts-chennai
 mkdir -p dist/ielts-vadodara
+mkdir -p dist/ielts-online
 mkdir -p dist/dubai
 mkdir -p dist/gre
 
@@ -14,6 +15,9 @@ cp ielts-chennai/index.html dist/ielts-chennai/index.html
 
 echo "📄 Copying static HTML to dist/ielts-vadodara/index.html"
 cp ielts-vadodara/index.html dist/ielts-vadodara/index.html
+
+echo "📄 Copying static HTML to dist/ielts-online/index.html"
+cp ielts-online/index.html dist/ielts-online/index.html
 
 echo "📄 Copying static HTML to dist/dubai/index.html"
 cp dubai/index.html dist/dubai/index.html
@@ -45,6 +49,18 @@ cp manifest.json dist/ielts-vadodara/ 2>/dev/null || true
 cp robots.txt dist/ielts-vadodara/ 2>/dev/null || true
 cp sitemap.xml dist/ielts-vadodara/ 2>/dev/null || true
 
+# Copy all necessary assets to Online directory
+echo "🖼️ Copying assets to Online directory..."
+cp -r testimonial-images dist/ielts-online/ 2>/dev/null || true
+cp -r ielts-online/trainer-images dist/ielts-online/ 2>/dev/null || true
+cp kanan-ielts-3.png dist/ielts-online/ 2>/dev/null || true
+cp kanan-ielts-3-optimized.webp dist/ielts-online/ 2>/dev/null || true
+cp kanan-logo.svg dist/ielts-online/ 2>/dev/null || true
+cp faviconV2.png dist/ielts-online/ 2>/dev/null || true
+cp ielts-online/manifest.json dist/ielts-online/ 2>/dev/null || true
+cp ielts-online/robots.txt dist/ielts-online/ 2>/dev/null || true
+cp ielts-online/sitemap.xml dist/ielts-online/ 2>/dev/null || true
+
 # Copy all necessary assets to Dubai directory
 echo "🖼️ Copying assets to Dubai directory..."
 cp -r dubai/assets dist/dubai/ 2>/dev/null || true
@@ -71,12 +87,15 @@ cp gre/sitemap.xml dist/gre/ 2>/dev/null || true
 echo "✅ Static HTML deployment ready!"
 echo "🌐 Chennai: join.kanan.co/ielts-chennai"
 echo "🌐 Vadodara: join.kanan.co/ielts-vadodara"
+echo "🌐 Online: join.kanan.co/ielts-online"
 echo "🌐 Dubai: join.kanan.co/dubai"
 echo "🌐 GRE: join.kanan.co/gre"
-echo "📂 Files deployed to dist/ielts-chennai/, dist/ielts-vadodara/, dist/dubai/, and dist/gre/"
+echo "📂 Files deployed to dist/ielts-chennai/, dist/ielts-vadodara/, dist/ielts-online/, dist/dubai/, and dist/gre/"
 ls -la dist/ielts-chennai/ | head -5
 echo "..."
 ls -la dist/ielts-vadodara/ | head -5
+echo "..."
+ls -la dist/ielts-online/ | head -5
 echo "..."
 ls -la dist/dubai/ | head -5
 echo "..."
