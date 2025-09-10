@@ -55,6 +55,11 @@
   to = "/us/"
   status = 200
 
+[[redirects]]
+  from = "/sat-vadodara"
+  to = "/sat-vadodara/"
+  status = 200
+
 # Catch-all redirect for SPA routing within each app
 [[redirects]]
   from = "/ielts-chennai/*"
@@ -94,6 +99,11 @@
 [[redirects]]
   from = "/us/*"
   to = "/us/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/sat-vadodara/*"
+  to = "/sat-vadodara/index.html"
   status = 200
 
 # Headers for security and performance

@@ -9,6 +9,7 @@ mkdir -p dist/ielts-online
 mkdir -p dist/dubai
 mkdir -p dist/gre
 mkdir -p dist/us
+mkdir -p dist/sat-vadodara
 
 # Copy our static HTML to all directories
 echo "📄 Copying static HTML to dist/ielts-chennai/index.html"
@@ -28,6 +29,9 @@ cp gre/index.html dist/gre/index.html
 
 echo "📄 Copying static HTML to dist/us/index.html"
 cp us/index.html dist/us/index.html
+
+echo "📄 Copying static HTML to dist/sat-vadodara/index.html"
+cp sat-vadodara/index.html dist/sat-vadodara/index.html
 
 # Copy all necessary assets to Chennai directory
 echo "🖼️ Copying assets to Chennai directory..."
@@ -102,6 +106,15 @@ cp us/manifest.json dist/us/ 2>/dev/null || true
 cp us/robots.txt dist/us/ 2>/dev/null || true
 cp us/sitemap.xml dist/us/ 2>/dev/null || true
 
+# Copy all necessary assets to SAT Vadodara directory
+echo "🖼️ Copying assets to SAT Vadodara directory..."
+cp -r sat-vadodara/testimonial-images dist/sat-vadodara/ 2>/dev/null || true
+cp -r sat-vadodara/trainer-images dist/sat-vadodara/ 2>/dev/null || true
+cp sat-vadodara/kanan-ielts-3.png dist/sat-vadodara/ 2>/dev/null || true
+cp sat-vadodara/kanan-ielts-3-optimized.webp dist/sat-vadodara/ 2>/dev/null || true
+cp sat-vadodara/kanan-logo.svg dist/sat-vadodara/ 2>/dev/null || true
+cp sat-vadodara/faviconV2.png dist/sat-vadodara/ 2>/dev/null || true
+
 echo "✅ Static HTML deployment ready!"
 echo "🌐 Chennai: join.kanan.co/ielts-chennai"
 echo "🌐 Vadodara: join.kanan.co/ielts-vadodara"
@@ -109,7 +122,8 @@ echo "🌐 Online: join.kanan.co/ielts-online"
 echo "🌐 Dubai: join.kanan.co/dubai"
 echo "🌐 GRE: join.kanan.co/gre"
 echo "🌐 US: join.kanan.co/us"
-echo "📂 Files deployed to dist/ielts-chennai/, dist/ielts-vadodara/, dist/ielts-online/, dist/dubai/, dist/gre/, and dist/us/"
+echo "🌐 SAT Vadodara: join.kanan.co/sat-vadodara"
+echo "📂 Files deployed to dist/ielts-chennai/, dist/ielts-vadodara/, dist/ielts-online/, dist/dubai/, dist/gre/, dist/us/, and dist/sat-vadodara/"
 ls -la dist/ielts-chennai/ | head -5
 echo "..."
 ls -la dist/ielts-vadodara/ | head -5
@@ -121,4 +135,6 @@ echo "..."
 ls -la dist/gre/ | head -5
 echo "..."
 ls -la dist/us/ | head -5
+echo "..."
+ls -la dist/sat-vadodara/ | head -5
 exit 0
