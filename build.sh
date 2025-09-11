@@ -13,6 +13,7 @@ LANDING_DIRS=(
   "us"
   "sat-vadodara"
   "uk"
+  "canada"
 )
 
 mkdir -p dist

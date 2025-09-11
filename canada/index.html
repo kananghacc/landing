@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study in Canada - Free Guidance for Indian Students | Kanan.co</title>
+    <meta name="description" content="End-to-end free guidance for Indian students studying in Canada. From college selection to visa approval. Trusted by 100,000+ learners already in Canada.">
+    <meta name="keywords" content="study in canada, canada student visa, canadian colleges, indian students canada, study abroad canada">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kanan.co/canada/">
+    <meta property="og:title" content="Study in Canada - Free Guidance for Indian Students | Kanan.co">
+    <meta property="og:description" content="End-to-end free guidance for Indian students studying in Canada. From college selection to visa approval. Trusted by 100,000+ learners already in Canada.">
+    <meta property="og:image" content="https://kanan.co/canada/images/hero-students-2-further-optimized.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kanan.co/canada/">
+    <meta property="twitter:title" content="Study in Canada - Free Guidance for Indian Students | Kanan.co">
+    <meta property="twitter:description" content="End-to-end free guidance for Indian students studying in Canada. From college selection to visa approval. Trusted by 100,000+ learners already in Canada.">
+    <meta property="twitter:image" content="https://kanan.co/canada/images/hero-students-2-further-optimized.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="faviconV2.png">
+    <link rel="apple-touch-icon" href="faviconV2.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        .font-heading { font-family: 'Manrope', system-ui, sans-serif; }
+        .font-body { font-family: 'Rubik', system-ui, sans-serif; }
+        
+        /* Custom animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom gradients */
+        .gradient-blue {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+        
+        .gradient-green {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+        
+        .gradient-purple {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+        }
+        
+        .gradient-orange {
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+        }
+        
+        .gradient-teal {
+            background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+        }
+    </style>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Manrope', 'system-ui', 'sans-serif'],
+                        'heading': ['Manrope', 'system-ui', 'sans-serif'],
+                        'body': ['Rubik', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-white font-body">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50" role="banner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <img 
+                        src="kanan-logo.svg" 
+                        alt="Kanan.co" 
+                        class="h-8"
+                    />
+                </div>
+                <button 
+                    onclick="openConsultationForm()"
+                    class="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors font-body"
+                >
+                    Book Free Consultation
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-blue-50 to-indigo-100 py-20" role="banner" aria-labelledby="hero-heading">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="space-y-6">
+                        <div class="hero-heading-container">
+                            <h1 id="hero-heading" class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight font-heading">
+                                Canada Awaits—Start Your 
+                                <span class="text-blue-600"> Study Journey</span> Today
+                            </h1>
+                        </div>
+                        <p class="text-lg sm:text-xl text-gray-600 leading-relaxed font-body">
+                            End-to-end <span class="font-semibold text-blue-600">free</span> guidance for Indian students, from <strong>college selection</strong> to <strong>visa approval</strong>. Trusted by <strong>100,000+</strong> learners already in Canada.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button 
+                            onclick="openConsultationForm()"
+                            class="bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2 font-body"
+                        >
+                            <!-- Target Icon -->
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="6"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                            </svg>
+                            <span>Get My Personalised Roadmap</span>
+                        </button>
+                        <a 
+                            href="https://wa.me/917355573555?text=I'd%20like%20to%20speak%20to%20a%20Kanan.co%20counsellor%20reg.%20my%20Canada%20plans"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="border-2 border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:border-gray-400 transition-colors flex items-center justify-center space-x-2 font-body"
+                        >
+                            <!-- Phone Icon -->
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>Speak to a Counsellor</span>
+                        </a>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6 pt-4">
+                        <div class="flex items-center space-x-2">
+                            <div class="flex -space-x-2">
+                                <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-300 border-2 border-white"></div>
+                                <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-300 border-2 border-white"></div>
+                                <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-300 border-2 border-white"></div>
+                                <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-300 border-2 border-white"></div>
+                            </div>
+                            <span class="text-xs sm:text-sm text-gray-600 font-body">5,000+ this month</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <div class="flex space-x-1">
+                                <!-- Star Icons -->
+                                <svg class="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                </svg>
+                                <svg class="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                </svg>
+                                <svg class="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                </svg>
+                                <svg class="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                </svg>
+                                <svg class="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400 opacity-60" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                </svg>
+                            </div>
+                            <span class="text-xs sm:text-sm font-medium text-gray-700 font-body">4.6 rating</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="relative bg-white rounded-2xl shadow-2xl p-6 sm:p-8">
+                        <div class="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 bg-green-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold shadow-lg">
+                            Visa Approved!
+                        </div>
+                        <picture>
+                            <source srcset="images/hero-students-2-further-optimized.jpg" type="image/jpeg" />
+                            <img 
+                                src="images/hero-students-2-further-optimized.jpg" 
+                                alt="Diverse university students on campus during autumn - Study in Canada with Kanan.co"
+                                class="w-full h-48 sm:h-64 object-cover rounded-xl mb-4 sm:mb-6"
+                                loading="lazy"
+                                width="600"
+                                height="400"
+                            />
+                        </picture>
+                        <div class="space-y-3 sm:space-y-4">
+                            <h3 class="text-lg sm:text-xl font-bold text-gray-900 font-heading">Your Success Story Starts Here</h3>
+                            <p class="text-sm sm:text-base text-gray-600 font-body">Join thousands of Indian students who've made Canada their home</p>
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between space-y-2 sm:space-y-0">
+                                <div class="flex items-center space-x-2">
+                                    <!-- Users Icon -->
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                    <span class="text-xs sm:text-sm text-gray-600 font-body">100,000+ students placed</span>
+                                </div>
+                                <div class="flex items-center space-x-1">
+                                    <!-- CheckCircle Icon -->
+                                    <svg class="w-3 h-3 sm:w-4 sm:h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                        <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                                    </svg>
+                                    <span class="text-xs sm:text-sm font-medium font-body">96% visa approval</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Colleges Section -->
+    <section class="py-12 bg-gray-50" aria-labelledby="partner-colleges-heading">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-8">
+                <div>
+                    <h3 id="partner-colleges-heading" class="text-lg font-semibold text-gray-900 mb-4 text-center font-heading">Partner Colleges</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+                        <div class="bg-white rounded-lg p-4 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                            <img 
+                                src="images/2_Conestoga-optimized.png" 
+                                alt="Conestoga College" 
+                                class="h-12 w-auto object-contain" 
+                                width="120" 
+                                height="48" 
+                                loading="lazy" 
+                            />
+                        </div>
+                        <div class="bg-white rounded-lg p-4 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                            <img 
+                                src="images/3_Seneca-optimized.png" 
+                                alt="Seneca College" 
+                                class="h-12 w-auto object-contain" 
+                                width="120" 
+                                height="48" 
+                                loading="lazy" 
+                            />
+                        </div>
+                        <div class="bg-white rounded-lg p-4 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                            <img 
+                                src="images/4_Loyalist-optimized.png" 
+                                alt="Loyalist College" 
+                                class="h-12 w-auto object-contain" 
+                                width="120" 
+                                height="48" 
+                                loading="lazy" 
+                            />
+                        </div>
+                        <div class="bg-white rounded-lg p-4 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                            <img 
+                                src="images/5_Algoma-optimized.png" 
+                                alt="Algoma University" 
+                                class="h-12 w-auto object-contain" 
+                                width="120" 
+                                height="48" 
+                                loading="lazy" 
+                            />
+                        </div>
+                        <div class="bg-white rounded-lg p-4 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                            <img 
+                                src="images/10_Georgian_-optimized.png" 
+                                alt="Georgian College" 
+                                class="h-12 w-auto object-contain" 
+                                width="120" 
+                                height="48" 
+                                loading="lazy" 
+                            />
+                        </div>
+                        <div class="bg-white rounded-lg p-4 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                            <img 
+                                src="images/13_Niagara-optimized.png" 
+                                alt="Niagara College" 
+                                class="h-12 w-auto object-contain" 
+                                width="120" 
+                                height="48" 
+                                loading="lazy" 
+                            />
+                        </div>
+                        <div class="bg-white rounded-lg p-4 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                            <img 
+                                src="images/14_Northern_-optimized.png" 
+                                alt="Northern College" 
+                                class="h-12 w-auto object-contain" 
+                                width="120" 
+                                height="48" 
+                                loading="lazy" 
+                            />
+                        </div>
+                        <div class="bg-white rounded-lg p-4 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                            <img 
+                                src="images/15_Sheridan-optimized.png" 
+                                alt="Sheridan College" 
+                                class="h-12 w-auto object-contain" 
+                                width="120" 
+                                height="48" 
+                                loading="lazy" 
+                            />
+                        </div>
+                        <div class="bg-white rounded-lg p-4 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                            <img 
+                                src="images/1_Centennial-optimized.png" 
+                                alt="Centennial College" 
+                                class="h-12 w-auto object-contain" 
+                                width="120" 
+                                height="48" 
+                                loading="lazy" 
+                            />
+                        </div>
+                        <div class="bg-white rounded-lg p-4 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                            <img 
+                                src="images/6_St_Lawrence_Black-optimized.png" 
+                                alt="St. Lawrence College" 
+                                class="h-12 w-auto object-contain" 
+                                width="120" 
+                                height="48" 
+                                loading="lazy" 
+                            />
+                        </div>
+                        <div class="bg-white rounded-lg p-4 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                            <img 
+                                src="images/7_Cambrian_-optimized.png" 
+                                alt="Cambrian College" 
+                                class="h-12 w-auto object-contain" 
+                                width="120" 
+                                height="48" 
+                                loading="lazy" 
+                            />
+                        </div>
+                        <div class="bg-white rounded-lg p-4 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                            <img 
+                                src="images/8_Canadore-optimized.png" 
+                                alt="Canadore College" 
+                                class="h-12 w-auto object-contain" 
+                                width="120" 
+                                height="48" 
+                                loading="lazy" 
+                            />
+                        </div>
+                        <div class="bg-white rounded-lg p-4 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                            <img 
+                                src="images/9_Fleming_-optimized.png" 
+                                alt="Fleming College" 
+                                class="h-12 w-auto object-contain" 
+                                width="120" 
+                                height="48" 
+                                loading="lazy" 
+                            />
+                        </div>
+                        <div class="bg-white rounded-lg p-4 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                            <img 
+                                src="images/11_Lambton-optimized.png" 
+                                alt="Lambton College" 
+                                class="h-12 w-auto object-contain" 
+                                width="120" 
+                                height="48" 
+                                loading="lazy" 
+                            />
+                        </div>
+                        <div class="bg-white rounded-lg p-4 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                            <img 
+                                src="images/12_Mohawk_-optimized.png" 
+                                alt="Mohawk College" 
+                                class="h-12 w-auto object-contain" 
+                                width="120" 
+                                height="48" 
+                                loading="lazy" 
+                            />
+                        </div>
+                        <div class="bg-white rounded-lg p-4 flex items-center justify-center shadow-sm hover:shadow-md transition-shadow">
+                            <img 
+                                src="images/16_Fanshawe-optimized.png" 
+                                alt="Fanshawe College" 
+                                class="h-12 w-auto object-contain" 
+                                width="120" 
+                                height="48" 
+                                loading="lazy" 
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Metrics Section -->
+    <section class="py-16 bg-blue-600" aria-labelledby="impact-metrics-heading">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="space-y-2">
+                    <div class="text-4xl font-bold text-white font-heading">96%</div>
+                    <div class="text-xl font-semibold text-white font-heading">Visa Approval Rate</div>
+                    <div class="text-blue-200 font-body">Based on 4,700 IRCC decisions since 2021</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl font-bold text-white font-heading">100,000+</div>
+                    <div class="text-xl font-semibold text-white font-heading">Indian Students Placed</div>
+                    <div class="text-blue-200 font-body">Across 16 public colleges & universities</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl font-bold text-white font-heading">25 Years</div>
+                    <div class="text-xl font-semibold text-white font-heading">Trusted Experience</div>
+                    <div class="text-blue-200 font-body">Helping students achieve their Canadian dreams</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Pillars Section -->
+    <section id="services" class="py-20 bg-white" aria-labelledby="services-heading">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <h2 id="services-heading" class="text-4xl font-bold text-gray-900 font-heading">What We Do – Service Pillars</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto font-body">
+                    End-to-end support for your Canadian education journey
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center text-white mb-6">
+                        <!-- Building Icon -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M3 21h18"></path>
+                            <path d="M5 21V7l8-4v18"></path>
+                            <path d="M19 21V11l-6-4"></path>
+                            <path d="M9 9v.01"></path>
+                            <path d="M9 12v.01"></path>
+                            <path d="M9 15v.01"></path>
+                            <path d="M9 18v.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 font-heading">College & Program Match</h3>
+                    <div class="space-y-2">
+                        <div class="text-sm text-blue-600 font-medium font-body">Pain Resolved:</div>
+                        <div class="text-gray-700 mb-3 font-body">Overwhelm of 8,000+ courses</div>
+                        <div class="text-sm text-green-600 font-medium font-body">Key Deliverables:</div>
+                        <div class="text-gray-700 font-body">AI shortlist, budget fit, employability score</div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center text-white mb-6">
+                        <!-- FileText Icon -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14,2 14,8 20,8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10,9 9,9 8,9"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 font-heading">Application & SOP Boost</h3>
+                    <div class="space-y-2">
+                        <div class="text-sm text-blue-600 font-medium font-body">Pain Resolved:</div>
+                        <div class="text-gray-700 mb-3 font-body">Fear of rejection</div>
+                        <div class="text-sm text-green-600 font-medium font-body">Key Deliverables:</div>
+                        <div class="text-gray-700 font-body">Unlimited edits, former admissions readers</div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center text-white mb-6">
+                        <!-- Shield Icon -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 font-heading">Visa & Financial Prep</h3>
+                    <div class="space-y-2">
+                        <div class="text-sm text-blue-600 font-medium font-body">Pain Resolved:</div>
+                        <div class="text-gray-700 mb-3 font-body">Documentation anxiety</div>
+                        <div class="text-sm text-green-600 font-medium font-body">Key Deliverables:</div>
+                        <div class="text-gray-700 font-body">IRCC-compliant file, GIC guidance, loan partners</div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center text-white mb-6">
+                        <!-- Plane Icon -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 font-heading">Landing & Career Edge</h3>
+                    <div class="space-y-2">
+                        <div class="text-sm text-blue-600 font-medium font-body">Pain Resolved:</div>
+                        <div class="text-gray-700 mb-3 font-body">"What next?" worries</div>
+                        <div class="text-sm text-green-600 font-medium font-body">Key Deliverables:</div>
+                        <div class="text-gray-700 font-body">Airport pickup, PGWP webinars, mentor network</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-green-50 border-l-4 border-green-400 p-6 rounded-lg">
+                <div class="flex items-start space-x-3">
+                    <!-- Heart Icon -->
+                    <svg class="w-6 h-6 text-green-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    <div>
+                        <p class="text-gray-800 font-medium font-body">
+                            <strong>OCA Service</strong> — no consulting fee for students. You only pay third-party charges such as IELTS or university application fees.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Canada Section -->
+    <section class="py-20 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 font-heading">Why Indian Students Choose Canada</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-gradient-to-r from-green-400 to-green-600 rounded-xl flex items-center justify-center text-white mb-6">
+                        <!-- DollarSign Icon -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 font-heading">Affordable tuition vs. USA/UK</h3>
+                    <p class="text-gray-600 font-body">Study at world-class institutions without breaking the bank. Canadian education offers exceptional value compared to other English-speaking countries.</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl flex items-center justify-center text-white mb-6">
+                        <!-- GraduationCap Icon -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 font-heading">Up to 3-year PGWP</h3>
+                    <p class="text-gray-600 font-body">Post-Graduation Work Permit allows you to gain valuable Canadian work experience and build your career after studies.</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-gradient-to-r from-purple-400 to-purple-600 rounded-xl flex items-center justify-center text-white mb-6">
+                        <!-- CheckCircle Icon -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 font-heading">High visa success rate</h3>
+                    <p class="text-gray-600 font-body">Canada welcomes international students with streamlined visa processes and high approval rates for genuine applicants.</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="w-12 h-12 bg-gradient-to-r from-orange-400 to-orange-600 rounded-xl flex items-center justify-center text-white mb-6">
+                        <!-- Globe Icon -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 font-heading">Easy PR opportunities</h3>
+                    <p class="text-gray-600 font-body">Multiple pathways to permanent residency through programs like CEC, PNP, and Express Entry system.</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow md:col-span-2 lg:col-span-1">
+                    <div class="w-12 h-12 bg-gradient-to-r from-teal-400 to-teal-600 rounded-xl flex items-center justify-center text-white mb-6">
+                        <!-- Building Icon -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M3 21h18"></path>
+                            <path d="M5 21V7l8-4v18"></path>
+                            <path d="M19 21V11l-6-4"></path>
+                            <path d="M9 9v.01"></path>
+                            <path d="M9 12v.01"></path>
+                            <path d="M9 15v.01"></path>
+                            <path d="M9 18v.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 font-heading">Part-time work & internships</h3>
+                    <p class="text-gray-600 font-body">Work up to 20 hours per week during studies and unlimited hours during breaks to support your finances and gain experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 font-heading">Why 100,000 Students Choose Us</h2>
+                <p class="text-lg sm:text-xl text-gray-600 font-body max-w-3xl mx-auto">
+                    Discover what makes us the trusted choice for Indian students pursuing their Canadian dreams
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                <div class="space-y-6 sm:space-y-8">
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4 p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <!-- CheckCircle Icon -->
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2 font-heading">Truly Free Consulting</h3>
+                                <p class="text-sm sm:text-base text-gray-600 font-body">Colleges fund us; you don't pay a single rupee for our expert guidance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <!-- Target Icon -->
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <circle cx="12" cy="12" r="6"></circle>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2 font-heading">Transparent Process</h3>
+                                <p class="text-sm sm:text-base text-gray-600 font-body">Track every step in your personal dashboard with real-time updates.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <!-- Heart Icon -->
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2 font-heading">Parent Peace of Mind</h3>
+                                <p class="text-sm sm:text-base text-gray-600 font-body">Dedicated Tamil/Hindi helpline for parents to stay connected.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4 p-4 sm:p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+                            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                <!-- Users Icon -->
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2 font-heading">End-to-End Care</h3>
+                                <p class="text-sm sm:text-base text-gray-600 font-body">From SOP drafting to airport pickup - we're with you every step.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6 sm:space-y-8">
+                    <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-6 sm:p-8 border border-red-200">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold text-sm">✗</span>
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold text-gray-900 font-heading">Before Kanan.co</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                                <span class="text-sm sm:text-base text-gray-700 font-body">Multiple tabs, missed deadlines</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                                <span class="text-sm sm:text-base text-gray-700 font-body">Confusing application processes</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                                <span class="text-sm sm:text-base text-gray-700 font-body">Visa rejection fears</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                                <span class="text-sm sm:text-base text-gray-700 font-body">No guidance on PR pathway</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 sm:p-8 border border-green-200">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                                <!-- CheckCircle Icon -->
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg sm:text-xl font-bold text-gray-900 font-heading">After Kanan.co</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <!-- CheckCircle Icon -->
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                                </svg>
+                                <span class="text-sm sm:text-base text-gray-700 font-body">Admission letter secured</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <!-- CheckCircle Icon -->
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                                </svg>
+                                <span class="text-sm sm:text-base text-gray-700 font-body">Visa stamp approved</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <!-- CheckCircle Icon -->
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                                </svg>
+                                <span class="text-sm sm:text-base text-gray-700 font-body">Clear PR timeline</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <!-- CheckCircle Icon -->
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                                </svg>
+                                <span class="text-sm sm:text-base text-gray-700 font-body">Airport pickup arranged</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section id="success-stories" class="py-20 bg-gray-50" aria-labelledby="success-stories-heading">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <h2 id="success-stories-heading" class="text-4xl font-bold text-gray-900 font-heading">Success Stories</h2>
+                <p class="text-xl text-gray-600 font-body">Real students, real results</p>
+            </div>
+
+            <div class="relative overflow-hidden">
+                <div class="grid md:grid-cols-3 gap-8" id="testimonials-container">
+                    <!-- Testimonials will be populated by JavaScript -->
+                </div>
+                
+                <div class="flex justify-center space-x-4 mt-8">
+                    <button 
+                        onclick="prevTestimonial()"
+                        class="p-2 rounded-full bg-white shadow-lg hover:shadow-xl transition-shadow"
+                        aria-label="Previous testimonial"
+                        title="Previous testimonial"
+                    >
+                        <!-- ChevronLeft Icon -->
+                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <polyline points="15,18 9,12 15,6"></polyline>
+                        </svg>
+                    </button>
+                    <button 
+                        onclick="nextTestimonial()"
+                        class="p-2 rounded-full bg-white shadow-lg hover:shadow-xl transition-shadow"
+                        aria-label="Next testimonial"
+                        title="Next testimonial"
+                    >
+                        <!-- ChevronRight Icon -->
+                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <polyline points="9,18 15,12 9,6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="flex justify-center space-x-2 mt-4" role="tablist" aria-label="Testimonial navigation" id="testimonial-dots">
+                    <!-- Dots will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 font-heading">How It Works – 3 Simple Steps</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center space-y-6">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto font-heading">
+                        1
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 font-heading">Profile Call (30 min)</h3>
+                        <p class="text-gray-600 font-body">Goals & finances assessment</p>
+                    </div>
+                </div>
+                
+                <div class="text-center space-y-6">
+                    <div class="w-16 h-16 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto font-heading">
+                        2
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 font-heading">Plan & Apply</h3>
+                        <p class="text-gray-600 font-body">Documents, SOP, visa handled</p>
+                    </div>
+                </div>
+                
+                <div class="text-center space-y-6">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto font-heading">
+                        3
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 font-heading">Fly & Thrive</h3>
+                        <p class="text-gray-600 font-body">Airport pickup, housing leads, PR roadmap</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button 
+                    onclick="openConsultationForm()"
+                    class="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-700 transition-colors font-body"
+                >
+                    Start My Application
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 font-heading">Meet the Team</h2>
+                <p class="text-xl text-gray-600 font-body">Expert guidance from industry professionals</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div class="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
+                    <img 
+                        src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop" 
+                        alt="Rajiv Jain"
+                        class="w-24 h-24 rounded-full object-cover mx-auto mb-6"
+                    />
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 font-heading">Rajiv Jain</h3>
+                    <div class="text-blue-600 font-medium mb-2 font-body">Lead Consultant, ICCRC #R509505</div>
+                    <div class="text-sm text-gray-600 mb-2 font-body">Licensed Immigration Consultant</div>
+                    <div class="text-sm text-gray-500 font-body">10 yrs Canada visa expertise</div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
+                    <img 
+                        src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop" 
+                        alt="Dr. Meera Nair"
+                        class="w-24 h-24 rounded-full object-cover mx-auto mb-6"
+                    />
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 font-heading">Dr. Meera Nair</h3>
+                    <div class="text-blue-600 font-medium mb-2 font-body">Ex-McGill Admissions Officer</div>
+                    <div class="text-sm text-gray-600 mb-2 font-body">Former University Admissions</div>
+                    <div class="text-sm text-gray-500 font-body">Reviewed 5,000+ grad files</div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
+                    <img 
+                        src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop" 
+                        alt="Kevin Lee"
+                        class="w-24 h-24 rounded-full object-cover mx-auto mb-6"
+                    />
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 font-heading">Kevin Lee</h3>
+                    <div class="text-blue-600 font-medium mb-2 font-body">Toronto Career Coach</div>
+                    <div class="text-sm text-gray-600 mb-2 font-body">Ex-Shopify Recruiter</div>
+                    <div class="text-sm text-gray-500 font-body">Career placement specialist</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Banner Section -->
+    <section id="pricing" class="py-16 bg-green-600">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="space-y-4">
+                <h2 class="text-4xl font-bold text-white font-heading">Consulting Fees? ₹0.</h2>
+                <p class="text-xl text-green-200 font-body">
+                    You only pay exam and university application fees.
+                </p>
+                <p class="text-sm text-green-200 font-body">
+                    We're remunerated by partner institutions as an Official Channel Agent (OCA).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="py-16 bg-orange-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="space-y-6">
+                <div class="grid grid-cols-4 gap-4 max-w-md mx-auto">
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
+                        <div class="text-2xl font-bold text-orange-600 font-heading" id="countdown-days">0</div>
+                        <div class="text-sm text-gray-600 font-body">Days</div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
+                        <div class="text-2xl font-bold text-orange-600 font-heading" id="countdown-hours">0</div>
+                        <div class="text-sm text-gray-600 font-body">Hours</div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
+                        <div class="text-2xl font-bold text-orange-600 font-heading" id="countdown-minutes">0</div>
+                        <div class="text-sm text-gray-600 font-body">Minutes</div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
+                        <div class="text-2xl font-bold text-orange-600 font-heading" id="countdown-seconds">0</div>
+                        <div class="text-sm text-gray-600 font-body">Seconds</div>
+                    </div>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-900 font-heading">
+                    Fall 2026 admissions close soon
+                </h2>
+                <p class="text-lg text-gray-600 font-body">Book your free strategy call now.</p>
+                <button onclick="openConsultationForm()" class="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-700 transition-colors flex items-center space-x-2 mx-auto font-body">
+                    <!-- Calendar Icon -->
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <span>Book Call</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50" aria-labelledby="faq-heading">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <h2 id="faq-heading" class="text-4xl font-bold text-gray-900 font-heading">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600 font-body">Everything you need to know</p>
+            </div>
+
+            <div class="space-y-4" id="faq-container">
+                <!-- FAQ items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-blue-600 text-white py-12" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-6">
+                <img 
+                    src="kanan-logo.svg" 
+                    alt="Kanan.co" 
+                    class="h-12 mx-auto filter brightness-0 invert"
+                />
+                <div class="space-y-2">
+                    <div class="flex items-center justify-center space-x-2 text-blue-200">
+                        <!-- MapPin Icon -->
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span class="font-body">Vadodara, Gujarat</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-2 text-blue-200">
+                        <!-- Phone Icon -->
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <span class="font-body">+919228122553</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-2 text-blue-200">
+                        <!-- Mail Icon -->
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span class="font-body">info@kanan.co</span>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-blue-500 mt-8 pt-8 text-center text-blue-200">
+                <p class="font-body">&copy; 2025 Kanan.co · ICCRC/CCIC #R509505</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Consultation Form Modal -->
+    <div id="consultation-modal" class="modal">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-900 font-heading">Get personalized guidance for your Canada study journey</h3>
+                <button onclick="closeConsultationForm()" class="text-gray-400 hover:text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Zoho Form Iframe -->
+            <div class="w-full">
+                <iframe 
+                    frameborder="0" 
+                    id="iframewin" 
+                    width="100%" 
+                    height="600" 
+                    src="https://yujc-zc1.maillist-manage.in/ua/Optin?od=1a1e3dbc371d6&zx=1df90a3f61&sD=1373240311782401"
+                    style="border-radius: 8px;"
+                    title="Canada Study Consultation Form">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thank You Page (Hidden by default) -->
+    <div id="thank-you-page" class="min-h-screen bg-white font-body hidden">
+        <!-- Header -->
+        <header class="bg-white shadow-sm border-b border-gray-100" role="banner">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center space-x-2">
+                        <img 
+                            src="kanan-logo.svg" 
+                            alt="Kanan.co" 
+                            class="h-8"
+                        />
+                    </div>
+                    <button 
+                        onclick="backToHome()"
+                        class="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors font-body"
+                    >
+                        Back to Home
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-1">
+            <!-- Hero Section -->
+            <section class="bg-gradient-to-br from-blue-50 to-indigo-100 py-20" role="banner">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <div class="mb-8">
+                        <div class="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full mb-6">
+                            <!-- CheckCircle Icon -->
+                            <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                            </svg>
+                        </div>
+                        <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-heading">
+                            Thank You for Your Interest!
+                        </h1>
+                        <p class="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto font-body">
+                            We've received your consultation request and our expert team will get back to you within <strong>24 hours</strong> with your personalized Canada study roadmap.
+                        </p>
+                    </div>
+
+                    <!-- Next Steps -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg max-w-3xl mx-auto mb-12">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6 font-heading">What Happens Next?</h2>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="text-center">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <!-- MessageCircle Icon -->
+                                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-semibold text-gray-900 mb-2 font-body">1. Expert Review</h3>
+                                <p class="text-gray-600 text-sm font-body">Our certified counselors will analyze your profile and requirements</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <!-- Target Icon -->
+                                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <circle cx="12" cy="12" r="6"></circle>
+                                        <circle cx="12" cy="12" r="2"></circle>
+                                    </svg>
+                                </div>
+                                <h3 class="font-semibold text-gray-900 mb-2 font-body">2. Personalized Plan</h3>
+                                <p class="text-gray-600 text-sm font-body">We'll create your custom study roadmap with college recommendations</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <!-- Users Icon -->
+                                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="font-semibold text-gray-900 mb-2 font-body">3. Ongoing Support</h3>
+                                <p class="text-gray-600 text-sm font-body">Get continuous guidance throughout your application journey</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto mb-12">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6 font-heading">Need Immediate Help?</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-center space-x-3">
+                                <!-- Phone Icon -->
+                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span class="text-gray-700 font-body">+919228122553</span>
+                            </div>
+                            <div class="flex items-center justify-center space-x-3">
+                                <!-- Mail Icon -->
+                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <span class="text-gray-700 font-body">info@kanan.co</span>
+                            </div>
+                            <div class="flex items-center justify-center space-x-3">
+                                <!-- MapPin Icon -->
+                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span class="text-gray-700 font-body">Vadodara, Gujarat</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a 
+                            href="https://wa.me/917355573555?text=I'd%20like%20to%20speak%20to%20a%20Kanan.co%20counsellor%20reg.%20my%20Canada%20plans"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="bg-green-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-700 transition-colors flex items-center justify-center space-x-2 font-body"
+                        >
+                            <!-- MessageCircle Icon -->
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                        <button 
+                            onclick="backToHome()"
+                            class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-semibold text-lg hover:border-gray-400 transition-colors flex items-center justify-center space-x-2 font-body"
+                        >
+                            <!-- ArrowRight Icon -->
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12,5 19,12 12,19"></polyline>
+                            </svg>
+                            <span>Back to Homepage</span>
+                        </button>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="mt-12 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+                        <div class="flex items-center space-x-2">
+                            <div class="flex space-x-1">
+                                <!-- Star Icons -->
+                                <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                </svg>
+                                <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                </svg>
+                                <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                </svg>
+                                <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                </svg>
+                                <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                                </svg>
+                            </div>
+                            <span class="text-sm font-medium text-gray-700 font-body">4.9 rating</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <!-- Users Icon -->
+                            <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <span class="text-sm text-gray-600 font-body">100,000+ students helped</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <!-- CheckCircle Icon -->
+                            <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                            </svg>
+                            <span class="text-sm text-gray-600 font-body">ICCRC/CCIC #R509505</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-blue-600 text-white py-12" role="contentinfo">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center space-y-6">
+                    <img 
+                        src="kanan-logo.svg" 
+                        alt="Kanan.co" 
+                        class="h-12 mx-auto filter brightness-0 invert"
+                    />
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-center space-x-2 text-blue-200">
+                            <!-- MapPin Icon -->
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="font-body">Vadodara, Gujarat</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-2 text-blue-200">
+                            <!-- Phone Icon -->
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span class="font-body">+919228122553</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-2 text-blue-200">
+                            <!-- Mail Icon -->
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span class="font-body">info@kanan.co</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-blue-500 mt-8 pt-8 text-center text-blue-200">
+                    <p class="font-body">&copy; 2025 Kanan.co · ICCRC/CCIC #R509505</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <div id="main-content">
+        <!-- All main content is already above -->
+    </div>
+
+    <!-- JavaScript for functionality -->
+    <script>
+        // Countdown functionality
+        function updateCountdown() {
+            const deadline = new Date('2026-03-01T00:00:00');
+            const now = new Date();
+            const timeDiff = deadline.getTime() - now.getTime();
+            
+            if (timeDiff > 0) {
+                const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+                
+                // Update countdown display if elements exist
+                const daysEl = document.getElementById('countdown-days');
+                const hoursEl = document.getElementById('countdown-hours');
+                const minutesEl = document.getElementById('countdown-minutes');
+                const secondsEl = document.getElementById('countdown-seconds');
+                
+                if (daysEl) daysEl.textContent = days;
+                if (hoursEl) hoursEl.textContent = hours;
+                if (minutesEl) minutesEl.textContent = minutes;
+                if (secondsEl) secondsEl.textContent = seconds;
+            }
+        }
+        
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+        
+        // Testimonials functionality
+        const testimonials = [
+            {
+                name: "Avisha Sanjay Kumar Patel",
+                college: "Centennial College",
+                quote: "I thank Kanan for their great support and hospitality services.",
+                image: "testimonial-images/Avisha_Sanjay_Kumar_Patel.png"
+            },
+            {
+                name: "Bhargavi Patel",
+                college: "Centennial College",
+                quote: "My special thanks to Yash sir, who gave personal guidance during the process.",
+                image: "testimonial-images/Bhargavi_Patel.png"
+            },
+            {
+                name: "Bhavik Patel",
+                college: "SAIT College, Canada",
+                quote: "Just because of their guidance I am studying at SAIT College, Canada.",
+                image: "testimonial-images/Bhavik_Patel_b655b19057.png"
+            },
+            {
+                name: "Saloni",
+                college: "Algoma University",
+                quote: "They helped me throughout my education journey abroad.",
+                image: "testimonial-images/Saloni_34fc2dee35.png"
+            },
+            {
+                name: "Jaimin Patel",
+                college: "Conestoga College",
+                quote: "They helped me in all stages of getting a student study permit.",
+                image: "testimonial-images/Jaimin_Patel_65b6c293d5.png"
+            },
+            {
+                name: "Sanskriti",
+                college: "Humber College, Canada",
+                quote: "I didn't face any problems with my visa and college admission process.",
+                image: "testimonial-images/Sanskriti_35d4ff78ca.png"
+            },
+            {
+                name: "Hetvi Baktarwala",
+                college: "Venture College",
+                quote: "The multiple mock tests boosted my confidence and helped me achieve a high band score.",
+                image: "testimonial-images/hetvi_baktarwala_d25f05a368.png"
+            },
+            {
+                name: "Disha Patel",
+                college: "Centennial College",
+                quote: "Their friendly environment and exceptional support were amazing.",
+                image: "testimonial-images/disha_patel_b07218c2ac.png"
+            },
+            {
+                name: "Jatin Raj Bharadwaj",
+                college: "Conestoga College",
+                quote: "My IELTS trainer, Ms. Mansi, helped me through my IELTS journey.",
+                image: "testimonial-images/jatin_raj_bharadwaj_52633119c0.png"
+            },
+            {
+                name: "Tulsi Thakar",
+                college: "Lambton College, Toronto",
+                quote: "I have done all my visa process with the support of Kanan.co team, and it was a great experience.",
+                image: "testimonial-images/tulsi_thakar_66cb3365ee.png"
+            }
+        ];
+        
+        let currentTestimonial = 0;
+        
+        function renderTestimonials() {
+            const container = document.getElementById('testimonials-container');
+            const dotsContainer = document.getElementById('testimonial-dots');
+            
+            if (!container || !dotsContainer) return;
+            
+            // Render 3 testimonials
+            container.innerHTML = '';
+            for (let i = 0; i < 3; i++) {
+                const testimonialIndex = (currentTestimonial + i) % testimonials.length;
+                const testimonial = testimonials[testimonialIndex];
+                
+                const testimonialDiv = document.createElement('div');
+                testimonialDiv.className = 'bg-white rounded-2xl p-8 shadow-lg';
+                testimonialDiv.innerHTML = `
+                    <div class="flex items-center space-x-4 mb-6">
+                        <img 
+                            src="${testimonial.image}" 
+                            alt="${testimonial.name}"
+                            class="w-16 h-16 rounded-full object-cover"
+                        />
+                        <div>
+                            <div class="font-bold text-gray-900 font-heading">${testimonial.name}</div>
+                            <div class="text-sm text-blue-600 font-medium font-body">${testimonial.college}</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-lg leading-relaxed font-body">"${testimonial.quote}"</p>
+                `;
+                container.appendChild(testimonialDiv);
+            }
+            
+            // Render dots
+            dotsContainer.innerHTML = '';
+            testimonials.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.className = `w-3 h-3 rounded-full transition-colors ${
+                    index === currentTestimonial ? 'bg-blue-600' : 'bg-gray-300'
+                }`;
+                dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
+                dot.setAttribute('aria-pressed', index === currentTestimonial);
+                dot.setAttribute('role', 'tab');
+                dot.onclick = () => {
+                    currentTestimonial = index;
+                    renderTestimonials();
+                };
+                dotsContainer.appendChild(dot);
+            });
+        }
+        
+        function nextTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            renderTestimonials();
+        }
+        
+        function prevTestimonial() {
+            currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+            renderTestimonials();
+        }
+        
+        // Auto-advance testimonials every 4 seconds
+        setInterval(nextTestimonial, 4000);
+        
+        // Initialize testimonials
+        renderTestimonials();
+        
+        // FAQ functionality
+        const faqs = [
+            {
+                question: "Do I pay for your services?",
+                answer: "No! Our consulting is completely free. We're remunerated by partner institutions as an Official Channel Agent (OCA). You only pay third-party charges like IELTS or university application fees."
+            },
+            {
+                question: "What is ICCRC/CCIC and why does it matter?",
+                answer: "ICCRC (Immigration Consultants of Canada Regulatory Council) license #R509505 means we're federally authorized to represent you before IRCC (Immigration, Refugees and Citizenship Canada). This ensures legal compliance and professional standards."
+            },
+            {
+                question: "Can you help with loans?",
+                answer: "Yes! We have partnerships with leading education loan providers for seamless financing and can guide you through the entire loan application process."
+            },
+            {
+                question: "What if my visa is refused?",
+                answer: "Our Toronto law-firm partner, Brownstein & Brownstein Associates, handles refusals, appeals, and work permits. With our 96% visa approval rate, refusals are rare, but we're prepared to fight for you."
+            },
+            {
+                question: "Do you serve cities outside Vadodara?",
+                answer: "Yes! While our main office is in Vadodara, we serve students across India with dedicated Gujarati/Tamil/Hindi helplines and virtual consultations. Our services are available nationwide."
+            }
+        ];
+        
+        let openFAQ = null;
+        
+        function renderFAQs() {
+            const container = document.getElementById('faq-container');
+            if (!container) return;
+            
+            container.innerHTML = '';
+            faqs.forEach((faq, index) => {
+                const faqDiv = document.createElement('div');
+                faqDiv.className = 'bg-white rounded-2xl shadow-sm border border-gray-100';
+                
+                const button = document.createElement('button');
+                button.className = 'w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 rounded-2xl transition-colors';
+                button.onclick = () => toggleFAQ(index);
+                
+                const questionSpan = document.createElement('span');
+                questionSpan.className = 'text-lg font-semibold text-gray-900 font-heading';
+                questionSpan.textContent = faq.question;
+                
+                const chevronIcon = document.createElement('div');
+                chevronIcon.innerHTML = openFAQ === index ? 
+                    '<!-- ChevronUp Icon --><svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="18,15 12,9 6,15"></polyline></svg>' :
+                    '<!-- ChevronDown Icon --><svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"></polyline></svg>';
+                
+                button.appendChild(questionSpan);
+                button.appendChild(chevronIcon);
+                faqDiv.appendChild(button);
+                
+                if (openFAQ === index) {
+                    const answerDiv = document.createElement('div');
+                    answerDiv.className = 'px-8 pb-6';
+                    const answerP = document.createElement('p');
+                    answerP.className = 'text-gray-600 leading-relaxed font-body';
+                    answerP.textContent = faq.answer;
+                    answerDiv.appendChild(answerP);
+                    faqDiv.appendChild(answerDiv);
+                }
+                
+                container.appendChild(faqDiv);
+            });
+        }
+        
+        function toggleFAQ(index) {
+            openFAQ = openFAQ === index ? null : index;
+            renderFAQs();
+        }
+        
+        // Initialize FAQs
+        renderFAQs();
+        
+        // Modal functionality
+        function openConsultationForm() {
+            const modal = document.getElementById('consultation-modal');
+            const iframe = document.getElementById('iframewin');
+            
+            // Reset to original URL
+            iframe.src = 'https://yujc-zc1.maillist-manage.in/ua/Optin?od=1a1e3dbc371d6&zx=1df90a3f61&sD=1373240311782401';
+            
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeConsultationForm() {
+            const modal = document.getElementById('consultation-modal');
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal when clicking outside
+        document.getElementById('consultation-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeConsultationForm();
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeConsultationForm();
+            }
+        });
+    </script>
+</body>
+</html>
