@@ -65,8 +65,8 @@
     
     <!-- Custom styles -->
     <style>
-        .font-heading { font-family: 'Rubik', sans-serif; }
-        .font-body { font-family: 'Manrope', sans-serif; }
+        .font-heading { font-family: 'Manrope', sans-serif; }
+        .font-body { font-family: 'Rubik', sans-serif; }
         
         /* Prevent layout shift for hero heading */
         .hero-heading-container {
@@ -814,8 +814,8 @@
     </footer>
 
     <!-- Consultation Form Modal -->
-    <div id="consultationModal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-        <div class="bg-white rounded-2xl p-8 max-w-md w-full relative">
+    <div id="consultationModal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" onclick="closeConsultationForm()">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full relative" onclick="event.stopPropagation()">
             <button
                 onclick="closeConsultationForm()"
                 class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
@@ -896,8 +896,8 @@
     </div>
 
     <!-- Thank You Page (Hidden by default) -->
-    <div id="thankYouPage" class="modal-overlay fixed inset-0 bg-white z-50">
-        <div class="min-h-screen bg-white font-body">
+    <div id="thankYouPage" class="modal-overlay fixed inset-0 bg-white z-50" onclick="backToHome()">
+        <div class="min-h-screen bg-white font-body" onclick="event.stopPropagation()">
             <!-- Header -->
             <header class="bg-white shadow-sm border-b border-gray-100" role="banner">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
