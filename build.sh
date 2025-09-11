@@ -12,6 +12,7 @@ LANDING_DIRS=(
   "gre"
   "us"
   "sat-vadodara"
+  "uk"
 )
 
 mkdir -p dist
