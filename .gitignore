@@ -133,4 +133,4 @@ vite.config.ts
 
 # React build outputs (not needed for static HTML)
 dist/
-build/
+build/project-uk/
