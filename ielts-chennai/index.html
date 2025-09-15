@@ -1577,7 +1577,7 @@
                                                     </table>
                                                 </div>
                                             </div>
-                                            <form method="POST" id="zcampaignOptinForm" action="https://yujc-zgpm.maillist-manage.in/weboptin.zc" target="_blank" onsubmit="handleFormSubmit(this)">
+                                            <form method="POST" id="zcampaignOptinForm" action="https://yujc-zgpm.maillist-manage.in/weboptin.zc" onsubmit="handleFormSubmit(this)">
                                                 <div id="SIGNUP_BODY_ALL" name="SIGNUP_BODY_ALL">
                                                     <div id="SIGNUP_BODY" name="SIGNUP_BODY">
                                                         <div>
@@ -1678,15 +1678,30 @@
                     }
                     
                     function handleFormSubmit(form) {
-                        // Call the original Zoho function
-                        zcScptlessSubmit(form);
+                        // Prevent default form submission
+                        event.preventDefault();
                         
-                        // Redirect to thank you page after a short delay
-                        setTimeout(function() {
-                            window.location.href = '/ielts-chennai/thank-you.html';
-                        }, 2000);
+                        // Create a hidden iframe to handle the form submission
+                        const iframe = document.createElement('iframe');
+                        iframe.style.display = 'none';
+                        iframe.name = 'zoho-form-submit';
+                        document.body.appendChild(iframe);
                         
-                        return false; // Prevent default form submission
+                        // Set form target to the iframe
+                        form.target = 'zoho-form-submit';
+                        
+                        // Submit the form
+                        form.submit();
+                        
+                        // Listen for the iframe load event
+                        iframe.onload = function() {
+                            // Redirect to thank you page after form submission
+                            setTimeout(function() {
+                                window.location.href = '/ielts-chennai/thank-you.html';
+                            }, 1000);
+                        };
+                        
+                        return false;
                     }
                     </script>
                     <!--Zoho Marketing Automation Web-Optin Form Ends Here-->
