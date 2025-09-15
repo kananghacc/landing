@@ -4,7 +4,7 @@ function openConsultationForm() {
     const iframe = document.getElementById('iframewin');
     
     // Set iframe source
-    iframe.src = 'https://yujc-zgpm.maillist-manage.in/ua/Optin?od=1a1e3dbc371d6&zx=1dfa204add&sD=137324031178240f';
+    iframe.src = 'https://yujc-zgpm.maillist-manage.in/ua/Optin?od=1a1e3dbc371d6&zx=1dfa204add&sD=137324031178240f&redirect=https://join.kanan.co/dubai/thank-you';
     
     
     modal.classList.add('show');
