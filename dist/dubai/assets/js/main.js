@@ -1,4 +1,19 @@
-const modal=document.getElementById("consultation-modal"),openButtons=document.querySelectorAll('[data-action="open-consultation"]'),closeButton=document.querySelector('[data-action="close-consultation"]');function openModal(){modal&&(modal.classList.remove("hidden"),modal.setAttribute("aria-hidden","false"))}function closeModal(){modal&&(modal.classList.add("hidden"),modal.setAttribute("aria-hidden","true"))}openButtons.forEach(o=>o.addEventListener("click",openModal)),closeButton&&closeButton.addEventListener("click",closeModal),modal&&modal.addEventListener("click",o=>{o.target===modal&&closeModal()});const form=document.getElementById("consultation-form");form&&form.addEventListener("submit",o=>{o.preventDefault();const e=new FormData(form);console.log("Form submitted:",Object.fromEntries(e.entries())),closeModal(),form.reset(),alert("Thank you! We will contact you soon.")});// Set a fixed deadline when the script loads
+// Modal functions
+function openConsultationForm() {
+    const modal = document.getElementById('consultation-modal');
+    const iframe = document.getElementById('iframewin');
+    iframe.src = 'https://yujc-zgpm.maillist-manage.in/ua/Optin?od=1a1e3dbc371d6&zx=1dfa204add&sD=137324031178240f';
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+function closeConsultationForm() {
+    const modal = document.getElementById('consultation-modal');
+    modal.classList.remove('show');
+    document.body.style.overflow = 'auto';
+}
+document.getElementById('consultation-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeConsultationForm();
+});// Set a fixed deadline when the script loads
 const countdownDeadline = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000); // 7 days from when script loads
 
 function updateCountdown() {
