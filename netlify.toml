@@ -65,6 +65,11 @@
   to = "/sat-vadodara/"
   status = 200
 
+[[redirects]]
+  from = "/canada"
+  to = "/canada/"
+  status = 200
+
 # Catch-all redirect for SPA routing within each app
 [[redirects]]
   from = "/ielts-chennai/*"
@@ -116,9 +121,45 @@
   to = "/uk/index.html"
   status = 200
 
+# Thank you page redirects
+[[redirects]]
+  from = "/ielts-chennai/thank-you"
+  to = "/ielts-chennai/thank-you.html"
+  status = 200
+
+[[redirects]]
+  from = "/ielts-vadodara/thank-you"
+  to = "/ielts-vadodara/thank-you.html"
+  status = 200
+
+[[redirects]]
+  from = "/ielts-online/thank-you"
+  to = "/ielts-online/thank-you.html"
+  status = 200
+
+[[redirects]]
+  from = "/us/thank-you"
+  to = "/us/thank-you.html"
+  status = 200
+
+[[redirects]]
+  from = "/sat-vadodara/thank-you"
+  to = "/sat-vadodara/thank-you.html"
+  status = 200
+
+[[redirects]]
+  from = "/canada/thank-you"
+  to = "/canada/thank-you.html"
+  status = 200
+
 [[redirects]]
   from = "/sat-vadodara/*"
   to = "/sat-vadodara/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/canada/*"
+  to = "/canada/index.html"
   status = 200
 
 # Headers for security and performance
