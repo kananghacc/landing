@@ -56,6 +56,11 @@
   status = 200
 
 [[redirects]]
+  from = "/uk"
+  to = "/uk/"
+  status = 200
+
+[[redirects]]
   from = "/sat-vadodara"
   to = "/sat-vadodara/"
   status = 200
@@ -99,6 +104,16 @@
 [[redirects]]
   from = "/us/*"
   to = "/us/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/uk/thank-you"
+  to = "/uk/thank-you.html"
+  status = 200
+
+[[redirects]]
+  from = "/uk/*"
+  to = "/uk/index.html"
   status = 200
 
 [[redirects]]
