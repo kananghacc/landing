@@ -15,6 +15,13 @@ function closeConsultationForm() {
     modal.classList.remove('show');
     document.body.style.overflow = 'auto';
 }
+
+function openWhatsApp() {
+    const message = "I'd like to speak to a Kanan.co counsellor reg. my Dubai plans";
+    const phoneNumber = "918160896252";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+}
 document.getElementById('consultation-modal').addEventListener('click', function(e) {
     if (e.target === this) closeConsultationForm();
 });// Set a fixed deadline when the script loads
