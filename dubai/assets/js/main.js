@@ -2,7 +2,19 @@
 function openConsultationForm() {
     const modal = document.getElementById('consultation-modal');
     const iframe = document.getElementById('iframewin');
+    
+    // Set iframe source
     iframe.src = 'https://yujc-zgpm.maillist-manage.in/ua/Optin?od=1a1e3dbc371d6&zx=1dfa204add&sD=137324031178240f';
+    
+    // Add error handling for iframe
+    iframe.onerror = function() {
+        console.error('Iframe failed to load');
+    };
+    
+    iframe.onload = function() {
+        console.log('Iframe loaded successfully');
+    };
+    
     modal.classList.add('show');
     document.body.style.overflow = 'hidden';
 }
