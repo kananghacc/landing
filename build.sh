@@ -14,6 +14,7 @@ LANDING_DIRS=(
   "sat-vadodara"
   "uk"
   "canada"
+  "australia"
 )
 
 mkdir -p dist
