@@ -1264,10 +1264,12 @@
                                                     </table>
                                                 </div>
                                             </div>
-                                            <form method="POST" id="zcampaignOptinForm" action="https://yujc-zgpm.maillist-manage.in/weboptin.zc" onsubmit="handleFormSubmit(event)">
+                                            <form method="POST" id="zcampaignOptinForm" action="https://yujc-zgpm.maillist-manage.in/weboptin.zc" onsubmit="zcScptlessSubmit(this)">
                                                 <div id="SIGNUP_BODY_ALL" name="SIGNUP_BODY_ALL">
+                                                    
                                                     <div id="SIGNUP_BODY" name="SIGNUP_BODY">
                                                         <div>
+                                                            
                                                             <div id="errorMsgDiv" style="color: #dc2626; font-size: 14px; margin-bottom: 16px; padding: 8px 12px; background-color: #fef2f2; border: 1px solid #fecaca; border-radius: 6px; display: none;">&nbsp;&nbsp;Please correct the marked field(s) below.</div>
                                                             <div>
                                                                 <div name="fieldsdivSf" class="zcsffieldsdiv" style="display: flex; flex-direction: column; gap: 12px;">
@@ -1588,54 +1590,23 @@
             modal.classList.add('show');
         }
 
-        // Form submission handler
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            
-            // Get form data
-            const form = event.target;
-            const formData = new FormData(form);
-            
-            // Basic validation
-            const email = formData.get('CONTACT_EMAIL');
-            const mobile = formData.get('MOBILE');
-            const name = formData.get('FIRSTNAME');
-            
-            if (!email || !mobile) {
-                alert('Please fill in all required fields (Email and Mobile Number)');
-                return false;
-            }
-            
-            // Show loading state
-            const submitBtn = form.querySelector('#zcWebOptin');
-            const originalText = submitBtn.value;
-            submitBtn.value = 'Submitting...';
-            submitBtn.disabled = true;
-            
-            // Create a hidden iframe to submit the form
-            const iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            iframe.name = 'zoho_submit_frame';
-            document.body.appendChild(iframe);
-            
-            // Set form target to iframe
-            form.target = 'zoho_submit_frame';
-            
-            // Submit form normally
-            form.submit();
-            
-            // Redirect after a short delay
-            setTimeout(() => {
-                window.location.href = 'thank-you.html';
-            }, 1500);
-            
-            return false;
-        }
+        // Form submission is now handled by Zoho's zcScptlessSubmit function
 
-        // Legacy Zoho function (kept for compatibility)
+        // Zoho form submission function
         function zcScptlessSubmit(parentNode){
+            console.log('Form submission started...');
+            console.log('Form data:', new FormData(parentNode));
+            
             parentNode.removeChild(document.querySelector("#zc_spmSubmit"));
             parentNode.submit();
+            
+            console.log('Form submitted to Zoho successfully');
+            
+            // Redirect to thank you page after form submission
+            setTimeout(function() {
+                console.log('Redirecting to thank you page...');
+                window.location.href = '/uk/thank-you.html';
+            }, 2000);
         }
 
         function closeConsultationForm() {
