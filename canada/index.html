@@ -1684,18 +1684,12 @@
 
         // Zoho form submission
         function zcScptlessSubmit(parentNode){
-            console.log('Form submission started...');
-            console.log('Form data:', new FormData(parentNode));
-            
             const spamInput = document.querySelector('#zc_spmSubmit');
             if (spamInput && parentNode.contains(spamInput)) {
                 parentNode.removeChild(spamInput);
             }
             parentNode.submit();
-            
-            console.log('Form submitted to Zoho successfully');
             setTimeout(function(){
-                console.log('Redirecting to thank you page...');
                 window.location.href = '/canada/thank-you.html';
             }, 2000);
         }

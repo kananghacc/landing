@@ -1466,28 +1466,16 @@
 
   <!-- JavaScript for Modal and Form Handling -->
   <script>
-    // Suppress countdown debug logs
-    (function() {
-      const originalLog = console.log;
-      console.log = function(...args) {
-        const message = args.join(' ');
-        if (!message.includes('Countdown update:') && !message.includes('Time left:')) {
-          originalLog.apply(console, args);
-        }
-      };
-    })();
 
     // Global functions for modal handling - using unique name to avoid conflicts
     window.openKananConsultationForm = function() {
-      console.log('Opening Kanan consultation form...');
       const modal = document.getElementById('consultation-modal');
       if (modal) {
         modal.style.display = 'flex';
         modal.classList.add('show');
         document.body.style.overflow = 'hidden';
-        console.log('Modal opened successfully');
       } else {
-        console.error('Modal element not found!');
+        /* modal missing */
       }
     };
 
@@ -1502,7 +1490,6 @@
 
     // Wait for DOM to be ready
     document.addEventListener('DOMContentLoaded', function() {
-      console.log('DOM loaded, modal functions initialized');
       
       // Close modal when clicking outside of it
       document.addEventListener('click', function(event) {
@@ -1524,17 +1511,10 @@
 
     // Zoho form submission function
     function zcScptlessSubmit(parentNode){
-      console.log('Form submission started...');
-      console.log('Form data:', new FormData(parentNode));
-      
       parentNode.removeChild(document.querySelector("#zc_spmSubmit"));
       parentNode.submit();
-      
-      console.log('Form submitted to Zoho successfully');
-      
       // Redirect to thank you page after form submission
       setTimeout(function() {
-        console.log('Redirecting to thank you page...');
         window.location.href = '/dubai/thank-you.html';
       }, 2000);
     }

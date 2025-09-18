@@ -2064,17 +2064,10 @@
 
       // Zoho form submission function
       function zcScptlessSubmit(parentNode){
-        console.log('Form submission started...');
-        console.log('Form data:', new FormData(parentNode));
-        
         parentNode.removeChild(document.querySelector("#zc_spmSubmit"));
         parentNode.submit();
-        
-        console.log('Form submitted to Zoho successfully');
-        
         // Redirect to thank you page after form submission
         setTimeout(function() {
-          console.log('Redirecting to thank you page...');
           window.location.href = '/us/thank-you.html';
         }, 2000);
       }
