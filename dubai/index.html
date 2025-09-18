@@ -23,19 +23,20 @@
     .modal {
       display: none;
       position: fixed;
-      z-index: 1000;
+      z-index: 10000;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.5);
-    }
-    .modal.show {
-      display: flex;
       align-items: center;
       justify-content: center;
     }
+    .modal.show {
+      display: flex;
+    }
     .modal-content {
+      position: relative;
       background: white;
       padding: 2rem;
       border-radius: 1rem;
@@ -43,6 +44,7 @@
       width: 90%;
       max-height: 90vh;
       overflow-y: auto;
+      margin: auto;
     }
         .floating-buttons {
             position: fixed;
@@ -1290,7 +1292,7 @@
     <div class="modal-content">
       <div class="flex justify-between items-center mb-6">
         <h3 class="text-2xl font-bold text-gray-900 font-heading">Book Your Free Consultation</h3>
-        <button onclick="closeConsultationForm()" class="text-gray-400 hover:text-gray-600">
+        <button type="button" onclick="closeConsultationForm()" class="text-gray-400 hover:text-gray-600" aria-label="Close consultation form">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
@@ -1471,18 +1473,16 @@
     window.openKananConsultationForm = function() {
       const modal = document.getElementById('consultation-modal');
       if (modal) {
-        modal.style.display = 'flex';
         modal.classList.add('show');
         document.body.style.overflow = 'hidden';
       } else {
-        /* modal missing */
+        console.error('Modal not found');
       }
     };
 
     window.closeConsultationForm = function() {
       const modal = document.getElementById('consultation-modal');
       if (modal) {
-        modal.style.display = 'none';
         modal.classList.remove('show');
         document.body.style.overflow = 'auto';
       }
@@ -1491,18 +1491,24 @@
     // Wait for DOM to be ready
     document.addEventListener('DOMContentLoaded', function() {
       
-      // Close modal when clicking outside of it
-      document.addEventListener('click', function(event) {
-        const modal = document.getElementById('consultation-modal');
-        if (event.target === modal) {
-          window.closeConsultationForm();
-        }
-      });
+      // Close modal when clicking the overlay (outside content)
+      const modal = document.getElementById('consultation-modal');
+      if (modal) {
+        modal.addEventListener('click', function(e) {
+          // Only close if clicking directly on the modal background, not its children
+          if (e.target === modal) {
+            window.closeConsultationForm();
+          }
+        });
+      }
 
       // Close modal with Escape key
       document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape') {
-          window.closeConsultationForm();
+          const modal = document.getElementById('consultation-modal');
+          if (modal && modal.classList.contains('show')) {
+            window.closeConsultationForm();
+          }
         }
       });
     });
