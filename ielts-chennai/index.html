@@ -118,57 +118,38 @@
     <!-- Header -->
     <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16 lg:h-20">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <img src="kanan-logo.svg" alt="Kanan.co - IELTS Coaching" class="h-8 lg:h-10 w-auto">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <img 
+                        src="kanan-logo.svg" 
+                        alt="Kanan.co" 
+                        class="h-8"
+                    />
                 </div>
-
-                <!-- Desktop Navigation -->
-                <nav class="hidden lg:flex items-center space-x-8">
-                    <a href="#course-features" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Course Features</a>
-                    <a href="#success-stories" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Success Stories</a>
-                    <a href="#trainers" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Trainers</a>
-                    <a href="#faq" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">FAQ</a>
-                </nav>
-
-                <!-- Desktop CTAs -->
-                <div class="hidden lg:flex items-center space-x-4">
-                    <a href="tel:+919228122553" class="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center gap-2">
+                <div class="flex items-center space-x-2 sm:space-x-4">
+                    <!-- Phone number - hidden on very small screens, visible on sm and up -->
+                    <a href="tel:+91 92281 22553" class="hidden sm:flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors font-body">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                         </svg>
-                        +91 92281 22553
+                        <span class="text-sm font-medium">+91 92281 22553</span>
                     </a>
-                    <button onclick="openConsultationForm()" class="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors">
-                        Book Free Consultation
+                    <!-- Mobile phone icon - visible only on very small screens -->
+                    <a href="tel:+91 92281 22553" class="sm:hidden flex items-center justify-center w-10 h-10 bg-gray-100 hover:bg-blue-100 text-gray-700 hover:text-blue-600 rounded-full transition-all duration-200 font-body">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                    </a>
+                    <button 
+                        onclick="openConsultationForm()"
+                        class="bg-blue-600 text-white px-3 sm:px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors font-body text-sm sm:text-base whitespace-nowrap"
+                    >
+                        <span class="hidden sm:inline">Book Free Consultation</span>
+                        <span class="sm:hidden">Book Free Consultation</span>
                     </button>
                 </div>
-
-                <!-- Mobile menu button -->
-                <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
             </div>
 
-            <!-- Mobile Navigation -->
-            <div id="mobile-menu" class="lg:hidden hidden">
-                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
-                    <a href="#course-features" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Course Features</a>
-                    <a href="#success-stories" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Success Stories</a>
-                    <a href="#trainers" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Trainers</a>
-                    <a href="#faq" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">FAQ</a>
-                    <div class="px-3 py-2">
-                        <a href="tel:+919228122553" class="block text-gray-700 hover:text-blue-600 font-medium mb-2">+91 92281 22553</a>
-                        <button onclick="openConsultationForm()" class="w-full bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors">
-                            Book Free Consultation
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </header>
 
     <!-- Main Content -->

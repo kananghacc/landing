@@ -76,80 +76,37 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-300" id="header">
+    <header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50" role="banner">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16 lg:h-20">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <img src="kanan-logo.svg" alt="Kanan.co - GRE Coaching" class="h-8 w-auto">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <img 
+                        src="kanan-logo.svg" 
+                        alt="Kanan.co" 
+                        class="h-8"
+                    />
                 </div>
-
-                <!-- Desktop Navigation -->
-                <nav class="hidden lg:flex items-center space-x-8">
-                    <a href="#course-features" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Course Features</a>
-                    <a href="#success-stories" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Success Stories</a>
-                    <a href="#trainers" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Trainers</a>
-                    <a href="#course-packages" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Course Packages</a>
-                    <a href="#faq" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">FAQ</a>
-                </nav>
-
-                <!-- Desktop CTAs -->
-                <div class="hidden lg:flex items-center space-x-4">
-                    <a href="https://wa.me/919150050940?text=Hi! I'm interested in GRE coaching. Can you help me?" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center space-x-2 bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                <div class="flex items-center space-x-2 sm:space-x-4">
+                    <!-- Phone number - hidden on very small screens, visible on sm and up -->
+                    <a href="tel:+91 92281 22552" class="hidden sm:flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors font-body">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                         </svg>
-                        <span>Chat</span>
+                        <span class="text-sm font-medium">+91 92281 22552</span>
                     </a>
-                    <a href="tel:+919228122552" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    <!-- Mobile phone icon - visible only on very small screens -->
+                    <a href="tel:+91 92281 22552" class="sm:hidden flex items-center justify-center w-10 h-10 bg-gray-100 hover:bg-blue-100 text-gray-700 hover:text-blue-600 rounded-full transition-all duration-200 font-body">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                         </svg>
-                        <span>Call</span>
                     </a>
-                    <button onclick="openConsultationForm()" class="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors">
-                        Free Demo Class
+                    <button 
+                        onclick="openConsultationForm()"
+                        class="bg-blue-600 text-white px-3 sm:px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors font-body text-sm sm:text-base whitespace-nowrap"
+                    >
+                        <span class="hidden sm:inline">Free Demo Class</span>
+                        <span class="sm:hidden">Free Demo Class</span>
                     </button>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors" id="mobile-menu-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="menu-icon">
-                        <line x1="3" y1="6" x2="21" y2="6"/>
-                        <line x1="3" y1="12" x2="21" y2="12"/>
-                        <line x1="3" y1="18" x2="21" y2="18"/>
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div class="lg:hidden bg-white border-t border-gray-200 hidden" id="mobile-menu">
-                <div class="px-4 py-6 space-y-4">
-                    <nav class="space-y-4">
-                        <a href="#course-features" class="block text-gray-700 hover:text-blue-600 font-medium transition-colors" onclick="closeMobileMenu()">Course Features</a>
-                        <a href="#success-stories" class="block text-gray-700 hover:text-blue-600 font-medium transition-colors" onclick="closeMobileMenu()">Success Stories</a>
-                        <a href="#trainers" class="block text-gray-700 hover:text-blue-600 font-medium transition-colors" onclick="closeMobileMenu()">Trainers</a>
-                        <a href="#course-packages" class="block text-gray-700 hover:text-blue-600 font-medium transition-colors" onclick="closeMobileMenu()">Course Packages</a>
-                        <a href="#faq" class="block text-gray-700 hover:text-blue-600 font-medium transition-colors" onclick="closeMobileMenu()">FAQ</a>
-                    </nav>
-                    
-                    <div class="pt-4 border-t border-gray-200 space-y-4">
-                        <a href="https://wa.me/919150050940?text=Hi! I'm interested in GRE coaching. Can you help me?" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium transition-colors" onclick="closeMobileMenu()">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                            </svg>
-                            <span>Chat on WhatsApp</span>
-                        </a>
-                        <a href="tel:+919228122552" class="flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium transition-colors" onclick="closeMobileMenu()">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                            <span>Call Us</span>
-                        </a>
-                        <button onclick="openConsultationForm(); closeMobileMenu();" class="w-full bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors">
-                            Free Demo Class
-                        </button>
-                    </div>
                 </div>
             </div>
         </div>
