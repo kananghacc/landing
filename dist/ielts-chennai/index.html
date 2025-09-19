@@ -118,57 +118,38 @@
     <!-- Header -->
     <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16 lg:h-20">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <img src="kanan-logo.svg" alt="Kanan.co - IELTS Coaching" class="h-8 lg:h-10 w-auto">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <img 
+                        src="kanan-logo.svg" 
+                        alt="Kanan.co" 
+                        class="h-8"
+                    />
                 </div>
-
-                <!-- Desktop Navigation -->
-                <nav class="hidden lg:flex items-center space-x-8">
-                    <a href="#course-features" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Course Features</a>
-                    <a href="#success-stories" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Success Stories</a>
-                    <a href="#trainers" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Trainers</a>
-                    <a href="#faq" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">FAQ</a>
-                </nav>
-
-                <!-- Desktop CTAs -->
-                <div class="hidden lg:flex items-center space-x-4">
-                    <a href="tel:+919228122553" class="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center gap-2">
+                <div class="flex items-center space-x-2 sm:space-x-4">
+                    <!-- Phone number - hidden on very small screens, visible on sm and up -->
+                    <a href="tel:+91 92281 22553" class="hidden sm:flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors font-body">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                         </svg>
-                        +91 92281 22553
+                        <span class="text-sm font-medium">+91 92281 22553</span>
                     </a>
-                    <button onclick="openConsultationForm()" class="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors">
-                        Book Free Consultation
+                    <!-- Mobile phone icon - visible only on very small screens -->
+                    <a href="tel:+91 92281 22553" class="sm:hidden flex items-center justify-center w-10 h-10 bg-gray-100 hover:bg-blue-100 text-gray-700 hover:text-blue-600 rounded-full transition-all duration-200 font-body">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                    </a>
+                    <button 
+                        onclick="openConsultationForm()"
+                        class="bg-blue-600 text-white px-3 sm:px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors font-body text-sm sm:text-base whitespace-nowrap"
+                    >
+                        <span class="hidden sm:inline">Book Free Consultation</span>
+                        <span class="sm:hidden">Book Free Consultation</span>
                     </button>
                 </div>
-
-                <!-- Mobile menu button -->
-                <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
             </div>
 
-            <!-- Mobile Navigation -->
-            <div id="mobile-menu" class="lg:hidden hidden">
-                <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
-                    <a href="#course-features" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Course Features</a>
-                    <a href="#success-stories" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Success Stories</a>
-                    <a href="#trainers" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">Trainers</a>
-                    <a href="#faq" class="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium">FAQ</a>
-                    <div class="px-3 py-2">
-                        <a href="tel:+919228122553" class="block text-gray-700 hover:text-blue-600 font-medium mb-2">+91 92281 22553</a>
-                        <button onclick="openConsultationForm()" class="w-full bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors">
-                            Book Free Consultation
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </header>
 
     <!-- Main Content -->
@@ -1577,10 +1558,14 @@
                                                     </table>
                                                 </div>
                                             </div>
-                                            <form method="POST" id="zcampaignOptinForm" action="https://yujc-zgpm.maillist-manage.in/weboptin.zc" onsubmit="handleFormSubmit(this)">
+                                            <form method="POST" id="zcampaignOptinForm" action="https://yujc-zgpm.maillist-manage.in/weboptin.zc" onsubmit="zcScptlessSubmit(this)">
                                                 <div id="SIGNUP_BODY_ALL" name="SIGNUP_BODY_ALL">
+                                                    <h1 id="SIGNUP_HEADING" name="SIGNUP_HEADING" changeid="SIGNUP_MSG" changetype="SIGNUP_HEADER" style="font-size: 24px; font-weight: 700; color: #1f2937; margin-bottom: 16px; text-align: center;">
+                                                        <span>Register For Free 1:1 Consultation</span>
+                                                    </h1>
                                                     <div id="SIGNUP_BODY" name="SIGNUP_BODY">
                                                         <div>
+                                                            <div class="" changeid="SIGNUP_MSG" id="SIGNUP_DESCRIPTION" changetype="SIGNUP_DESCRIPTION" style="color: #6b7280; font-size: 14px; margin-bottom: 20px; text-align: center;">Please complete this form to create an account, receive email updates and much more.</div>
                                                             <div id="errorMsgDiv" style="color: #dc2626; font-size: 14px; margin-bottom: 16px; padding: 8px 12px; background-color: #fef2f2; border: 1px solid #fecaca; border-radius: 6px; display: none;">&nbsp;&nbsp;Please correct the marked field(s) below.</div>
                                                             <div>
                                                                 <div name="fieldsdivSf" class="zcsffieldsdiv" style="display: flex; flex-direction: column; gap: 12px;">
@@ -1606,6 +1591,7 @@
                                                                         <div></div>
                                                                     </div>
                                                                 </div>
+                                                                <!-- Captcha for Signup --><!-- Captcha for Signup End--><!-- Other Lists Subscription Start--><div></div>
                                                                 <div id="REQUIRED_FIELD_TEXT" changetype="REQUIRED_FIELD_TEXT" name="SIGNUP_REQUIRED" style="color: #6b7280; font-size: 12px; margin: 16px 0 8px 0; text-align: center;">*Required fields</div>
                                                                 <div>
                                                                     <input type="submit" action="Save" id="zcWebOptin" name="SIGNUP_SUBMIT_BUTTON" changetype="SIGNUP_SUBMIT_BUTTON_TEXT" value="Submit" style="width: 100%; padding: 16px; margin: 8px 0; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 6px 8px -1px rgba(0, 0, 0, 0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0, 0, 0, 0.1)'">
@@ -1615,7 +1601,7 @@
                                                     </div>
                                                 </div>
                                                 <!-- Do not edit the below Zoho Campaigns hidden tags -->
-                                                <input type="hidden" id="fieldBorder" value="">
+                                                <input type="hidden" id="fieldBorder" value="rgb(222, 222, 222)">
                                                 <input type="hidden" name="zc_trackCode" id="zc_trackCode" value="" onload="">
                                                 <input type="hidden" name="viewFrom" id="viewFrom" value="URL_ACTION">
                                                 <input type="hidden" id="submitType" name="submitType" value="optinCustomView">
@@ -1674,34 +1660,12 @@
                         </span><div id="zcOptinSuccessPanel"></div></div>
                     <script>
                     function zcScptlessSubmit(parentNode){
-                    parentNode.removeChild(document.querySelector("#zc_spmSubmit"));parentNode.submit();
-                    }
-                    
-                    function handleFormSubmit(form) {
-                        // Prevent default form submission
-                        event.preventDefault();
-                        
-                        // Create a hidden iframe to handle the form submission
-                        const iframe = document.createElement('iframe');
-                        iframe.style.display = 'none';
-                        iframe.name = 'zoho-form-submit';
-                        document.body.appendChild(iframe);
-                        
-                        // Set form target to the iframe
-                        form.target = 'zoho-form-submit';
-                        
-                        // Submit the form
-                        form.submit();
-                        
-                        // Listen for the iframe load event
-                        iframe.onload = function() {
-                            // Redirect to thank you page after form submission
-                            setTimeout(function() {
-                                window.location.href = '/ielts-chennai/thank-you.html';
-                            }, 1000);
-                        };
-                        
-                        return false;
+                        parentNode.removeChild(document.querySelector("#zc_spmSubmit"));
+                        parentNode.submit();
+                        // Redirect to thank you page after form submission
+                        setTimeout(function() {
+                            window.location.href = '/ielts-chennai/thank-you.html';
+                        }, 2000);
                     }
                     </script>
                     <!--Zoho Marketing Automation Web-Optin Form Ends Here-->
@@ -1839,22 +1803,7 @@
             }
         }
 
-        // Form submission
-        document.getElementById('consultation-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // Here you would typically send the data to your backend
-            // For now, we'll just show a success message
-            alert('Thank you for your interest! We will contact you soon.');
-            
-            // Close modal and reset form
-            closeConsultationForm();
-            this.reset();
-        });
+        // Form submission is now handled by Zoho's zcScptlessSubmit function
 
         // Close modal when clicking outside
         document.getElementById('consultation-modal').addEventListener('click', function(e) {

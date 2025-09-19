@@ -23,19 +23,20 @@
     .modal {
       display: none;
       position: fixed;
-      z-index: 1000;
+      z-index: 10000;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.5);
-    }
-    .modal.show {
-      display: flex;
       align-items: center;
       justify-content: center;
     }
+    .modal.show {
+      display: flex;
+    }
     .modal-content {
+      position: relative;
       background: white;
       padding: 2rem;
       border-radius: 1rem;
@@ -43,6 +44,7 @@
       width: 90%;
       max-height: 90vh;
       overflow-y: auto;
+      margin: auto;
     }
         .floating-buttons {
             position: fixed;
@@ -1290,7 +1292,7 @@
     <div class="modal-content">
       <div class="flex justify-between items-center mb-6">
         <h3 class="text-2xl font-bold text-gray-900 font-heading">Book Your Free Consultation</h3>
-        <button onclick="closeConsultationForm()" class="text-gray-400 hover:text-gray-600">
+        <button type="button" onclick="closeConsultationForm()" class="text-gray-400 hover:text-gray-600" aria-label="Close consultation form">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
@@ -1333,10 +1335,14 @@
                           </table>
                         </div>
                       </div>
-                      <form method="POST" id="zcampaignOptinForm" action="https://yujc-zgpm.maillist-manage.in/weboptin.zc" onsubmit="handleFormSubmit(event)">
+                      <form method="POST" id="zcampaignOptinForm" action="https://yujc-zgpm.maillist-manage.in/weboptin.zc" onsubmit="zcScptlessSubmit(this)">
                         <div id="SIGNUP_BODY_ALL" name="SIGNUP_BODY_ALL">
+                          <h1 id="SIGNUP_HEADING" name="SIGNUP_HEADING" changeid="SIGNUP_MSG" changetype="SIGNUP_HEADER" style="font-size: 24px; font-weight: 700; color: #1f2937; margin-bottom: 16px; text-align: center;">
+                            <span>Register For Free 1:1 Consultation</span>
+                          </h1>
                           <div id="SIGNUP_BODY" name="SIGNUP_BODY">
                             <div>
+                              <div class="" changeid="SIGNUP_MSG" id="SIGNUP_DESCRIPTION" changetype="SIGNUP_DESCRIPTION" style="color: #6b7280; font-size: 14px; margin-bottom: 20px; text-align: center;">Please complete this form to create an account, receive email updates and much more.</div>
                               <div id="errorMsgDiv" style="color: #dc2626; font-size: 14px; margin-bottom: 16px; padding: 8px 12px; background-color: #fef2f2; border: 1px solid #fecaca; border-radius: 6px; display: none;">&nbsp;&nbsp;Please correct the marked field(s) below.</div>
                               <div>
                                 <div name="fieldsdivSf" class="zcsffieldsdiv" style="display: flex; flex-direction: column; gap: 12px;">
@@ -1377,7 +1383,7 @@
                           </div>
                         </div>
                         <!-- Do not edit the below Zoho Campaigns hidden tags -->
-                        <input type="hidden" id="fieldBorder" value="">
+                        <input type="hidden" id="fieldBorder" value="rgb(222, 222, 222)">
                         <input type="hidden" name="zc_trackCode" id="zc_trackCode" value="" onload="">
                         <input type="hidden" name="viewFrom" id="viewFrom" value="URL_ACTION">
                         <input type="hidden" id="submitType" name="submitType" value="optinCustomView">
@@ -1462,35 +1468,21 @@
 
   <!-- JavaScript for Modal and Form Handling -->
   <script>
-    // Suppress countdown debug logs
-    (function() {
-      const originalLog = console.log;
-      console.log = function(...args) {
-        const message = args.join(' ');
-        if (!message.includes('Countdown update:') && !message.includes('Time left:')) {
-          originalLog.apply(console, args);
-        }
-      };
-    })();
 
     // Global functions for modal handling - using unique name to avoid conflicts
     window.openKananConsultationForm = function() {
-      console.log('Opening Kanan consultation form...');
       const modal = document.getElementById('consultation-modal');
       if (modal) {
-        modal.style.display = 'flex';
         modal.classList.add('show');
         document.body.style.overflow = 'hidden';
-        console.log('Modal opened successfully');
       } else {
-        console.error('Modal element not found!');
+        console.error('Modal not found');
       }
     };
 
     window.closeConsultationForm = function() {
       const modal = document.getElementById('consultation-modal');
       if (modal) {
-        modal.style.display = 'none';
         modal.classList.remove('show');
         document.body.style.overflow = 'auto';
       }
@@ -1498,72 +1490,39 @@
 
     // Wait for DOM to be ready
     document.addEventListener('DOMContentLoaded', function() {
-      console.log('DOM loaded, modal functions initialized');
       
-      // Close modal when clicking outside of it
-      document.addEventListener('click', function(event) {
-        const modal = document.getElementById('consultation-modal');
-        if (event.target === modal) {
-          window.closeConsultationForm();
-        }
-      });
+      // Close modal when clicking the overlay (outside content)
+      const modal = document.getElementById('consultation-modal');
+      if (modal) {
+        modal.addEventListener('click', function(e) {
+          // Only close if clicking directly on the modal background, not its children
+          if (e.target === modal) {
+            window.closeConsultationForm();
+          }
+        });
+      }
 
       // Close modal with Escape key
       document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape') {
-          window.closeConsultationForm();
+          const modal = document.getElementById('consultation-modal');
+          if (modal && modal.classList.contains('show')) {
+            window.closeConsultationForm();
+          }
         }
       });
     });
 
-    // Form submission handler
-    function handleFormSubmit(event) {
-      event.preventDefault();
-      
-      // Get form data
-      const form = event.target;
-      const formData = new FormData(form);
-      
-      // Basic validation
-      const email = formData.get('CONTACT_EMAIL');
-      const mobile = formData.get('MOBILE');
-      const name = formData.get('FIRSTNAME');
-      
-      if (!email || !mobile) {
-        alert('Please fill in all required fields (Email and Mobile Number)');
-        return false;
-      }
-      
-      // Show loading state
-      const submitBtn = form.querySelector('#zcWebOptin');
-      const originalText = submitBtn.value;
-      submitBtn.value = 'Submitting...';
-      submitBtn.disabled = true;
-      
-      // Create a hidden iframe to submit the form
-      const iframe = document.createElement('iframe');
-      iframe.style.display = 'none';
-      iframe.name = 'zoho_submit_frame';
-      document.body.appendChild(iframe);
-      
-      // Set form target to iframe
-      form.target = 'zoho_submit_frame';
-      
-      // Submit form normally
-      form.submit();
-      
-      // Redirect after a short delay
-      setTimeout(() => {
-        window.location.href = 'thank-you.html';
-      }, 1500);
-      
-      return false;
-    }
+    // Form submission is now handled by Zoho's zcScptlessSubmit function
 
-    // Legacy Zoho function (kept for compatibility)
+    // Zoho form submission function
     function zcScptlessSubmit(parentNode){
       parentNode.removeChild(document.querySelector("#zc_spmSubmit"));
       parentNode.submit();
+      // Redirect to thank you page after form submission
+      setTimeout(function() {
+        window.location.href = '/dubai/thank-you.html';
+      }, 2000);
     }
 
     // WhatsApp function for floating buttons

@@ -11,7 +11,7 @@ LANDING_DIRS=(
   "dubai"
   "gre"
   "us"
-  "sat-vadodara"
+  "sat"
   "uk"
   "canada"
   "australia"

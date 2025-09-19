@@ -61,8 +61,8 @@
   status = 200
 
 [[redirects]]
-  from = "/sat-vadodara"
-  to = "/sat-vadodara/"
+  from = "/sat"
+  to = "/sat/"
   status = 200
 
 [[redirects]]
@@ -143,8 +143,8 @@
   status = 200
 
 [[redirects]]
-  from = "/sat-vadodara/thank-you"
-  to = "/sat-vadodara/thank-you.html"
+  from = "/sat/thank-you"
+  to = "/sat/thank-you.html"
   status = 200
 
 [[redirects]]
@@ -153,8 +153,8 @@
   status = 200
 
 [[redirects]]
-  from = "/sat-vadodara/*"
-  to = "/sat-vadodara/index.html"
+  from = "/sat/*"
+  to = "/sat/index.html"
   status = 200
 
 [[redirects]]
