@@ -11,7 +11,7 @@ LANDING_DIRS=(
   "dubai"
   "gre-online"
   "us"
-  "sat"
+  "sat-online"
   "uk"
   "canada"
   "australia"
