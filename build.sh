@@ -9,7 +9,7 @@ LANDING_DIRS=(
   "ielts-vadodara"
   "ielts-online"
   "dubai"
-  "gre"
+  "gre-online"
   "us"
   "sat"
   "uk"
