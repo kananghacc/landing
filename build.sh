@@ -15,6 +15,7 @@ LANDING_DIRS=(
   "uk"
   "canada"
   "australia"
+  "germany"
 )
 
 mkdir -p dist
