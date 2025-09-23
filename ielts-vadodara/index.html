@@ -1590,7 +1590,9 @@
                                                     </table>
                                                 </div>
                                             </div>
-                                            <form method="POST" id="zcampaignOptinForm" action="https://yujc-zgpm.maillist-manage.in/weboptin.zc" onsubmit="zcScptlessSubmit(this); scheduleThankYouRedirect(); return false;" class="zk-form" novalidate>
+                                            <!-- Hidden target iframe to keep JSON response off the main page -->
+                                            <iframe name="zohosubmit" style="display:none;"></iframe>
+                                            <form method="POST" id="zcampaignOptinForm" action="https://yujc-zgpm.maillist-manage.in/weboptin.zc" target="zohosubmit" onsubmit="zcScptlessSubmit(this); scheduleThankYouRedirect();" class="zk-form" novalidate>
                                                 <div id="SIGNUP_BODY_ALL" name="SIGNUP_BODY_ALL" style="margin-top: 0;">
                                                     <h1 id="SIGNUP_HEADING" name="SIGNUP_HEADING" changeid="SIGNUP_MSG" changetype="SIGNUP_HEADER">
                                                         
@@ -1612,7 +1614,7 @@
                                                                         <div>
                                                                             <input id="email" class="zk-input" maxlength="100" placeholder="name@example.com" name="CONTACT_EMAIL" changeitem="SIGNUP_FORM_FIELD" type="email" autocomplete="email" required aria-required="true">
                                                                         </div>
-                                                                        <div class="zk-help">We’ll send confirmation and updates here.</div>
+                                                                        <div class="zk-help">We'll send confirmation and updates here.</div>
                                                                     </div>
                                                                     <div class="zcsffield zk-field" fieldid="248582000000000047">
                                                                         <label for="mobile" class="zk-label">Mobile Number<span class="zk-req" aria-hidden="true">*</span></label>
@@ -1701,6 +1703,12 @@
                             window.location.href = 'thank-you.html';
                           }, 600);
                         }
+                        // Fallback: if JSON content appears in location or body, redirect immediately
+                        try {
+                          if (window.location && /ZC_TYPEJSON/.test(document.body && document.body.innerText || '')) {
+                            window.location.replace('thank-you.html');
+                          }
+                        } catch(e) {}
                         </script>
                         <!--Zoho Marketing Automation Web-Optin Form Ends Here-->
                 </div>
