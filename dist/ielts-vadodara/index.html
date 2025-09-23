@@ -231,7 +231,7 @@
                     <!-- Right Column - Visual Content -->
                     <div class="relative">
                         <!-- Main Hero Card -->
-                        <div class="relative bg-white rounded-2xl shadow-2xl p-6 sm:p-8">
+                        <div class="relative z-10 bg-white rounded-2xl shadow-2xl p-6 sm:p-8">
                             <!-- Success Badge -->
                             <div class="absolute -top-4 -right-4 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg flex items-center space-x-1">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -246,7 +246,8 @@
                                 <img src="kanan-ielts-3.png" alt="Students at university campus with digital education icons - Achieve your IELTS goals with Kanan.co" class="w-full h-48 sm:h-64 object-cover rounded-xl mb-6" loading="lazy" width="390" height="192">
                             </picture>
                             
-                            <!-- Video Preview -->
+                            
+                            <!-- Video Preview 
                             <div class="relative mb-6">
                                 <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-4 text-white">
                                     <div class="flex items-center space-x-3 mb-3">
@@ -265,6 +266,7 @@
                                     </button>
                                 </div>
                             </div>
+                            -->
 
                             <!-- Key Features Grid -->
                             <div class="space-y-4">
@@ -308,12 +310,14 @@
                         </div>
 
                         <!-- Floating Stats Card -->
-                        <div class="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 border border-gray-100">
+                        <!--
+                        <div class="hidden lg:block absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 border border-gray-100 z-0 pointer-events-none">
                             <div class="text-center">
                                 <div class="text-2xl font-bold text-blue-600">7</div>
                                 <div class="text-xs text-gray-600">Seats Left</div>
                             </div>
                         </div>
+                        -->
                     </div>
                 </div>
             </div>
@@ -860,75 +864,16 @@
                     </div>
                 </div>
 
-                <!-- Featured Testimonial -->
-                <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12 mb-12">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                        <!-- Video Section -->
-                        <div class="relative">
-                            <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl p-8 text-white text-center">
-                                <div class="mb-6">
-                                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M8 5v14l11-7z"/>
-                                        </svg>
-                                    </div>
-                                    <h3 class="text-xl font-semibold mb-2 font-heading">Watch Success Stories</h3>
-                                    <p class="text-sm opacity-90">See how our students achieved their target band scores</p>
-                                </div>
-                                <button onclick="openVideoModal()" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
-                                    Play Video Testimonials
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Featured Quote -->
-                        <div class="space-y-6">
-                            <div class="flex items-center space-x-4">
-                                <img src="testimonial-images/maitry_f4c1575654.png" alt="Maitry Acharya" class="w-16 h-16 rounded-full object-cover border-4 border-blue-100">
-                                <div>
-                                    <h4 class="text-lg font-semibold text-gray-900 font-heading">Maitry Acharya</h4>
-                                    <div class="flex items-center space-x-2">
-                                        <span class="text-2xl font-bold text-green-600 font-heading">Band 8.0</span>
-                                        <div class="flex space-x-1">
-                                            <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24">
-                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                            </svg>
-                                            <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24">
-                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                            </svg>
-                                            <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24">
-                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                            </svg>
-                                            <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24">
-                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                            </svg>
-                                            <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24">
-                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <blockquote class="text-lg text-gray-700 italic leading-relaxed">
-                                "My decision to go to <strong>Canada</strong> was quite instant, so I had to give IELTS within <strong>10 days</strong>. However, Kanan's <strong>crash course</strong> was perfect for my decision. The teacher was <strong>friendly and amazing</strong>, their class was easily understandable."
-                            </blockquote>
-                            <div class="flex items-center space-x-2 text-sm text-gray-500">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                                </svg>
-                                <span>Improved from Band 6.0 to 8.0</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
 
                 <!-- Video Testimonial Cards -->
+                <!--
                 <div class="mb-12">
                     <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center font-heading">
                         Watch More Success Stories
                     </h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <!-- Testimonial 1 -->
+                        
                         <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow cursor-pointer" onclick="openVideoModal()">
                             <div class="relative mb-4">
                                 <img src="testimonial-images/bharvi_patel_8d7835ce10.png" alt="Bharvi Patel" class="w-full h-32 object-cover rounded-lg">
@@ -950,8 +895,9 @@
                                 </p>
                             </div>
                         </div>
+                
 
-                        <!-- Testimonial 2 -->
+                        
                         <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow cursor-pointer" onclick="openVideoModal()">
                             <div class="relative mb-4">
                                 <img src="testimonial-images/manan_rajesh_padsala_dca2ae5fe4.png" alt="Manan Rajesh Padsala" class="w-full h-32 object-cover rounded-lg">
@@ -974,7 +920,7 @@
                             </div>
                         </div>
 
-                        <!-- Testimonial 3 -->
+                        
                         <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow cursor-pointer" onclick="openVideoModal()">
                             <div class="relative mb-4">
                                 <img src="testimonial-images/jayashankar_179f406b82.png" alt="Jayashankar" class="w-full h-32 object-cover rounded-lg">
@@ -997,7 +943,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Testimonial Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1522,13 +1468,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <div class="mb-8">
-                    <img src="kanan-logo.svg" alt="Kanan.co" class="h-12 mx-auto mb-4">
+                    <img src="Kanan White logo PNG.png" alt="Kanan.co" class="h-12 mx-auto mb-4">
                     <p class="text-lg opacity-90 max-w-2xl mx-auto">
                         Your trusted partner for IELTS success. Join thousands of students who have achieved their target band scores with our expert guidance.
                     </p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 justify-center justify-items-center">
                     <div class="text-center">
                         <h4 class="text-lg font-semibold mb-4 font-heading">Contact Info</h4>
                         <div class="space-y-2">
@@ -1557,26 +1503,7 @@
                         </div>
                     </div>
                     
-                    <div class="text-center">
-                        <h4 class="text-lg font-semibold mb-4 font-heading">Follow Us</h4>
-                        <div class="flex justify-center space-x-4">
-                            <a href="#" class="text-blue-200 hover:text-white transition-colors" aria-label="Facebook">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                                </svg>
-                            </a>
-                            <a href="#" class="text-blue-200 hover:text-white transition-colors" aria-label="Instagram">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.297-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.807.875 1.297 2.026 1.297 3.323s-.49 2.448-1.297 3.323c-.875.807-2.026 1.297-3.323 1.297zm7.83-9.781H7.721c-.49 0-.875.385-.875.875v8.449c0 .49.385.875.875.875h8.449c.49 0 .875-.385.875-.875V8.082c0-.49-.385-.875-.875-.875z"/>
-                                </svg>
-                            </a>
-                            <a href="#" class="text-blue-200 hover:text-white transition-colors" aria-label="YouTube">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             <div class="border-t border-blue-500 mt-8 pt-8 text-center text-blue-200">
