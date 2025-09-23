@@ -91,11 +91,11 @@
         }
         .modal-content {
             background: white;
-            padding: 2rem;
+            padding: 1.25rem;
             border-radius: 1rem;
             max-width: 500px;
             width: 90%;
-            max-height: 90vh;
+            max-height: 80vh;
             overflow-y: auto;
         }
         .floating-buttons {
@@ -1538,7 +1538,7 @@
             
             <!-- Form replaced with iframe -->
             <div class="w-full">
-                <div id="form-container" style="border-radius: 8px; padding: 24px; background: white; height: 600px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                <div id="form-container" style="border-radius: 8px; padding: 16px; background: white; min-height: 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
                     <!--Zoho Marketing Automation Web-Optin Form Starts Here-->
                     <style>
                         /* Scoped, minimal styles for the consultation form */
@@ -1592,14 +1592,14 @@
                                                 </div>
                                             </div>
                                             <form method="POST" id="zcampaignOptinForm" action="https://yujc-zgpm.maillist-manage.in/weboptin.zc" target="_blank" onsubmit="zcScptlessSubmit(this)" class="zk-form" novalidate>
-                                                <div id="SIGNUP_BODY_ALL" name="SIGNUP_BODY_ALL">
+                                                <div id="SIGNUP_BODY_ALL" name="SIGNUP_BODY_ALL" style="margin-top: 0;">
                                                     <h1 id="SIGNUP_HEADING" name="SIGNUP_HEADING" changeid="SIGNUP_MSG" changetype="SIGNUP_HEADER">
-                                                        <span>Register For Free 1:1 Consultation</span>
+                                                        
                                                     </h1>
                                                     <div id="SIGNUP_BODY" name="SIGNUP_BODY">
-                                                        <div>
-                                                            <div class="" changeid="SIGNUP_MSG" id="SIGNUP_DESCRIPTION" changetype="SIGNUP_DESCRIPTION">Please complete this form to create an account, receive email updates and much more.</div>
-                                                            <div id="errorMsgDiv">&nbsp;&nbsp;Please correct the marked field(s) below.</div>
+                                                        <div style="margin-top: 4px;">
+                                                            <div class="" changeid="SIGNUP_MSG" id="SIGNUP_DESCRIPTION" changetype="SIGNUP_DESCRIPTION"></div>
+                                                            
                                                             <div>
                                                                 <div name="fieldsdivSf" class="zcsffieldsdiv">
                                                                     <div class="zcsffield zk-field" fieldid="248582000000000029">
