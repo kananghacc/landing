@@ -1590,7 +1590,9 @@
                                                     </table>
                                                 </div>
                                             </div>
-                                            <form method="POST" id="zcampaignOptinForm" action="https://yujc-zgpm.maillist-manage.in/weboptin.zc" target="_blank" onsubmit="zcScptlessSubmit(this)" class="zk-form" novalidate>
+                                            <!-- Hidden target to avoid JSON page replacing the UI -->
+                                            <iframe name="zohosubmit" style="display:none;"></iframe>
+                                            <form method="POST" id="zcampaignOptinForm" action="https://yujc-zgpm.maillist-manage.in/weboptin.zc" target="zohosubmit" onsubmit="zcScptlessSubmit(this); scheduleThankYouRedirect();" class="zk-form" novalidate>
                                                 <div id="SIGNUP_BODY_ALL" name="SIGNUP_BODY_ALL" style="margin-top: 0;">
                                                     <h1 id="SIGNUP_HEADING" name="SIGNUP_HEADING" changeid="SIGNUP_MSG" changetype="SIGNUP_HEADER">
                                                         
@@ -1688,6 +1690,16 @@
                         <script>
                         function zcScptlessSubmit(parentNode){
                         parentNode.removeChild(document.querySelector("#zc_spmSubmit"));parentNode.submit();
+                        }
+                        function scheduleThankYouRedirect(){
+                          try {
+                            // Let Zoho process, then redirect
+                            setTimeout(function(){
+                              window.open('thank-you.html', '_blank');
+                            }, 800);
+                          } catch(e) {
+                            window.location.href = 'thank-you.html';
+                          }
                         }
                         </script>
                         <!--Zoho Marketing Automation Web-Optin Form Ends Here-->
