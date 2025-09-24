@@ -1329,7 +1329,6 @@
     <div id="consultation-modal" class="modal">
         <div class="modal-content">
             <div class="flex justify-between items-center mb-6">
-                <h3 class="text-2xl font-bold text-blue-900 font-heading">Book Your Free Consultation</h3>
                 <button onclick="closeConsultationForm()" class="text-gray-400 hover:text-gray-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -1337,10 +1336,20 @@
                 </button>
             </div>
             
-            <!-- IELTS Chennai Form iframe -->
+            <!-- IELTS Chennai Form (Tally embed) -->
             <div class="w-full">
                 <div id="form-container" style="border-radius: 8px; padding: 24px; background: white; height: 600px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-                    <iframe frameborder="0" id="iframewin" width="100%" height="100%" src="https://yujc-zlfp.maillist-manage.in/ua/Optin?od=1a1e3dbc371d6&zx=1dfa204add&tD=137324030f8eaa49&sD=13732403116b3e25" style="border-radius: 4px;"></iframe>
+                    <iframe data-tally-src="https://tally.so/embed/me49yl?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="387" frameborder="0" marginheight="0" marginwidth="0" title="IELTS_Chennai"></iframe>
+                    <script>
+                        var d=document,w="https://tally.so/widgets/embed.js",v=function(){
+                          if(typeof Tally!=="undefined"){Tally.loadEmbeds()}else{d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc})}
+                        };
+                        if(typeof Tally!=="undefined") v();
+                        else if(d.querySelector('script[src="'+w+'"]')==null){
+                          var s=d.createElement("script");
+                          s.src=w; s.onload=v; s.onerror=v; d.body.appendChild(s);
+                        }
+                    </script>
                 </div>
             </div>
         </div>
