@@ -108,89 +108,10 @@
             }
         }
 
-        /* Zoho Marketing Automation Form Styling */
-        #form-container .zcsffield label {
-            display: block;
-            font-size: 14px;
-            font-weight: 500;
-            color: #374151;
-            margin-bottom: 8px;
-        }
-
-        #form-container .zcsffield input {
-            width: 100%;
-            padding: 12px 16px;
-            border: 2px solid #e5e7eb;
+        /* Tally.so Form Styling */
+        #form-container iframe {
             border-radius: 8px;
-            font-size: 16px;
-            transition: border-color 0.3s ease;
-            margin-bottom: 16px;
-        }
-
-        #form-container .zcsffield input:focus {
-            outline: none;
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-        }
-
-        #form-container #zcWebOptin {
-            width: 100%;
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-            color: white;
             border: none;
-            padding: 16px 24px;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 8px;
-        }
-
-        #form-container #zcWebOptin:hover {
-            background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
-        }
-
-        #form-container #SIGNUP_HEADING {
-            color: #1f2937;
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            text-align: center;
-        }
-
-        #form-container #SIGNUP_DESCRIPTION {
-            color: #6b7280;
-            font-size: 14px;
-            margin-bottom: 24px;
-            text-align: center;
-        }
-
-        #form-container #REQUIRED_FIELD_TEXT {
-            color: #6b7280;
-            font-size: 12px;
-            margin-bottom: 16px;
-        }
-
-        #form-container .zcsffield {
-            margin-bottom: 8px;
-        }
-
-        #form-container .zcsffield span[name="SIGNUP_REQUIRED"] {
-            color: #ef4444;
-            font-weight: bold;
-        }
-
-        /* Success message styling */
-        #Zc_SignupSuccess {
-            border-radius: 8px !important;
-            margin: 16px 0 !important;
-        }
-
-        #signupSuccessMsg {
-            font-weight: 600 !important;
         }
     </style>
 </head>
@@ -1457,149 +1378,12 @@
                 </button>
             </div>
             
-            <!-- Zoho Marketing Automation Form Container -->
+            <!-- Tally.so Form Container -->
             <div class="w-full">
                 <div id="form-container" style="border-radius: 8px; padding: 24px; background: white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-                    <!--Zoho Marketing Automation Web-Optin Form Starts Here-->
-                    <script type="text/javascript" src="https://ma.zoho.in/js/optin.min.js" onload="setupSF('sf3z59b62032aa1451b1358d3114511eedc7bb7fb33a3d28942564990d9edadcc662','ZCFORMVIEW',false,'light')"></script>
-                    <script type="text/javascript">
-                    function runOnFormSubmit_sf3z59b62032aa1451b1358d3114511eedc7bb7fb33a3d28942564990d9edadcc662(th){
-                    /*Before submit, if you want to trigger your event, "include your code here"*/
-                    };
-                    </script>
-
-                    <div name="signupFormContainer">
-                    <input type="hidden" id="signupTmplName" value="large_form_3">
-                    <input type="hidden" value="2" id="recapThemeOptin">
-                    <input type="hidden" id="orgNameFull" value="Kanan International Private Limited">
-                    <div id="sf3z59b62032aa1451b1358d3114511eedc7bb7fb33a3d28942564990d9edadcc662" data-type="signupform">
-                    <input type="hidden" id="recapTheme" value="2">
-                    <input type="hidden" id="isRecapIntegDone" value="false">
-                    <input type="hidden" id="signupFormType" value="LargeForm_Vertical">
-                    <div id="customForm">
-                    <div name="SIGNUP_PAGE" class="large_form_3_css" id="SIGNUP_PAGE">
-                    <div name="" changeid="" changename="">
-                    <div id="imgBlock" name="LOGO_DIV" logo="true"></div>
-                    </div>
-                    <br>
-                    <div id="signupMainDiv" name="SIGNUPFORM" changeid="SIGNUPFORM" changename="SIGNUPFORM">
-                    <div>
-                    <div style="position:relative;">
-                    <div id="Zc_SignupSuccess" style="display:none;position:absolute;margin-left:4%;width:90%;background-color: white; padding: 3px; border: 3px solid rgb(194, 225, 154);  margin-top: 10px;margin-bottom:10px;word-break:break-all ">
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                    <tbody>
-                    <tr>
-                    <td width="10%">
-                    <img class="successicon" src="https://ma.zoho.in/images/challangeiconenable.jpg" align="absmiddle" alt="thumsup">
-                    </td>
-                    <td>
-
-                    <span id="signupSuccessMsg" style="color: rgb(73, 140, 132); font-family: sans-serif; font-size: 14px;word-break:break-word">&nbsp;&nbsp;Thank you for Signing Up</span>
-
-                    </td>
-                    </tr>
-                    </tbody>
-                    </table>
-                    </div>
-                    </div>
-                    <form method="POST" id="zcampaignOptinForm" action="https://yujc-zlfp.maillist-manage.in/weboptin.zc" target="_zcSignup">
-                    <div id="SIGNUP_BODY_ALL" name="SIGNUP_BODY_ALL">
-                    
-                    <div id="SIGNUP_BODY" name="SIGNUP_BODY">
-                    
-                    <div name="fieldsdivSf" class="zcsffieldsdiv">
-                    <div class="zcsffield " fieldid="248582000000000029">
-                    <div><!-- check to mark emailid field as type email, and other mandatory fields as type required -->
-                    <label for="FIRSTNAME" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                    <input maxlength="100" placeholder="Enter Your Name" name="FIRSTNAME" id="FIRSTNAME" changeitem="SIGNUP_FORM_FIELD" type="text">&nbsp;
-                    <span style="display:none" id="dt_FIRSTNAME">1,false,1,First Name,2</span>
-                    </div>
-
-
-
-                    <div></div>
-
-
-                    </div>
-                    <div class="zcsffield " fieldid="248582000000000023">
-                    <div><!-- check to mark emailid field as type email, and other mandatory fields as type required -->
-                    <label for="CONTACT_EMAIL" class="block text-sm font-medium text-gray-700 mb-2">Email Address <span class="text-red-500">*</span></label>
-                    <input maxlength="100" placeholder="Enter Email ID" name="CONTACT_EMAIL" id="CONTACT_EMAIL" changeitem="SIGNUP_FORM_FIELD" type="email">&nbsp;
-
-                    <span name="SIGNUP_REQUIRED" style="display:none">*</span>
-                    <span style="display:none" id="dt_CONTACT_EMAIL">1,true,6,Lead Email,2</span>
-                    </div><div></div></div>
-                    <div class="zcsffield " fieldid="248582000000000047">
-                    <div><!-- check to mark emailid field as type email, and other mandatory fields as type required -->
-                    <label for="MOBILE" class="block text-sm font-medium text-gray-700 mb-2">Mobile Number <span class="text-red-500">*</span></label>
-                    <input maxlength="20" placeholder="Mobile Number" name="MOBILE" id="MOBILE" changeitem="SIGNUP_FORM_FIELD" type="text">&nbsp;<span name="SIGNUP_REQUIRED" style="display:none">*</span>
-                    <span style="display:none" id="dt_MOBILE">1,true,1,Mobile,2</span>
-                    </div><div></div></div>
-                    </div><!-- Captcha for Signup --><!-- Captcha for Signup End--><!-- Other Lists Subscription Start--><div></div>
-                    <div id="REQUIRED_FIELD_TEXT" changetype="REQUIRED_FIELD_TEXT" name="SIGNUP_REQUIRED">*Required fields</div>
-                    <div>
-                    <input type="button" action="Save" id="zcWebOptin" name="SIGNUP_SUBMIT_BUTTON" changetype="SIGNUP_SUBMIT_BUTTON_TEXT" value="Submit">
-                    </div>
-                    </div>
-                    </div>
-                    </div><!-- Do not edit the below Zoho Campaigns hidden tags -->
-                    <input type="hidden" id="fieldBorder" value="rgb(222, 222, 222)">
-                    <input type="hidden" name="zc_trackCode" id="zc_trackCode" value="" onload="">
-                    <input type="hidden" name="viewFrom" id="viewFrom" value="URL_ACTION">
-                    <input type="hidden" id="submitType" name="submitType" value="optinCustomView">
-                    <input type="hidden" id="lD" name="lD" value="">
-                    <input type="hidden" name="emailReportId" id="emailReportId" value="">
-                    <input type="hidden" name="zx" id="cmpZuid" value="1df90a3f61">
-                    <input type="hidden" name="zcvers" value="2.0">
-                    <input type="hidden" name="oldListIds" id="allCheckedListIds" value="">
-                    <input type="hidden" id="mode" name="mode" value="OptinCreateView">
-                    <input type="hidden" id="zcld" name="zcld" value="">
-                    <input type="hidden" id="zctd" name="zctd" value="137324030f8eaa49">
-                    <input type="hidden" id="document_domain" value="ma.zoho.in">
-                    <input type="hidden" id="zc_Url" value="yujc-zlfp.maillist-manage.in">
-                    <input type="hidden" id="new_optin_response_in" value="0">
-                    <input type="hidden" id="duplicate_optin_response_in" value="0">
-                    <input type="hidden" id="zc_formIx" name="zc_formIx" value="3z59b62032aa1451b1358d3114511eedc7bb7fb33a3d28942564990d9edadcc662"><!-- End of the campaigns hidden tags --></div>
-                    </form>
-                    </div>
-                    </div>
-                    </div>
-                    <input type="hidden" id="isCaptchaNeeded" value="false">
-                    <input type="hidden" id="superAdminCap" value="0">
-                    <img src="https://yujc-zlfp.maillist-manage.in/images/spacer.gif" onload="referenceSetter(this)" id="refImage" style="display:none;">
-                    </div>
-                    </div>
-                    <div style="position:relative;">
-                    <div id="Zc_SignupSuccess" style="display:none;position:absolute;margin-left:4%;width:90%;background-color: white; padding: 3px; border: 3px solid rgb(194, 225, 154);margin-bottom:10px;word-break: break-all;">
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                    <tbody>
-                    <tr>
-                    <td width="10%">
-                    <img class="successicon" src="//campaigns.zoho.in/images/challangeiconenable.jpg" align="absmiddle">
-                    </td>
-                    <td><span id="signupSuccessMsg" style="color: rgb(73, 140, 132); font-family: sans-serif; font-size: 14px;word-break:break-word">&nbsp;&nbsp;Thank you for Signing Up</span></td>
-                    </tr>
-                    </tbody>
-                    </table>
-                    </div>
-                    </div>
-
-                    <div id="zcOptinOverLay" oncontextmenu="return false" style="display:none;text-align: center; background-color: rgb(0, 0, 0); opacity: 0.5; z-index: 100; position: fixed; width: 100%; top: 0px; left: 0px; height: 988px;"></div>
-                    <div id="zcOptinSuccessPopup" style="margin:0px auto;display:none;z-index: 9999;width: 800px; height:24%;top: 84px;position: fixed; left: 26%;background-color: #FFFFFF;border-color: #E6E6E6; border-style: solid; border-width: 1px;  box-shadow: 0 1px 10px #424242;padding: 35px;">
-                    <span style="position: absolute;top: -16px;right: -14px;z-index:1;cursor: pointer;" onclick="closeSuccessPopup()">
-                    <img src="//campaigns.zoho.in/images/videoclose.png">
-                    </span>
-
-                    <div id="zcOptinSuccessPanel"></div>
-
-                    </div>
-                    </div><div id="zcOptinOverLay" oncontextmenu="return false" style="display:none;text-align: center; background-color: rgb(0, 0, 0); opacity: 0.5; z-index: 100; position: fixed; width: 100%; top: 0px; left: 0px; height: 988px;"></div>
-                    <div id="zcOptinSuccessPopup" style="display:none;z-index: 9999;width: 800px; height: 40%;top: 84px;position: fixed; left: 26%;background-color: #FFFFFF;border-color: #E6E6E6; border-style: solid; border-width: 1px;  box-shadow: 0 1px 10px #424242;padding: 35px;">
-                    <span style="position: absolute;top: -16px;right:-14px;z-index:99999;cursor: pointer;" id="closeSuccess">
-                    <img src="https://ma.zoho.in/images/videoclose.png" alt="close">
-                    </span><div id="zcOptinSuccessPanel"></div></div>
-
-                    <!--Zoho Marketing Automation Web-Optin Form Ends Here-->
+                    <!-- Tally.so Form -->
+                    <iframe data-tally-src="https://tally.so/embed/3E988L?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="387" frameborder="0" marginheight="0" marginwidth="0" title="Register For Free 1:1 Demo Class"></iframe>
+                    <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
                 </div>
             </div>
         </div>
@@ -1724,7 +1508,7 @@
             }
         }
 
-        // Form submission is now handled by the Zoho Marketing Automation form
+        // Form submission is now handled by the Tally.so form
 
         // Close modal when clicking outside
         document.getElementById('consultation-modal').addEventListener('click', function(e) {

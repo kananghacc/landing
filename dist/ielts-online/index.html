@@ -107,6 +107,12 @@
                 display: none;
             }
         }
+
+        /* Tally.so Form Styling */
+        #form-container iframe {
+            border-radius: 8px;
+            border: none;
+        }
     </style>
 </head>
 <body class="min-h-screen bg-white font-body">
@@ -163,7 +169,7 @@
                         <!-- Main Headline -->
                         <div class="space-y-6">
                             <div class="hero-heading-container">
-                                <h1 id="hero-heading" class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 font-heading">
+                                <h1 id="hero-heading" class="text-4xl lg:text-6xl font-bold text-blue-900 mb-6 font-heading">
                                     Achieve 8+ IELTS Band in 6 Weeks
                                 </h1>
                             </div>
@@ -244,28 +250,10 @@
                             </picture>
                             
                             <!-- Video Preview -->
-                            <div class="relative mb-6">
-                                <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-4 text-white">
-                                    <div class="flex items-center space-x-3 mb-3">
-                                        <div class="bg-white/20 rounded-full p-2">
-                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M8 5v14l11-7z"/>
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <h3 class="font-semibold font-heading">Watch Success Stories</h3>
-                                            <p class="text-sm opacity-90">See how our students achieved 8+ band</p>
-                                        </div>
-                                    </div>
-                                    <button onclick="openVideoModal()" class="w-full bg-white/20 hover:bg-white/30 transition-colors rounded-full py-2 text-sm font-medium">
-                                        Play Video Testimonials
-                                    </button>
-                                </div>
-                            </div>
-
+                            
                             <!-- Key Features Grid -->
                             <div class="space-y-4">
-                                <h3 class="text-xl font-bold text-gray-900 font-heading">What's Included:</h3>
+                                <h3 class="text-xl font-bold text-blue-900 font-heading">What's Included:</h3>
                                 <div class="grid grid-cols-2 gap-4">
                                     <div class="flex items-center space-x-2">
                                         <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -304,13 +292,8 @@
                             </div>
                         </div>
 
-                        <!-- Floating Stats Card -->
-                        <div class="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 border border-gray-100">
-                            <div class="text-center">
-                                <div class="text-2xl font-bold text-blue-600">7</div>
-                                <div class="text-xs text-gray-600">Seats Left</div>
-                            </div>
-                        </div>
+                        
+                        
                     </div>
                 </div>
             </div>
@@ -327,7 +310,7 @@
                         </svg>
                         <span class="text-sm font-semibold text-blue-600 uppercase tracking-wide">Course Packages</span>
                     </div>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-blue-900 mb-4 font-heading">
                         Choose Your Perfect IELTS Preparation Plan
                     </h2>
                     <p class="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -347,7 +330,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                                     </svg>
                                 </div>
-                                <h3 class="text-xl font-bold text-gray-900 font-heading">IELTS Self Preparation Course</h3>
+                                <h3 class="text-xl font-bold text-blue-900 font-heading">IELTS Self Preparation Course</h3>
                             </div>
                             
                             <!-- Pricing -->
@@ -355,7 +338,7 @@
                                 <div class="mb-2">
                                     <span class="text-lg text-gray-500 line-through">INR 9999</span>
                                 </div>
-                                <div class="text-3xl font-bold text-gray-900 font-heading">
+                                <div class="text-3xl font-bold text-blue-900 font-heading">
                                     INR 5999
                                 </div>
                                 <div class="text-sm text-green-600 font-medium">
@@ -453,7 +436,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                                     </svg>
                                 </div>
-                                <h3 class="text-xl font-bold text-gray-900 font-heading">IELTS Live Class Champion Course</h3>
+                                <h3 class="text-xl font-bold text-blue-900 font-heading">IELTS Live Class Champion Course</h3>
                             </div>
                             
                             <!-- Pricing -->
@@ -461,7 +444,7 @@
                                 <div class="mb-2">
                                     <span class="text-lg text-gray-500 line-through">INR 15999</span>
                                 </div>
-                                <div class="text-3xl font-bold text-gray-900 font-heading">
+                                <div class="text-3xl font-bold text-blue-900 font-heading">
                                     INR 9999
                                 </div>
                                 <div class="text-sm text-green-600 font-medium">
@@ -564,12 +547,12 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
                                     </svg>
                                 </div>
-                                <h3 class="text-xl font-bold text-gray-900 font-heading">IELTS Personalized Batches - One to One Tutoring</h3>
+                                <h3 class="text-xl font-bold text-blue-900 font-heading">IELTS Personalized Batches - One to One Tutoring</h3>
                             </div>
                             
                             <!-- Pricing -->
                             <div class="text-center">
-                                <div class="text-3xl font-bold text-gray-900 font-heading">
+                                <div class="text-3xl font-bold text-blue-900 font-heading">
                                     Starting INR 4999
                                 </div>
                             </div>
@@ -627,7 +610,7 @@
                 <!-- Additional Info -->
                 <div class="text-center">
                     <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 font-heading">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-4 font-heading">
                             Need Help Choosing?
                         </h3>
                         <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
@@ -655,7 +638,7 @@
                         </svg>
                         <span class="text-sm font-semibold text-blue-600 uppercase tracking-wide">Course Features</span>
                     </div>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 font-heading mb-4">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-blue-900 font-heading mb-4">
                         What's Included in Kanan.co's Smart 
                         <span class="text-blue-600"> Live IELTS Courses</span>
                     </h2>
@@ -685,7 +668,7 @@
                                 </div>
                             </div>
                             <div class="flex-1">
-                                <h3 class="text-lg font-semibold text-gray-900 mb-2 font-heading">KananPrep Portal</h3>
+                                <h3 class="text-lg font-semibold text-blue-900 mb-2 font-heading">KananPrep Portal</h3>
                                 <p class="text-gray-600 text-sm">600+ videos covering mindset, the four parts of the test, tips & tricks and more.</p>
                                 <div class="mt-3">
                                     <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">600+ Videos</span>
@@ -705,7 +688,7 @@
                                 </div>
                             </div>
                             <div class="flex-1">
-                                <h3 class="text-lg font-semibold text-gray-900 mb-2 font-heading">Practice Tests</h3>
+                                <h3 class="text-lg font-semibold text-blue-900 mb-2 font-heading">Practice Tests</h3>
                                 <p class="text-gray-600 text-sm">Sectional tests and simulated full-length mock tests give you the ultimate exam practice.</p>
                                 <div class="mt-3">
                                     <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">Full Mock Tests</span>
@@ -725,7 +708,7 @@
                                 </div>
                             </div>
                             <div class="flex-1">
-                                <h3 class="text-lg font-semibold text-gray-900 mb-2 font-heading">Flexible Class Timings</h3>
+                                <h3 class="text-lg font-semibold text-blue-900 mb-2 font-heading">Flexible Class Timings</h3>
                                 <p class="text-gray-600 text-sm">Conveniently integrate your IELTS preparation alongside other commitments.</p>
                                 <div class="mt-3">
                                     <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">Flexible Schedule</span>
@@ -745,7 +728,7 @@
                                 </div>
                             </div>
                             <div class="flex-1">
-                                <h3 class="text-lg font-semibold text-gray-900 mb-2 font-heading">Study Materials</h3>
+                                <h3 class="text-lg font-semibold text-blue-900 mb-2 font-heading">Study Materials</h3>
                                 <p class="text-gray-600 text-sm">No need to buy expensive exam prep books. We provide comprehensive study material with your course enrollment.</p>
                                 <div class="mt-3">
                                     <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">Free Materials</span>
@@ -765,7 +748,7 @@
                                 </div>
                             </div>
                             <div class="flex-1">
-                                <h3 class="text-lg font-semibold text-gray-900 mb-2 font-heading">Certified Trainers</h3>
+                                <h3 class="text-lg font-semibold text-blue-900 mb-2 font-heading">Certified Trainers</h3>
                                 <p class="text-gray-600 text-sm">Certified trainers with high IELTS scores guide with proven study methods. You are in good hands at Kanan.co.</p>
                                 <div class="mt-3">
                                     <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">Certified Experts</span>
@@ -785,7 +768,7 @@
                                 </div>
                             </div>
                             <div class="flex-1">
-                                <h3 class="text-lg font-semibold text-gray-900 mb-2 font-heading">Small Batch Size</h3>
+                                <h3 class="text-lg font-semibold text-blue-900 mb-2 font-heading">Small Batch Size</h3>
                                 <p class="text-gray-600 text-sm">This intimate learning environment facilitates active participation and focused guidance from our expert trainers.</p>
                                 <div class="mt-3">
                                     <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">Personal Attention</span>
@@ -797,7 +780,7 @@
 
                 <!-- Trust Indicators -->
                 <div class="bg-blue-50 rounded-2xl p-8 text-center border border-blue-100">
-                    <h3 class="text-2xl font-bold mb-4 font-heading text-gray-900">Why Choose Our IELTS Course?</h3>
+                    <h3 class="text-2xl font-bold mb-4 font-heading text-blue-900">Why Choose Our IELTS Course?</h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div>
                             <div class="text-3xl font-bold text-blue-600 mb-2">94%</div>
@@ -827,7 +810,7 @@
                         </svg>
                         <span class="text-sm font-semibold text-yellow-600 uppercase tracking-wide">Success Stories</span>
                     </div>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-blue-900 mb-4 font-heading">
                         Students Who Achieved Their Target Band Score
                     </h2>
                     <p class="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -859,142 +842,11 @@
 
                 <!-- Featured Testimonial -->
                 <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12 mb-12">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                        <!-- Video Section -->
-                        <div class="relative">
-                            <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl p-8 text-white text-center">
-                                <div class="mb-6">
-                                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M8 5v14l11-7z"/>
-                                        </svg>
-                                    </div>
-                                    <h3 class="text-xl font-semibold mb-2 font-heading">Watch Success Stories</h3>
-                                    <p class="text-sm opacity-90">See how our students achieved their target band scores</p>
-                                </div>
-                                <button onclick="openVideoModal()" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
-                                    Play Video Testimonials
-                                </button>
-                            </div>
-                        </div>
+                    
 
-                        <!-- Featured Quote -->
-                        <div class="space-y-6">
-                            <div class="flex items-center space-x-4">
-                                <img src="testimonial-images/maitry_f4c1575654.png" alt="Maitry Acharya" class="w-16 h-16 rounded-full object-cover border-4 border-blue-100">
-                                <div>
-                                    <h4 class="text-lg font-semibold text-gray-900 font-heading">Maitry Acharya</h4>
-                                    <div class="flex items-center space-x-2">
-                                        <span class="text-2xl font-bold text-green-600 font-heading">Band 8.0</span>
-                                        <div class="flex space-x-1">
-                                            <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24">
-                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                            </svg>
-                                            <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24">
-                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                            </svg>
-                                            <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24">
-                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                            </svg>
-                                            <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24">
-                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                            </svg>
-                                            <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24">
-                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <blockquote class="text-lg text-gray-700 italic leading-relaxed">
-                                "My decision to go to <strong>Canada</strong> was quite instant, so I had to give IELTS within <strong>10 days</strong>. However, Kanan's <strong>crash course</strong> was perfect for my decision. The teacher was <strong>friendly and amazing</strong>, their class was easily understandable."
-                            </blockquote>
-                            <div class="flex items-center space-x-2 text-sm text-gray-500">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                                </svg>
-                                <span>Improved from Band 6.0 to 8.0</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Video Testimonial Cards -->
-                <div class="mb-12">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center font-heading">
-                        Watch More Success Stories
-                    </h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <!-- Testimonial 1 -->
-                        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow cursor-pointer" onclick="openVideoModal()">
-                            <div class="relative mb-4">
-                                <img src="testimonial-images/bharvi_patel_8d7835ce10.png" alt="Bharvi Patel" class="w-full h-32 object-cover rounded-lg">
-                                <div class="absolute inset-0 bg-black/40 rounded-lg flex items-center justify-center">
-                                    <div class="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
-                                        <svg class="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M8 5v14l11-7z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <h4 class="font-semibold text-gray-900 mb-2 font-heading">Bharvi Patel</h4>
-                                <div class="flex items-center justify-center space-x-2 mb-2">
-                                    <span class="text-lg font-bold text-green-600 font-heading">Band 8.0</span>
-                                </div>
-                                <p class="text-sm text-gray-600 line-clamp-3">
-                                    With Kanan's exceptional guidance, I achieved an overall band score of 8 in my IELTS exam. The faculty is incredibly supportive...
-                                </p>
-                            </div>
-                        </div>
 
-                        <!-- Testimonial 2 -->
-                        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow cursor-pointer" onclick="openVideoModal()">
-                            <div class="relative mb-4">
-                                <img src="testimonial-images/manan_rajesh_padsala_dca2ae5fe4.png" alt="Manan Rajesh Padsala" class="w-full h-32 object-cover rounded-lg">
-                                <div class="absolute inset-0 bg-black/40 rounded-lg flex items-center justify-center">
-                                    <div class="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
-                                        <svg class="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M8 5v14l11-7z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <h4 class="font-semibold text-gray-900 mb-2 font-heading">Manan Rajesh Padsala</h4>
-                                <div class="flex items-center justify-center space-x-2 mb-2">
-                                    <span class="text-lg font-bold text-green-600 font-heading">Band 8.0</span>
-                                </div>
-                                <p class="text-sm text-gray-600 line-clamp-3">
-                                    Studying abroad was my dream, and finding the right IELTS coaching became crucial. Fortunately, I found Kanan International...
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 3 -->
-                        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow cursor-pointer" onclick="openVideoModal()">
-                            <div class="relative mb-4">
-                                <img src="testimonial-images/jayashankar_179f406b82.png" alt="Jayashankar" class="w-full h-32 object-cover rounded-lg">
-                                <div class="absolute inset-0 bg-black/40 rounded-lg flex items-center justify-center">
-                                    <div class="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
-                                        <svg class="w-6 h-6 text-gray-800" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M8 5v14l11-7z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <h4 class="font-semibold text-gray-900 mb-2 font-heading">Jayashankar</h4>
-                                <div class="flex items-center justify-center space-x-2 mb-2">
-                                    <span class="text-lg font-bold text-green-600 font-heading">Band 7.5</span>
-                                </div>
-                                <p class="text-sm text-gray-600 line-clamp-3">
-                                    IELTS trainer and her exceptional training helped me achieve an impressive overall band score of 7.5 in the Academic module...
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
 
                 <!-- Testimonial Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1003,7 +855,7 @@
                         <div class="flex items-start space-x-4 mb-4">
                             <img src="testimonial-images/suriya_senthilkumar_ielts_review_7dfca668c9.png" alt="Suriya Senthilkumar" class="w-12 h-12 rounded-full object-cover border-2 border-blue-100">
                             <div class="flex-1">
-                                <h4 class="font-semibold text-gray-900 font-heading">Suriya Senthilkumar</h4>
+                                <h4 class="font-semibold text-blue-900 font-heading">Suriya Senthilkumar</h4>
                                 <div class="flex items-center space-x-2">
                                     <span class="text-lg font-bold text-green-600 font-heading">Band 7.0</span>
                                     <div class="flex space-x-1">
@@ -1036,7 +888,7 @@
                         <div class="flex items-start space-x-4 mb-4">
                             <img src="testimonial-images/anees_basha_ielts_review_fd739179d4.png" alt="Anees Basha" class="w-12 h-12 rounded-full object-cover border-2 border-blue-100">
                             <div class="flex-1">
-                                <h4 class="font-semibold text-gray-900 font-heading">Anees Basha</h4>
+                                <h4 class="font-semibold text-blue-900 font-heading">Anees Basha</h4>
                                 <div class="flex items-center space-x-2">
                                     <span class="text-lg font-bold text-green-600 font-heading">Band 7.5</span>
                                     <div class="flex space-x-1">
@@ -1069,7 +921,7 @@
                         <div class="flex items-start space-x-4 mb-4">
                             <img src="testimonial-images/prachi_sexana_e01739ed20.png" alt="Prachi Saxena" class="w-12 h-12 rounded-full object-cover border-2 border-blue-100">
                             <div class="flex-1">
-                                <h4 class="font-semibold text-gray-900 font-heading">Prachi Saxena</h4>
+                                <h4 class="font-semibold text-blue-900 font-heading">Prachi Saxena</h4>
                                 <div class="flex items-center space-x-2">
                                     <span class="text-lg font-bold text-green-600 font-heading">Band 7.0</span>
                                     <div class="flex space-x-1">
@@ -1101,7 +953,7 @@
                 <!-- CTA Section -->
                 <div class="text-center mt-12">
                     <div class="bg-blue-50 rounded-2xl p-8 border border-blue-100">
-                        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4 font-heading">Ready to Join Their Success?</h3>
+                        <h3 class="text-2xl lg:text-3xl font-bold text-blue-900 mb-4 font-heading">Ready to Join Their Success?</h3>
                         <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
                             Book your free demo class and get a personalized study plan tailored to your goals.
                         </p>
@@ -1127,7 +979,7 @@
                         </svg>
                         <span class="text-sm font-semibold text-blue-600 uppercase tracking-wide">Expert Trainers</span>
                     </div>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-blue-900 mb-4 font-heading">
                         Master IELTS with Leading Trainers
                     </h2>
                     <p class="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -1141,7 +993,7 @@
                     <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
                         <div class="text-center mb-6">
                             <img src="trainer-images/anupama.png" alt="Anupama Rk" class="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-blue-100">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2 font-heading">Anupama Rk</h3>
+                            <h3 class="text-xl font-bold text-blue-900 mb-2 font-heading">Anupama Rk</h3>
                             <p class="text-sm text-blue-600 font-medium mb-2">Senior IELTS Trainer</p>
                             <div class="flex items-center justify-center space-x-2 mb-3">
                                 <span class="text-sm text-gray-600">Experience:</span>
@@ -1167,7 +1019,7 @@
                         <div class="mb-4">
                             <div class="flex items-center space-x-2 mb-2">
                                 <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-                                <span class="text-sm font-semibold text-gray-900">Key Strengths:</span>
+                                <span class="text-sm font-semibold text-blue-900">Key Strengths:</span>
                             </div>
                             <div class="space-y-2">
                                 <span class="text-sm text-gray-600 bg-blue-50 px-3 py-1 rounded-full block">Academic & General IELTS Expert</span>
@@ -1182,7 +1034,7 @@
                     <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
                         <div class="text-center mb-6">
                             <img src="trainer-images/ishita-sahaa.png" alt="Ishita Saha" class="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-blue-100">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2 font-heading">Ishita Saha</h3>
+                            <h3 class="text-xl font-bold text-blue-900 mb-2 font-heading">Ishita Saha</h3>
                             <p class="text-sm text-blue-600 font-medium mb-2">Master IELTS Trainer</p>
                             <div class="flex items-center justify-center space-x-2 mb-3">
                                 <span class="text-sm text-gray-600">Experience:</span>
@@ -1208,7 +1060,7 @@
                         <div class="mb-4">
                             <div class="flex items-center space-x-2 mb-2">
                                 <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-                                <span class="text-sm font-semibold text-gray-900">Key Strengths:</span>
+                                <span class="text-sm font-semibold text-blue-900">Key Strengths:</span>
                             </div>
                             <div class="space-y-2">
                                 <span class="text-sm text-gray-600 bg-blue-50 px-3 py-1 rounded-full block">B.Ed & English Post-Graduate</span>
@@ -1223,7 +1075,7 @@
                     <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
                         <div class="text-center mb-6">
                             <img src="trainer-images/ami-desai.png" alt="Ami Desai" class="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-blue-100">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2 font-heading">Ami Desai</h3>
+                            <h3 class="text-xl font-bold text-blue-900 mb-2 font-heading">Ami Desai</h3>
                             <p class="text-sm text-blue-600 font-medium mb-2">Senior IELTS Trainer</p>
                             <div class="flex items-center justify-center space-x-2 mb-3">
                                 <span class="text-sm text-gray-600">Experience:</span>
@@ -1249,7 +1101,7 @@
                         <div class="mb-4">
                             <div class="flex items-center space-x-2 mb-2">
                                 <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-                                <span class="text-sm font-semibold text-gray-900">Key Strengths:</span>
+                                <span class="text-sm font-semibold text-blue-900">Key Strengths:</span>
                             </div>
                             <div class="space-y-2">
                                 <span class="text-sm text-gray-600 bg-blue-50 px-3 py-1 rounded-full block">20+ Years Education Experience</span>
@@ -1264,7 +1116,7 @@
                     <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
                         <div class="text-center mb-6">
                             <img src="trainer-images/hanima.png" alt="Hanima Nawaz" class="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-4 border-blue-100">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2 font-heading">Hanima Nawaz</h3>
+                            <h3 class="text-xl font-bold text-blue-900 mb-2 font-heading">Hanima Nawaz</h3>
                             <p class="text-sm text-blue-600 font-medium mb-2">Master IELTS Trainer</p>
                             <div class="flex items-center justify-center space-x-2 mb-3">
                                 <span class="text-sm text-gray-600">Experience:</span>
@@ -1290,7 +1142,7 @@
                         <div class="mb-4">
                             <div class="flex items-center space-x-2 mb-2">
                                 <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-                                <span class="text-sm font-semibold text-gray-900">Key Strengths:</span>
+                                <span class="text-sm font-semibold text-blue-900">Key Strengths:</span>
                             </div>
                             <div class="space-y-2">
                                 <span class="text-sm text-gray-600 bg-blue-50 px-3 py-1 rounded-full block">BA English Honors Graduate</span>
@@ -1328,7 +1180,7 @@
                 <!-- CTA Section -->
                 <div class="text-center mt-12">
                     <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 font-heading">Ready to Learn from the Best?</h3>
+                        <h3 class="text-2xl font-bold text-blue-900 mb-4 font-heading">Ready to Learn from the Best?</h3>
                         <p class="text-lg text-gray-600 mb-6">
                             Book your free demo class and get matched with the perfect trainer for your learning style
                         </p>
@@ -1348,7 +1200,7 @@
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- Section Header -->
                 <div class="text-center mb-12 lg:mb-16">
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 font-heading">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-blue-900 mb-4 font-heading">
                         Frequently Asked Questions
                     </h2>
                     <p class="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -1361,7 +1213,7 @@
                     <!-- FAQ 1 -->
                     <div class="bg-gray-50 rounded-xl overflow-hidden">
                         <button onclick="toggleFAQ(0)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2 font-heading">
+                            <h3 class="text-lg font-semibold text-blue-900 mb-2 font-heading">
                                 How long does it take to achieve 8+ band in IELTS?
                             </h3>
                             <svg id="faq-icon-0" class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1378,7 +1230,7 @@
                     <!-- FAQ 2 -->
                     <div class="bg-gray-50 rounded-xl overflow-hidden">
                         <button onclick="toggleFAQ(1)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2 font-heading">
+                            <h3 class="text-lg font-semibold text-blue-900 mb-2 font-heading">
                                 Do you offer online IELTS coaching?
                             </h3>
                             <svg id="faq-icon-1" class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1395,7 +1247,7 @@
                     <!-- FAQ 3 -->
                     <div class="bg-gray-50 rounded-xl overflow-hidden">
                         <button onclick="toggleFAQ(2)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2 font-heading">
+                            <h3 class="text-lg font-semibold text-blue-900 mb-2 font-heading">
                                 What's included in the IELTS course?
                             </h3>
                             <svg id="faq-icon-2" class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1412,7 +1264,7 @@
                     <!-- FAQ 4 -->
                     <div class="bg-gray-50 rounded-xl overflow-hidden">
                         <button onclick="toggleFAQ(3)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2 font-heading">
+                            <h3 class="text-lg font-semibold text-blue-900 mb-2 font-heading">
                                 Can I get a free demo class?
                             </h3>
                             <svg id="faq-icon-3" class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1429,7 +1281,7 @@
                     <!-- FAQ 5 -->
                     <div class="bg-gray-50 rounded-xl overflow-hidden">
                         <button onclick="toggleFAQ(4)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2 font-heading">
+                            <h3 class="text-lg font-semibold text-blue-900 mb-2 font-heading">
                                 What are the course duration options?
                             </h3>
                             <svg id="faq-icon-4" class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1446,7 +1298,7 @@
                     <!-- FAQ 6 -->
                     <div class="bg-gray-50 rounded-xl overflow-hidden">
                         <button onclick="toggleFAQ(5)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2 font-heading">
+                            <h3 class="text-lg font-semibold text-blue-900 mb-2 font-heading">
                                 What is your success rate?
                             </h3>
                             <svg id="faq-icon-5" class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1463,7 +1315,7 @@
                     <!-- FAQ 7 -->
                     <div class="bg-gray-50 rounded-xl overflow-hidden">
                         <button onclick="toggleFAQ(6)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2 font-heading">
+                            <h3 class="text-lg font-semibold text-blue-900 mb-2 font-heading">
                                 Do you provide study materials?
                             </h3>
                             <svg id="faq-icon-6" class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1480,7 +1332,7 @@
                     <!-- FAQ 8 -->
                     <div class="bg-gray-50 rounded-xl overflow-hidden">
                         <button onclick="toggleFAQ(7)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors">
-                            <h3 class="text-lg font-semibold text-gray-900 mb-2 font-heading">
+                            <h3 class="text-lg font-semibold text-blue-900 mb-2 font-heading">
                                 What if I don't achieve my target score?
                             </h3>
                             <svg id="faq-icon-7" class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1518,7 +1370,7 @@
     <div id="consultation-modal" class="modal">
         <div class="modal-content">
             <div class="flex justify-between items-center mb-6">
-                <h3 class="text-2xl font-bold text-gray-900 font-heading">Book Your Free Consultation</h3>
+                <h3 class="text-2xl font-bold text-blue-900 font-heading">Book Your Free Consultation</h3>
                 <button onclick="closeConsultationForm()" class="text-gray-400 hover:text-gray-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -1526,10 +1378,12 @@
                 </button>
             </div>
             
-            <!-- Form Container with iframe -->
+            <!-- Tally.so Form Container -->
             <div class="w-full">
-                <div id="form-container" style="border-radius: 8px; padding: 24px; background: white; height: 600px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-                    <iframe frameborder="0" id="iframewin" width="100%" height="100%" src="https://yujc-zlfp.maillist-manage.in/ua/Optin?od=1a1e3dbc371d6&zx=1dfa204add&tD=137324030f8eaa49&sD=137324031178248d" style="border-radius: 4px;"></iframe>
+                <div id="form-container" style="border-radius: 8px; padding: 24px; background: white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                    <!-- Tally.so Form -->
+                    <iframe data-tally-src="https://tally.so/embed/3E988L?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="387" frameborder="0" marginheight="0" marginwidth="0" title="Register For Free 1:1 Demo Class"></iframe>
+                    <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
                 </div>
             </div>
         </div>
@@ -1654,7 +1508,7 @@
             }
         }
 
-        // Form submission is now handled by the iframe
+        // Form submission is now handled by the Tally.so form
 
         // Close modal when clicking outside
         document.getElementById('consultation-modal').addEventListener('click', function(e) {
