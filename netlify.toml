@@ -32,8 +32,8 @@
 
 [[redirects]]
   from = "/gre"
-  to = "/gre/"
-  status = 200
+  to = "/"
+  status = 301
 
 [[redirects]]
   from = "/gmat"
@@ -47,8 +47,8 @@
 
 [[redirects]]
   from = "/gre"
-  to = "/gre/"
-  status = 200
+  to = "/"
+  status = 301
 
 [[redirects]]
   from = "/us"
@@ -88,8 +88,8 @@
 
 [[redirects]]
   from = "/gre/*"
-  to = "/gre/index.html"
-  status = 200
+  to = "/"
+  status = 301
 
 [[redirects]]
   from = "/gmat/*"
@@ -103,8 +103,8 @@
 
 [[redirects]]
   from = "/gre/*"
-  to = "/gre/index.html"
-  status = 200
+  to = "/"
+  status = 301
 
 [[redirects]]
   from = "/us/*"
