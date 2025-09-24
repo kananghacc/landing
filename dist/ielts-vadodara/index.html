@@ -91,11 +91,11 @@
         }
         .modal-content {
             background: white;
-            padding: 2rem;
+            padding: 1.25rem;
             border-radius: 1rem;
             max-width: 500px;
             width: 90%;
-            max-height: 90vh;
+            max-height: 80vh;
             overflow-y: auto;
         }
         .floating-buttons {
@@ -242,8 +242,7 @@
                             
                             <!-- Hero Image -->
                             <picture>
-                                <source srcset="kanan-ielts-3-optimized.webp" type="image/webp">
-                                <img src="kanan-ielts-3.png" alt="Students at university campus with digital education icons - Achieve your IELTS goals with Kanan.co" class="w-full h-48 sm:h-64 object-cover rounded-xl mb-6" loading="lazy" width="390" height="192">
+                                <img src="ielts-vadodara-hero.jpg" alt="Students at university campus with digital education icons - Achieve your IELTS goals with Kanan.co" class="w-full h-48 sm:h-64 object-cover rounded-xl mb-6" loading="eager" decoding="async" width="390" height="192">
                             </picture>
                             
                             
@@ -1538,21 +1537,21 @@
             
             <!-- Form replaced with iframe -->
             <div class="w-full">
-                <div id="form-container" style="border-radius: 8px; padding: 24px; background: white; height: 600px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                <div id="form-container" style="border-radius: 8px; padding: 16px; background: white; min-height: 0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
                     <!--Zoho Marketing Automation Web-Optin Form Starts Here-->
                     <style>
                         /* Scoped, minimal styles for the consultation form */
                         #form-container .zk-form { max-width: 560px; margin: 0 auto; }
                         #form-container .zk-field { margin: 16px 0; }
-                        #form-container .zk-label { display: block; font-weight: 600; color: #111827; margin-bottom: 6px; }
+                        #form-container .zk-label { display: block; font-weight: 600; color: #374151; margin-bottom: 6px; }
                         #form-container .zk-req { color: #ef4444; margin-left: 4px; }
-                        #form-container .zk-input { width: 100%; padding: 12px 14px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; color: #111827; }
+                        #form-container .zk-input { width: 100%; padding: 12px 14px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; color: #374151; }
                         #form-container .zk-input::placeholder { color: #9ca3af; }
                         #form-container .zk-input:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); }
                         #form-container .zk-help { font-size: 12px; color: #6b7280; margin-top: 6px; }
                         #form-container .zk-button { display: inline-block; width: 100%; background: #0b5bd3; color: #fff; padding: 12px 16px; border-radius: 9999px; font-weight: 600; cursor: pointer; border: 0; }
                         #form-container .zk-button:hover { background: #0a4db3; }
-                        #form-container #SIGNUP_HEADING { margin: 0 0 8px 0; font-size: 20px; }
+                        #form-container #SIGNUP_HEADING { margin: 0 0 8px 0; font-size: 20px; color: #1f2937; }
                         #form-container #SIGNUP_DESCRIPTION { margin-bottom: 8px; color: #4b5563; }
                         #form-container #errorMsgDiv { margin-bottom: 8px; color: #9ca3af; }
                     </style>
@@ -1591,15 +1590,17 @@
                                                     </table>
                                                 </div>
                                             </div>
-                                            <form method="POST" id="zcampaignOptinForm" action="https://yujc-zgpm.maillist-manage.in/weboptin.zc" target="_blank" onsubmit="zcScptlessSubmit(this)" class="zk-form" novalidate>
-                                                <div id="SIGNUP_BODY_ALL" name="SIGNUP_BODY_ALL">
+                                            <!-- Hidden target iframe to keep JSON response off the main page -->
+                                            <iframe name="zohosubmit" style="display:none;"></iframe>
+                                            <form method="POST" id="zcampaignOptinForm" action="https://yujc-zgpm.maillist-manage.in/weboptin.zc" target="zohosubmit" onsubmit="zcScptlessSubmit(this); scheduleThankYouRedirect();" class="zk-form" novalidate>
+                                                <div id="SIGNUP_BODY_ALL" name="SIGNUP_BODY_ALL" style="margin-top: 0;">
                                                     <h1 id="SIGNUP_HEADING" name="SIGNUP_HEADING" changeid="SIGNUP_MSG" changetype="SIGNUP_HEADER">
-                                                        <span>Register For Free 1:1 Consultation</span>
+                                                        
                                                     </h1>
                                                     <div id="SIGNUP_BODY" name="SIGNUP_BODY">
-                                                        <div>
-                                                            <div class="" changeid="SIGNUP_MSG" id="SIGNUP_DESCRIPTION" changetype="SIGNUP_DESCRIPTION">Please complete this form to create an account, receive email updates and much more.</div>
-                                                            <div id="errorMsgDiv">&nbsp;&nbsp;Please correct the marked field(s) below.</div>
+                                                        <div style="margin-top: 4px;">
+                                                            <div class="" changeid="SIGNUP_MSG" id="SIGNUP_DESCRIPTION" changetype="SIGNUP_DESCRIPTION"></div>
+                                                            
                                                             <div>
                                                                 <div name="fieldsdivSf" class="zcsffieldsdiv">
                                                                     <div class="zcsffield zk-field" fieldid="248582000000000029">
@@ -1613,7 +1614,7 @@
                                                                         <div>
                                                                             <input id="email" class="zk-input" maxlength="100" placeholder="name@example.com" name="CONTACT_EMAIL" changeitem="SIGNUP_FORM_FIELD" type="email" autocomplete="email" required aria-required="true">
                                                                         </div>
-                                                                        <div class="zk-help">We’ll send confirmation and updates here.</div>
+                                                                        <div class="zk-help">We'll send confirmation and updates here.</div>
                                                                     </div>
                                                                     <div class="zcsffield zk-field" fieldid="248582000000000047">
                                                                         <label for="mobile" class="zk-label">Mobile Number<span class="zk-req" aria-hidden="true">*</span></label>
@@ -1688,8 +1689,26 @@
                             </span><div id="zcOptinSuccessPanel"></div></div>
                         <script>
                         function zcScptlessSubmit(parentNode){
-                        parentNode.removeChild(document.querySelector("#zc_spmSubmit"));parentNode.submit();
+                        try {
+                          var spamField = document.querySelector('#zc_spmSubmit');
+                          if (spamField && spamField.parentNode === parentNode) {
+                            parentNode.removeChild(spamField);
+                          }
+                        } catch (e) { /* no-op */ }
+                        parentNode.submit();
                         }
+                        function scheduleThankYouRedirect(){
+                          // Let Zoho process for a moment, then redirect in same tab
+                          setTimeout(function(){
+                            window.location.href = 'thank-you.html';
+                          }, 600);
+                        }
+                        // Fallback: if JSON content appears in location or body, redirect immediately
+                        try {
+                          if (window.location && /ZC_TYPEJSON/.test(document.body && document.body.innerText || '')) {
+                            window.location.replace('thank-you.html');
+                          }
+                        } catch(e) {}
                         </script>
                         <!--Zoho Marketing Automation Web-Optin Form Ends Here-->
                 </div>
