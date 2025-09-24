@@ -113,7 +113,7 @@
     </header>
 
     <!-- Main Content -->
-    <div class="pt-16 lg:pt-20">
+    <div class="pt-0">
         <!-- Hero Section -->
         <section class="gradient-bg py-16 lg:py-20" role="banner" aria-labelledby="hero-heading">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1384,16 +1384,15 @@
                 <span class="whitespace-nowrap">Chat Now</span>
             </button>
         </div>
-    </div> -->
+    </div> --> 
 
     <!-- Consultation Form Modal -->
     <div id="consultation-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
         <div class="flex items-center justify-center min-h-screen p-4">
-            <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden">
-                <!-- Header -->
-                <div class="flex items-center justify-between p-6 border-b border-gray-200">
-                    <h2 class="text-2xl font-bold text-gray-900 font-heading">Book Free Demo Class</h2>
-                    <button onclick="closeConsultationForm()" class="p-2 hover:bg-gray-100 rounded-full transition-colors">
+            <div class="bg-white rounded-2xl shadow-2xl p-8" style="max-width: 500px; width: 90%; max-height: 90vh; overflow-y: auto;">
+                <!-- Header (compact) -->
+                <div class="flex items-center justify-end p-2 pt-0">
+                    <button onclick="closeConsultationForm()" class="p-2 hover:bg-gray-100 rounded-full transition-colors" aria-label="Close modal">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="18" y1="6" x2="6" y2="18"/>
                             <line x1="6" y1="6" x2="18" y2="18"/>
@@ -1401,10 +1400,11 @@
                     </button>
                 </div>
 
-                <!-- Form Container with iframe -->
+                <!-- Form Container with Tally embed -->
                 <div class="w-full">
                     <div id="form-container" style="border-radius: 8px; padding: 24px; background: white; height: 600px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-                        <iframe frameborder="0" id="iframewin" width="100%" height="100%" src="https://yujc-zlfp.maillist-manage.in/ua/Optin?od=1a1e3dbc371d6&zx=1dfa204add&sD=1373240311757b43" style="border-radius: 4px;"></iframe>
+                        <iframe data-tally-src="https://tally.so/embed/npa46B?alignLeft=1&hideTitle=1&hideFooter=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="387" frameborder="0" marginheight="0" marginwidth="0" title="Register For Free 1:1 Demo Class"></iframe>
+                        <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
                     </div>
                 </div>
             </div>
