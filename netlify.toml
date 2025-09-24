@@ -32,8 +32,8 @@
 
 [[redirects]]
   from = "/gre"
-  to = "/"
-  status = 301
+  to = "/404.html"
+  status = 404
 
 [[redirects]]
   from = "/gmat"
@@ -45,10 +45,7 @@
   to = "/dubai/"
   status = 200
 
-[[redirects]]
-  from = "/gre"
-  to = "/"
-  status = 301
+# Duplicate removed
 
 [[redirects]]
   from = "/us"
@@ -88,8 +85,8 @@
 
 [[redirects]]
   from = "/gre/*"
-  to = "/"
-  status = 301
+  to = "/404.html"
+  status = 404
 
 [[redirects]]
   from = "/gmat/*"
@@ -101,10 +98,7 @@
   to = "/dubai/index.html"
   status = 200
 
-[[redirects]]
-  from = "/gre/*"
-  to = "/"
-  status = 301
+# Duplicate removed
 
 [[redirects]]
   from = "/us/*"
